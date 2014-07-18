@@ -104,33 +104,33 @@ In this article we study a diffeomorphism invariant ``toy'' model  consisting  s
 
 We aim to describe certain aspects of the gravitational interaction in four dimensions. To this end we have studied the non-relativistic limit of the parallel transport equations of motion of a particle moving on a flat, static, homogeneous and isotropic background.
 
-\vspace*{5mm}
+%% \vspace*{5mm}
 
-\hrule
+%% \hrule
 
-\vspace*{5mm}
+%% \vspace*{5mm}
 
-General Relativity (GR) is nowadays the accepted theory of gravitation. The gravitational effects are interpreted as a geometrical influence due to the curvature of the spacetime. In principle, the spacetime is a (pseudo-) Riemannian manifold whose metric tensor is the fundamental field in the description of the gravity.
+%% General Relativity (GR) is nowadays the accepted theory of gravitation. The gravitational effects are interpreted as a geometrical influence due to the curvature of the spacetime. In principle, the spacetime is a (pseudo-) Riemannian manifold whose metric tensor is the fundamental field in the description of the gravity.
 
-More generally, the spacetime might be associated with a topological space, $\mathcal{M}$, with less restrictive structure than a (pseudo-) Riemannian geometry  by choosing a connection non-compatible with the metric, in the sense that $\nabla g\neq 0$. It is  still possible to define a connection associated with the parallel transport of vectors along curves on the spacetime manifold. Interestingly, this general connection cannot be written in terms of the metric, but decomposes into the usual Levi-Civita connection plus a contribution from the torsion tensor,
-\begin{equation}
-  \Gamma^{\mu}{}_{\rho\sigma} = \hat{\Gamma}^{\mu}{}_{\rho\sigma} + T^{\mu}{}_{\rho\sigma},
-\end{equation}
-where the hatted objects represent the the torsion-free part (in the case of the connection it is just the Levi-Civita connection).
+%% More generally, the spacetime might be associated with a topological space, $\mathcal{M}$, with less restrictive structure than a (pseudo-) Riemannian geometry  by choosing a connection non-compatible with the metric, in the sense that $\nabla g\neq 0$. It is  still possible to define a connection associated with the parallel transport of vectors along curves on the spacetime manifold. Interestingly, this general connection cannot be written in terms of the metric, but decomposes into the usual Levi-Civita connection plus a contribution from the torsion tensor,
+%% \begin{equation}
+%%   \Gamma^{\mu}{}_{\rho\sigma} = \hat{\Gamma}^{\mu}{}_{\rho\sigma} + T^{\mu}{}_{\rho\sigma},
+%% \end{equation}
+%% where the hatted objects represent the the torsion-free part (in the case of the connection it is just the Levi-Civita connection).
 
-Therefore, another possible formulation of a gravitational theory within the context of a general connection would have an action like,
-\begin{equation}
-  S[g,\Ga]=\int\dn{n}{x}\sqrt{g}\; g^{\mu\nu}\Ri_{\mu\nu}\(\Ga,\partial\Ga\).
-\end{equation}
-This theory is known as the metric-affine gravity. It should be noticed that the above generalization of gravity is ``minimal'' in the sense that the new tensor (the torsion) enters only through the minimal coupling, while more general actions admit quadratic terms in the torsion.
+%% Therefore, another possible formulation of a gravitational theory within the context of a general connection would have an action like,
+%% \begin{equation}
+%%   S[g,\Ga]=\int\dn{n}{x}\sqrt{g}\; g^{\mu\nu}\Ri_{\mu\nu}\(\Ga,\partial\Ga\).
+%% \end{equation}
+%% This theory is known as the metric-affine gravity. It should be noticed that the above generalization of gravity is ``minimal'' in the sense that the new tensor (the torsion) enters only through the minimal coupling, while more general actions admit quadratic terms in the torsion.
 
-\vspace*{5mm}
+%% \vspace*{5mm}
 
-\hrule
+%% \hrule
 
-\vspace*{5mm}
+%% \vspace*{5mm}
 
-The aim of this work is to present a ``minimal'' affine theory of gravity, where the symmetric tensor which acts like ``metric'' is a composite field defined in terms of the connection,
+The aim of this work is to present a purely affine theory of gravity, where the symmetric tensor which acts like ``metric'' is a composite field defined in terms of the connection, \hl{Is it still TRUE?}
 \begin{equation}
   g_{\mu\nu} = T^\sigma{}_{\rho\mu} T^\rho{}_{\sigma\nu}.
 \end{equation}
@@ -250,15 +250,14 @@ or after dropping the boundary terms and rename the coefficients,
 
 %Poplawski...
 Noticing that in  the first term, the variation respect to the Ricci tensor yields to $T^{\mu\nu}$, it can be argued that in a standard theory of gravity this tensor density corresponds to $\sqrt{g}g^{\mu\nu}$.
-Therefore, Eq.~\eqref{accion3dfinal} reveals a one to one correspondence with General Relativity non minimally coupled to the $A_\mu$ field, \hl{I'd say that this result should be presented in terms of the action with coefficients C's}
-\begin{equation}
+Therefore, Eq.~\eqref{accion3dfinal} reveals a one to one correspondence with General Relativity non minimally coupled to the $A_\mu$ field, \hl{I'd say that this result should be presented in terms of the action with coefficients C's... This result should be review!!!}
+\begin{dmath}
   \label{accion3dGR}
-  \begin{split}
-    S[g,\hat\Gamma,A]&=
-    \int\dn{3}{x} \l\{\sqrt{g}\l(B_1\hat R +\frac{1}{4}(4B_4-3B_1) -\frac{1}{4}\l( 2B_2-B_3\r) A_\mu A^\mu\r)\r.\\
-    & \qquad \l.+\frac{1}{2}(2B_2-B_3)\epsilon^{\mu\nu\rho}A_\mu\hat R_{\nu\rho}{}^{\sigma}{}_\sigma+\frac{1}{4}(B_1+4B_2-2B_3)\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho\r\}
-  \end{split}
-\end{equation}
+  %\begin{split}
+    S[g,\hat\Gamma,A] =
+    \int\dn{3}{x} \Bigg\{\sqrt{g}\Big(B_1\hat R +\frac{1}{4}(4B_4-3B_1) -\frac{1}{4}\l( 2B_2-B_3\r) A_\mu A^\mu\Big) + \frac{1}{2}(2B_2-B_3)\epsilon^{\mu\nu\rho}A_\mu\hat R_{\nu\rho}{}^{\sigma}{}_\sigma+\frac{1}{4}(B_1+4B_2-2B_3)\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho\Bigg\}
+  %\end{split}
+\end{dmath}
 Thus, an interesting sector of the theory corresponds to the space of non-degenerated $T^{\mu\nu}$. 
 
 As a matter of fact, the vector field and the ``gravitational" sector of the torsion disengage when $B_3=2B_2$
