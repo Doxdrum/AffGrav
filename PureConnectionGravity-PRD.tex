@@ -94,7 +94,7 @@
 
 %--------- Abstract
 \begin{abstract}
-  We develop a topological theory of gravity with torsion where metric has a dynamical rather than a kinematical origin. This approach towards gravity resembles pre-geometrical approaches in that a fundamental metric is not assumed even though the  Affine connection gives place to a local inertial structure, which reminds us of Mach's principle that assumes that inertial forces, subject to locally Minkowskian metric structures, should have dynamical origin. Additionally a Newtonian like gravitational force is obtained in the perturbative limit of the theory.
+  We develop a topological theory of gravity with torsion where metric has a dynamical rather than a kinematical origin. This approach towards gravity resembles pre-geometrical approaches in which a fundamental metric is not assumed even though the  affine connection gives place to a local inertial structure, which reminds us of Mach's principle that assumes the inertial forces, subject to locally Minkowskian metric structures, should have dynamical origin. Additionally a Newtonian like gravitational force is obtained in the perturbative limit of the theory.
 %  We develop a topological theory of gravity constructed with a connection, while a ``metric'' arises as a constructed field. This approach towards gravity resembles pre-geometrical approaches in which a fundamental metric is not assumed even though torsion gives place to a spacetime structure and a Newtonian like gravitational force is obtained in the perturbative limit of the theory.
 \end{abstract}
 
@@ -167,21 +167,25 @@ Note that $T^\rho{}_{\mu\nu}$ is a  tensor under diffeomorphisms.
 
 In order to build topological invariants of density one, one can use the skew-symmetric Levi-\v{C}ivita tensor $\epsilon^{\mu_1\mu_2\dots\mu_n}$ in $n$-dimensional space(-time).
 
-With these ingredients, in a three-dimensional space one can write an action 
-\begin{align}
-  \label{accion3d}
-  S[\Gamma] &=
-  \int \dn{3}{x} \Bigg\{R_{\mu_1\mu_2}{}^\rho{}_{\mu_3} T^\sigma{}_{\mu_4\mu_5}\sum_{\pi \in  \mathrm{Z}_5}C_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\epsilon^{\mu_{\pi(3)}\mu_{\pi(4)}\mu_{\pi(5)}} \notag\\ 
-  & \qquad + T^\rho{}_{\mu_1\mu_2} T^\sigma{}_{\mu_3\mu_4}T^\tau{}_{\mu_5\mu_6} \sum_{\pi \in \mathrm{Z}_6}D_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\delta_\tau^{\mu_{\pi(3)}}\epsilon^{\mu_{\pi(4)}\mu_{\pi(5)}\mu_{\pi(6)}} \notag\\
-  & \qquad  +T^\rho{}_{\mu_1\mu_2}\nabla_{\mu_3} T^\sigma{}_{\mu_4\mu_5}\sum_{\pi \in \mathrm Z_5}E_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\epsilon^{\mu_{\pi(3)}\mu_{\pi(4)}\mu_{\pi(5)}} \Bigg\}, 
-\end{align}
-where all possible permutations of $n$ elements $\pi\in\mathrm{Z}_n$ have been included in the sums with  different constants $C_\pi$ and $D_\pi$ for  permutation. %In particular, $\pi(i)\in\mathrm{Z}_n$ if $i\in\mathrm Z_n$ represents a permutation of the integer numbers between $1$ and $n$.
+\begin{widetext}
+  With these ingredients, in a three-dimensional space one can write an action 
+  \begin{equation}
+    \label{accion3d}
+    \begin{split}      
+      S[\Gamma] =
+      \int \dn{3}{x} & \Bigg\{R_{\mu_1\mu_2}{}^\rho{}_{\mu_3} T^\sigma{}_{\mu_4\mu_5}\sum_{\pi \in  \mathrm{Z}_5}C_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\epsilon^{\mu_{\pi(3)}\mu_{\pi(4)}\mu_{\pi(5)}} \\ 
+      & \qquad + T^\rho{}_{\mu_1\mu_2} T^\sigma{}_{\mu_3\mu_4}T^\tau{}_{\mu_5\mu_6} \sum_{\pi \in \mathrm{Z}_6}D_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\delta_\tau^{\mu_{\pi(3)}}\epsilon^{\mu_{\pi(4)}\mu_{\pi(5)}\mu_{\pi(6)}} \\
+      & \qquad  +T^\rho{}_{\mu_1\mu_2}\nabla_{\mu_3} T^\sigma{}_{\mu_4\mu_5}\sum_{\pi \in \mathrm Z_5}E_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\epsilon^{\mu_{\pi(3)}\mu_{\pi(4)}\mu_{\pi(5)}} \Bigg\}, 
+    \end{split}
+  \end{equation}
+  where all possible permutations of $n$ elements $\pi\in\mathrm{Z}_n$ have been included in the sums with  different constants $C_\pi$, $D_\pi$ and $E_\pi$ for  permutation. %In particular, $\pi(i)\in\mathrm{Z}_n$ if $i\in\mathrm Z_n$ represents a permutation of the integer numbers between $1$ and $n$.
+\end{widetext}
 
 The torsion field can be decomposed into invariant tensors respecting the symmetry,
 \begin{equation}
   T^\sigma{}_{\mu\nu}=\epsilon_{\mu\nu\rho} T^{\sigma\rho}+A_{[\mu}\delta^\sigma{}_{\nu]},
 \end{equation}
-with a symmetric $T^{\sigma\rho}$ of density weight  $w =1$, and $A_\mu=T^\nu{}_{\mu\nu}$ is the trace part of the more arbitrary $T^\sigma{}_{\mu\nu}$.
+with a symmetric $T^{\sigma\rho}$ of density weight  $w =1$, and \mbox{$A_\mu=T^\nu{}_{\mu\nu}$} is the trace part of the more arbitrary $T^\sigma{}_{\mu\nu}$.
 
 The action in Eq.~\eqref{accion3d} can be rewritten as
 \begin{dmath}[compact, spread=2pt]
@@ -194,8 +198,10 @@ The action in Eq.~\eqref{accion3d} can be rewritten as
   +B_5 T^{\mu\nu}A_\mu A_\nu 
   +B_6 T^{\mu\nu}\nabla_\mu A_\nu
   +B_7\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho
-  +B_8\epsilon^{\mu\nu\lambda}\Big(\Gamma^{\sigma}{}_{\mu\rho}\partial_\nu\Gamma^{\rho}{}_{\lambda\sigma}
-  +\frac{2}{3}\Gamma^{\tau}{}_{\mu\rho}\Gamma^{\rho}{}_{\nu\sigma}\Gamma^{\sigma}{}_{\lambda\tau}{}\Big)\Bigg).
+  + B_8\epsilon^{\mu\nu\rho}\Gamma^{\sigma}{}_{\mu\sigma}\partial_\nu\Gamma^{\tau}{}_{\rho\tau}
+  +B_9\epsilon^{\mu\nu\lambda}\Big(\Gamma^{\sigma}{}_{\mu\rho}\partial_\nu\Gamma^{\rho}{}_{\lambda\sigma}
+  +\frac{2}{3}\Gamma^{\tau}{}_{\mu\rho}\Gamma^{\rho}{}_{\nu\sigma}\Gamma^{\sigma}{}_{\lambda\tau}{}\Big)
+   \Bigg).
 \end{dmath}
 %% \begin{equation}
 %%   \label{accion3dnew}
@@ -210,8 +216,12 @@ The action in Eq.~\eqref{accion3d} can be rewritten as
 %%     +B_6 T^{\mu\nu}\nabla_\mu A_\nu\Big\},
 %%   \end{split}
 %% \end{equation}
-where the coefficients $B_i$ are related with the original coefficients $C_i$,$D_i$ and $E_i$, and the additional $B_8$ term can be added in 3 dimensions leaving the action invariant under diffeomorphisms. %Moreover, the general curvature can be decomposed into the Riemann curvature plus extra contributions, through the use of the connection decomposition %\footnote{The symbol $\hat{\Gamma}^\lambda{}_{\mu\rho}$ represents the Levi-\v{C}vita connection.}
-The affine connection can be decomposed into its symmetric and antisymmetric parts, \mbox{$\Gamma^\lambda{}_{\mu\rho}=\hat\Gamma^\lambda{}_{(\mu\rho)} + \epsilon_{\mu\rho\sigma}T^{\lambda\sigma} + A_{[\mu}\delta^\lambda{}_{\rho]}$,} therefore, the curvature tensor can be expanded as 
+where the coefficients $B_i$ are related with the original coefficients $C_i$, $D_i$ and $E_i$, and the additional $B_9$ term can be added in three dimensions leaving the action invariant under diffeomorphisms. %Moreover, the general curvature can be decomposed into the Riemann curvature plus extra contributions, through the use of the connection decomposition %\footnote{The symbol $\hat{\Gamma}^\lambda{}_{\mu\rho}$ represents the Levi-\v{C}vita connection.}
+The affine connection can be decomposed into its symmetric and antisymmetric parts, 
+\begin{equation}
+  \Gamma^\lambda{}_{\mu\rho}=\hat{\Gamma}^\lambda{}_{(\mu\rho)} + \epsilon_{\mu\rho\sigma}T^{\lambda\sigma} + A_{[\mu}\delta^\lambda{}_{\rho]},
+\end{equation}
+where  $\epsilon_{\mu\rho\sigma}$ has been introduced, and it is related to the skew symmetric $\epsilon^{\mu\rho\sigma}$ through the identity $\epsilon^{\lambda\mu\nu}\epsilon_{\rho\sigma\tau}=3!\delta^{\lambda}{}_{[\rho}\delta^\mu{}_{\sigma}\delta^{\nu}{}_{\tau]}$. Therefore, the curvature tensor can be expressed as 
 \begin{dmath}[compact, spread=2pt]
   \label{RiemmanDecomposition}
   R_{\mu\nu}{}^\sigma{}_\rho=
@@ -253,29 +263,56 @@ Notice that Bianchi identity, obtained as $\epsilon^{\mu\nu\lambda}\hat R_{\mu\n
 Using the  Eqs.~\eqref{RiemmanDecomposition} and \eqref{bianchi} one can rewrite the action in Eq.~\eqref{accion3dnew} as
 \begin{dmath}[compact, spread=2pt]
   \label{accion3dfinal}
+  %% S[\Gamma]=\int\dn{3}{x} \Bigg( 
+  %% (B_1+2B_8) \hat R_{\mu\nu}{}^\mu{}_{\rho} T^{\nu\rho} 
+  %% + (B_2+B_8) \epsilon^{\mu\nu\rho}\hat R_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
+  %% + (-6B_1+B_4-4B_8) \det(T^{\mu\nu}) 
+  %% + \l(\frac{1}{2}B_1-4B_3+B_5+B_8 \r) T^{\mu\nu}A_\mu A_\nu 
+  %% + (B_1-4B_3+B_6+2B_8) T^{\mu\nu}\hat\nabla_\mu A_\nu
+  %% + (2B_2+2B_3+B_7)\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho
+  %% + B_8\epsilon^{\mu\nu\lambda}\Big(\hat\Gamma^{\sigma}{}_{\mu\rho}\partial_\nu\hat\Gamma^{\rho}{}_{\lambda\sigma}
+  %% + \frac{2}{3}\hat\Gamma^{\tau}{}_{\mu\rho}\hat\Gamma^{\rho}{}_{\nu\sigma}{}\hat\Gamma^{\sigma}{}_{\lambda\tau}{}\Big)
+  %% + 4B_3\partial_\mu(T^{\mu\nu} A_\nu) 
+  %% + B_8\partial_\alpha\Big(2\Gamma^{[\delta}{}_{\delta\beta}T^{\alpha]\beta}-T^{\alpha\beta}A_\beta + \frac{1}{2}\epsilon^{\beta\alpha\eta}A_\eta\Gamma^{\delta}{}_{\delta\beta}\Big)\Bigg),
   S[\Gamma]=\int\dn{3}{x} \Bigg( 
-  (B_1+2B_8) \hat R_{\mu\nu}{}^\mu{}_{\rho} T^{\nu\rho} 
-  + (B_2+B_8) \epsilon^{\mu\nu\rho}\hat R_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
-  + (-6B_1+B_4-4B_8) \det(T^{\mu\nu}) 
-  + \l(\frac{1}{2}B_1-4B_3+B_5+B_8 \r) T^{\mu\nu}A_\mu A_\nu 
-  + (B_1-4B_3+B_6+2B_8) T^{\mu\nu}\hat\nabla_\mu A_\nu
-  + (2B_2+2B_3+B_7)\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho
-  + B_8\epsilon^{\mu\nu\lambda}\Big(\hat\Gamma^{\sigma}{}_{\mu\rho}\partial_\nu\hat\Gamma^{\rho}{}_{\lambda\sigma}
-  + \frac{2}{3}\hat\Gamma^{\tau}{}_{\mu\rho}\hat\Gamma^{\rho}{}_{\nu\sigma}{}\hat\Gamma^{\sigma}{}_{\lambda\tau}{}\Big)
-  + 4B_3\partial_\mu(T^{\mu\nu} A_\nu) 
-  + B_8\partial_\alpha\Big(2\Gamma^{[\delta}{}_{\delta\beta}T^{\alpha]\beta}-T^{\alpha\beta}A_\beta + \frac{1}{2}\epsilon^{\beta\alpha\eta}A_\eta\Gamma^{\delta}{}_{\delta\beta}\Big)\Bigg),
+  (B_1+2B_9) \hat R_{\mu\nu}{}^\mu{}_{\rho} T^{\nu\rho} 
+  +(B_2+B_9+B_9) \epsilon^{\mu\nu\rho}\hat R_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
+  +(-6B_1+B_4-4B_9) \det(T^{\mu\nu}) 
+  +(\frac{1}{2}B_1-4B_3+B_5+B_9 ) T^{\mu\nu}A_\mu A_\nu 
+  +(B_1-4B_3+B_6+2B_9) T^{\mu\nu}\hat\nabla_\mu A_\nu
+  +(2B_2+2B_3+B_7+B_9)\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho
+  +B_9\epsilon^{\mu\nu\lambda}\Big(\hat\Gamma^{\sigma}{}_{\mu\rho}\partial_\nu\hat\Gamma^{\rho}{}_{\lambda\sigma}
+  +\frac{2}{3}\hat\Gamma^{\tau}{}_{\mu\rho}\hat\Gamma^{\rho}{}_{\nu\sigma}{}\hat\Gamma^{\sigma}{}_{\lambda\tau}{}\Big)
+  + B_8\epsilon^{\mu\nu\rho}\hat\Gamma^{\sigma}{}_{\mu\sigma}\partial_\nu\hat\Gamma^{\tau}{}_{\rho\tau}
+  +\partial_\alpha\Big( 4B_3T^{\alpha\mu} A_\mu 
+  +B_9(2\Gamma^{[\delta}{}_{\delta\beta}T^{\alpha]\beta}-T^{\alpha\beta}A_\beta+\frac{1}{2}\epsilon^{\beta\alpha\eta}A_\eta\Gamma^{\delta}{}_{\delta\beta})
+  +B_8\epsilon^{\beta\alpha\eta}A_\eta\hat\Gamma^{\delta}{}_{\delta\beta}\Big)
+  \Bigg),
 \end{dmath}
 or after dropping the boundary terms and rename the coefficients,
-\begin{dmath}[compact, spread=2pt]\label{3Dfull}
- S[\hat\Gamma^{\mu}{}_{\nu\rho},T^{\mu\nu},A_\mu] = \int \md^3x\bigg( C_1\hat R_{\mu\nu}{}^{\mu}{}_\rho T^{\nu\rho} 
-+C_2\epsilon^{\mu\nu\rho}\hat R_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
-+C_3\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho
-+C_4T^{\mu\nu}\hat\nabla_\mu A_\nu
-+C_5T^{\mu\nu}A_\mu A_\nu
-+C_6\det(T^{\mu\nu}) 
-+C_7\epsilon^{\mu\nu\lambda}\Big(\hat\Gamma^{\sigma}{}_{\mu\rho}\partial_\nu\hat\Gamma^{\rho}{}_{\lambda\sigma}
-+\frac{2}{3}\hat\Gamma^{\tau}{}_{\mu\rho}\hat\Gamma^{\rho}{}_{\nu\sigma}{}\hat\Gamma^{\sigma}{}_{\lambda\tau}{}\Big)
- \bigg).
+\begin{dmath}[compact, spread=2pt]
+  \label{3Dfull}
+%%  S[\hat\Gamma^{\mu}{}_{\nu\rho},T^{\mu\nu},A_\mu] = \int \md^3x\bigg( C_1\hat R_{\mu\nu}{}^{\mu}{}_\rho T^{\nu\rho} 
+%% +C_2\epsilon^{\mu\nu\rho}\hat R_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
+%% +C_3\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho
+%% +C_4T^{\mu\nu}\hat\nabla_\mu A_\nu
+%% +C_5T^{\mu\nu}A_\mu A_\nu
+%% +C_6\det(T^{\mu\nu}) 
+%% +C_7\epsilon^{\mu\nu\lambda}\Big(\hat\Gamma^{\sigma}{}_{\mu\rho}\partial_\nu\hat\Gamma^{\rho}{}_{\lambda\sigma}
+%% +\frac{2}{3}\hat\Gamma^{\tau}{}_{\mu\rho}\hat\Gamma^{\rho}{}_{\nu\sigma}{}\hat\Gamma^{\sigma}{}_{\lambda\tau}{}\Big)
+%%  \bigg).
+  S[\hat\Gamma,T,A] =
+  \int \dn{3}{x} \bigg( 
+  A_1\hat R_{\mu\nu}{}^{\mu}{}_\rho T^{\nu\rho} 
+  +A_2\epsilon^{\mu\nu\rho}\hat R_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
+  +A_3\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho
+  +A_4T^{\mu\nu}\hat\nabla_\mu A_\nu
+  +A_5T^{\mu\nu}A_\mu A_\nu
+  +A_6\det(T^{\mu\nu}) 
+  +A_7\epsilon^{\mu\nu\lambda}\Big(\hat\Gamma^{\sigma}{}_{\mu\rho}\partial_\nu\hat\Gamma^{\rho}{}_{\lambda\sigma}
+  +\frac{2}{3}\hat\Gamma^{\tau}{}_{\mu\rho}\hat\Gamma^{\rho}{}_{\nu\sigma}{}\hat\Gamma^{\sigma}{}_{\lambda\tau}{}\Big)
+  + A_8\epsilon^{\mu\nu\rho}\hat\Gamma^{\sigma}{}_{\mu\sigma}\partial_\nu\hat\Gamma^{\tau}{}_{\rho\tau}
+  \bigg).
 \end{dmath}
 %% \begin{equation}
 %%   \label{accion3dnewer}
