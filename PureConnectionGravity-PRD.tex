@@ -106,7 +106,7 @@ Furthermore, another alternative description of GR developed initially by Ashtek
 In this article we study a diffeomorphism invariant ``toy'' model  consisting  solely of an affine connection  (with torsion), and the strict commitment to formulate a power counting renormalizable action.  We find the condition on the background metric to be exactly zero to be appealing because the use of a background metric such as in teleparallel theories of gravity would in principle break background independence. We expect  this strategy may serve to overcome  the uniqueness theorem about diffeomorphism invariant theories of connections, since we  have no fundamental metric field to quantize. The earliest model (that we know of) that argues  a description of gravitational interaction in terms of connections as fundamental fields  was presented by Eddington~\cite{Eddington1923math}, for an spacetime with positive cosmological constant. He proposed the square root of the determinant of the Ricci tensor as the gravitational Lagrangian. His aim was not to solve the problems of quantum gravity,  others have emphasized the character of GR as a gauge theory in order to address the issues of quantization and regularization, as in LQG.
 %% Among other, the work by  Krasnov studies a BF model that is conceived to {\bfseries \color{blue} TO BE CONTINUED...}{\color{red}no se que decir al respecto}
 
-The aim of this work is to describe certain aspects of the gravitational interaction in four dimensions. To this end we have studied the non-relativistic limit of the parallel transport equations of motion of a particle moving on a flat, static, homogeneous and isotropic background. Additionally, a  symmetric tensor density which acts like ``metric'' can be obtained by identifying
+The aim of this work is to describe certain aspects of the gravitational interaction in four dimensions. To this end we have studied the non-relativistic limit of the parallel transport equations of motion of a particle moving on a flat, static, homogeneous and isotropic background. Additionally, a  symmetric tensor density which acts like an ``inverse metric'' can be obtained by identifying
 %% is a composite field defined in terms of the connection, \hl{Is it still TRUE?}
 \begin{equation}\label{metric}
   \sqrt{g}g^{\mu\nu} = \frac{\delta\ }{\delta R_{(\mu\nu)}} S[\Gamma]
@@ -169,7 +169,7 @@ where the coefficients $B_i$ are related with the original coefficients $C_i$, $
 \begin{equation}
   \Gamma^\lambda{}_{\mu\rho}=\hat{\Gamma}^\lambda{}_{(\mu\rho)} + \epsilon_{\mu\rho\sigma}T^{\lambda\sigma} + A_{[\mu}\delta^\lambda{}_{\rho]},
 \end{equation}
-where  $\epsilon_{\mu\rho\sigma}$ has been introduced, and it is related to the skew symmetric $\epsilon^{\mu\rho\sigma}$ through the identity $\epsilon^{\lambda\mu\nu}\epsilon_{\rho\sigma\tau}=3!\delta^{\lambda}{}_{[\rho}\delta^\mu{}_{\sigma}\delta^{\nu}{}_{\tau]}$. Therefore, the curvature tensor can be expressed as 
+where  $\epsilon_{\mu\rho\sigma}$ has been introduced, and it is related to the skew symmetric $\epsilon^{\mu\rho\sigma}$ through the identity \mbox{$\epsilon^{\lambda\mu\nu}\epsilon_{\rho\sigma\tau}=3!\delta^{\lambda}{}_{[\rho}\delta^\mu{}_{\sigma}\delta^{\nu}{}_{\tau]}$.} Therefore, the curvature tensor can be expressed as 
 \begin{dmath}[compact, spread=2pt]
   \label{RiemmanDecomposition}
   R_{\mu\nu}{}^\sigma{}_\rho=
@@ -236,21 +236,6 @@ Thus, an interesting sector of the theory corresponds to the space of non-degene
 
 As a matter of fact, the vector field and the ``gravitational" sector of the torsion disengage when $A_2$
 
-%% After these considerations we can conclude that the final expression for the action functional is then supposed to be expressed as a linear combination of all the invariants we can construct from $\hat{\Gamma}^\rho{}_{\mu\rho}$, $T^{\mu\nu}$ and $A_\mu$. Thus, the most general action should be 
-%% \begin{equation}
-%%   \begin{split}
-%%     S[\hat{\Gamma}^\nu{}_{\mu\rho},T^{\mu\nu},A_\mu] = \int \dn{3}{x} & \bigg(
-%%     C_1\hat{R}_{\mu\nu}{}^{\mu}{}_\rho T^{\nu\rho}\\
-%%     & + \epsilon^{\mu\nu\rho} \big(C_2 \hat{R}_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
-%%     + C_3 A_\mu\partial_\nu A_\rho\big)\\%\nonumber
-%%     & + C_4 T^{\mu\nu}\hat{\nabla}_\mu A_\nu
-%%     + C_5 T^{\mu\nu} A_\mu A_\nu
-%%     + C_6 \det(T)\\%\nonumber
-%%     & + C_7 \epsilon^{\mu\nu\lambda}\big( \hat{\Gamma}^{\sigma}{}_{\mu\rho}\partial_\nu\hat{\Gamma}^\rho{}_{\lambda\sigma}+\frac{2}{3}\hat{\Gamma}^\tau{}_{\mu\rho}\hat{\Gamma}^\rho{}_{\nu\sigma}\hat{\Gamma}^\sigma{}_{\lambda\tau}\big)
-%%     \bigg)
-%%   \end{split}
-%% \end{equation}
-%% where  the Chern-Simons term has been included, as it is also invariant.
 
 \section{4D metricless (and torsionful) action}
 
@@ -258,52 +243,58 @@ Following the precepts  already learnt, one starts  by defining an irreducible r
 \begin{equation}
   \Gamma^\mu{}_{\rho\sigma} = \hat{\Gamma}^\mu{}_{\rho\sigma} + T^\mu{}_{\rho\sigma} = \hat{\Gamma}^\mu{}_{\rho\sigma} + \epsilon_{\rho\sigma\lambda\kappa}T^{\mu,\lambda\kappa}+A_{[\rho}\delta^\mu_{\nu]},
 \end{equation}
-where $\hat{\Gamma}^\mu{}_{\rho\sigma}$ denotes a $(d+1)d^2/2$ dimensional symmetric connection, $A_\mu$ is a $d$ dimensional vector field  that gives trace to the antisymmetric part of the full connection, and  $T^{\mu,\lambda\kappa}$ is a $(d+1)d(d-2)/2$ dimensional (Curtright) field that is defined through the symmetry of its indices: antisymmetric in the last two indices, and it has a cyclic property $T^{\mu,\lambda\kappa}+T^{\lambda,\kappa\mu}+T^{\kappa,\mu\lambda}=0$. In other words that $T^{[\mu,\lambda]\kappa}=\frac{1}{2}T^{\kappa,\lambda\mu}$, just as for  the Riemmann tensor $\hat{R}_{\mu[\nu}{}^\alpha{}_{\lambda]}=\frac{1}{2}\hat{R}_{\lambda\nu}{}^\alpha{}_{\mu}$. Notice that due to its symmetries, the contraction $\epsilon_{\rho\sigma\lambda\kappa}T^{\mu,\lambda\kappa}$ is traceless. Additionally, since no metric is present  the epsilon symbols are not related by lowering or raising their indices, but instead one demands that $\epsilon^{\delta\eta\lambda\kappa}\epsilon_{\mu\nu\rho\sigma}=4!\delta^{\delta}{}_{[\mu}\delta^\eta{}_{\nu}\delta^{\lambda}{}_{\rho} \delta^\kappa{}_{\sigma]}$.
+where $\hat{\Gamma}^\mu{}_{\rho\sigma}$ denotes a $\tfrac{d^2(d+1)}{2}$ dimensional symmetric connection, $A_\mu$ is a $d$ dimensional vector field  that gives trace to the antisymmetric part of the full connection, and  $T^{\mu,\lambda\kappa}$ is a $\tfrac{d(d+1)(d-2)}{2}$ dimensional (Curtright) field that is defined through the symmetry of its indices: antisymmetric in the last two indices, and it has a cyclic property $T^{\mu,\lambda\kappa}+T^{\lambda,\kappa\mu}+T^{\kappa,\mu\lambda}=0$. In other words that $T^{[\mu,\lambda]\kappa}=\frac{1}{2}T^{\kappa,\lambda\mu}$, just as for  the Riemmann tensor $\hat{R}_{\mu[\nu}{}^\alpha{}_{\lambda]}=\frac{1}{2}\hat{R}_{\lambda\nu}{}^\alpha{}_{\mu}$. Notice that due to its symmetries, the contraction $\epsilon_{\rho\sigma\lambda\kappa}T^{\mu,\lambda\kappa}$ is traceless.
+
+Additionally, since no metric is present  the epsilon symbols are not related by lowering or raising their indices, but instead one demands that \mbox{$\epsilon^{\delta\eta\lambda\kappa}\epsilon_{\mu\nu\rho\sigma}=4!\delta^{\delta}{}_{[\mu}\delta^\eta{}_{\nu}\delta^{\lambda}{}_{\rho} \delta^\kappa{}_{\sigma]}$.}
 
 \begin{widetext}
- One can  write all the combinations of fields that would presumably be renormalizable with these three independent fields
-\begin{dmath}[compact, spread=2pt] 
-\label{4dfull}
-S[\hat\Gamma,T,A]=\int\md^4x\Big(\partial_\lambda\Big(
-A_1\hat R_{\mu(\nu}{}^{\mu}{}_{\rho)} T^{\nu,\rho\lambda} 
-+A_2\epsilon^{\lambda\mu\nu\rho}\hat R_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
-+A_3\epsilon^{\lambda\mu\nu\rho}A_\mu\partial_\nu A_\rho
-+A_4T^{(\mu,\nu)\lambda}\hat\nabla_\mu A_\nu
-+A_5T^{(\mu,\nu)\lambda}A_\mu A_\nu
-+A_6\epsilon_{\mu\nu\rho\sigma}\epsilon_{\alpha\beta\gamma\delta} T^{\lambda,\mu\alpha} T^{\beta,\rho\sigma} T^{\nu,\gamma\delta} 
-+A_7\epsilon^{\lambda\mu\nu\lambda}\Big(\hat\Gamma^{\sigma}{}_{\mu\rho}\partial_\nu\hat\Gamma^{\rho}{}_{\lambda\sigma}
-+\frac{2}{3}\hat\Gamma^{\tau}{}_{\mu\rho}\hat\Gamma^{\rho}{}_{\nu\sigma}{}\hat\Gamma^{\sigma}{}_{\lambda\tau}{}\Big) 
-+ A_8\epsilon^{\lambda\mu\nu\rho}\hat\Gamma^{\sigma}{}_{\mu\sigma}\partial_\nu\hat\Gamma^{\tau}{}_{\rho\tau}
-+A_9 R_{\mu\nu}{}^{\lambda}{}_{\rho} T^{\rho,\mu\nu}
-+A_{10}T^{\lambda,\alpha\beta}T^{\kappa,\gamma\delta} A_\kappa\epsilon_{\alpha\beta\gamma\delta}
-\Big)
-+B_1 \hat R_{\mu\nu}{}^{\mu}{}_{\rho} T^{\nu,\alpha\beta}T^{\rho,\gamma\delta}\epsilon_{\alpha\beta\gamma\delta}
-+B_2 \Big(\hat R_{\mu\nu}{}^{\sigma}{}_\rho+\frac{2}{3}\delta^\sigma{}_{[\mu}\hat R_{\nu]\lambda}{}^{\lambda}{}_\rho \Big) T^{\beta,\mu\nu}T^{\rho,\gamma\delta}\epsilon_{\sigma\beta\gamma\delta}
-+B_3 \hat R_{\mu\nu}{}^{\mu}{}_{\rho} T^{(\nu,\rho)\sigma}A_\sigma
-+B_4\Big(\hat R_{\mu\nu}{}^{\sigma}{}_\rho+\frac{2}{3}\delta^\sigma{}_{[\mu}\hat R_{\nu]\lambda}{}^{\lambda}{}_\rho \Big)\Big(T^{\rho,\mu\nu}A_\sigma-\frac{1}{4}\delta^\rho_\sigma T^{\kappa,\mu\nu}A_\kappa\Big)
-+B_5\hat R_{\mu\nu}{}^{\rho}{}_\rho T^{\sigma,\mu\nu}A_\sigma
-+C_1 \hat R_{\mu\nu}{}^{\mu}{}_{\rho} \hat\nabla_\sigma T^{(\nu,\rho)\sigma}
-+C_2\Big(\hat R_{\mu\nu}{}^{\sigma}{}_\rho+\frac{2}{3}\delta^\sigma{}_{[\mu}\hat R_{\nu]\lambda}{}^{\lambda}{}_\rho \Big)\Big(\hat\nabla_\sigma T^{\rho,\mu\nu}-\frac{1}{4}\delta^\rho_\sigma \hat\nabla_\kappa T^{\kappa,\mu\nu}\Big)
-+C_3\hat R_{\mu\nu}{}^{\rho}{}_\rho \hat\nabla_\sigma T^{\sigma,\mu\nu} 
-+D_1T^{\alpha,\mu\nu}T^{\beta,\rho\sigma}\hat\nabla_\gamma T^{(\lambda, \kappa) \gamma}\epsilon_{\beta\mu\nu\lambda}\epsilon_{\alpha\rho\sigma\kappa}
-+D_2T^{\alpha,\mu\nu}T^{\lambda,\beta\gamma}\hat\nabla_\lambda T^{\delta,\rho\sigma}\epsilon_{\alpha\beta\gamma\delta}\epsilon_{\mu\nu\rho\sigma}
-+D_3T^{\mu,\alpha\beta}T^{\lambda,\nu\gamma}\hat\nabla_\lambda T^{\delta,\rho\sigma}\epsilon_{\alpha\beta\gamma\delta}\epsilon_{\mu\nu\rho\sigma}
-+D_4T^{\lambda,\mu\nu}T^{\kappa,\rho\sigma}\hat\nabla_{(\lambda} A_{\kappa)} \epsilon_{\mu\nu\rho\sigma}
-+D_5T^{\lambda,\mu\nu}\hat\nabla_{[\lambda}T^{\kappa,\rho\sigma} A_{\kappa]} \epsilon_{\mu\nu\rho\sigma}
-+D_6T^{\lambda,\mu\nu}A_\nu\hat\nabla_{(\lambda} A_{\mu)}
-+D_7T^{\lambda,\mu\nu}A_\lambda\hat\nabla_{[\mu} A_{\nu]} 
-+E_1\hat\nabla_{(\rho} T^{\rho,\mu\nu}\hat\nabla_{\sigma)} T^{\sigma,\lambda\kappa}\epsilon_{\mu\nu\lambda\kappa}
-+E_2\hat\nabla_{(\lambda} T^{\lambda,\mu\nu}\hat\nabla_{\mu)} A_\nu
-+T^{\alpha,\beta\gamma}T^{\delta,\eta\kappa}T^{\lambda,\mu\nu}T^{\rho,\sigma\tau}
-\big(\Lambda_1\epsilon_{\beta\gamma\eta\kappa}\epsilon_{\alpha\rho\mu\nu}\epsilon_{\delta\lambda\sigma\tau}
-+\Lambda_2\epsilon_{\beta\lambda\eta\kappa}\epsilon_{\gamma\rho\mu\nu}\epsilon_{\alpha\delta\sigma\tau}\big) 
-+\Lambda_3 T^{\rho,\alpha\beta}T^{\gamma,\mu\nu}T^{\lambda,\sigma\tau}A_\tau \epsilon_{\alpha\beta\gamma\lambda}\epsilon_{\mu\nu\rho\sigma}
-+\Lambda_4T^{\eta,\alpha\beta}T^{\kappa,\gamma\delta}A_\eta A_\kappa\epsilon_{\alpha\beta\gamma\delta}\Big),
-\end{dmath}
-where the $A_i$ series of terms contribute solely to the boundary conditions, and the terms $B_2$, $B_4$ and $C_2$ contain a traceless contribution of the curvature.
+  One can  write all the combinations of fields that would presumably be renormalizable with these three independent fields
+  \begin{dmath}[compact, spread=2pt] 
+    \label{4dfull}
+    S[\hat\Gamma,T,A] =
+    \int\dn{4}{x}\Bigg[\partial_\lambda\bigg(
+    A_1\hat R_{\mu(\nu}{}^{\mu}{}_{\rho)} T^{\nu,\rho\lambda} 
+    +A_2\epsilon^{\lambda\mu\nu\rho}\hat R_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
+    +A_3\epsilon^{\lambda\mu\nu\rho}A_\mu\partial_\nu A_\rho
+    +A_4T^{(\mu,\nu)\lambda}\hat\nabla_\mu A_\nu
+    +A_5T^{(\mu,\nu)\lambda}A_\mu A_\nu
+    +A_6\epsilon_{\mu\nu\rho\sigma}\epsilon_{\alpha\beta\gamma\delta} T^{\lambda,\mu\alpha} T^{\beta,\rho\sigma} T^{\nu,\gamma\delta} 
+    +A_7\epsilon^{\lambda\mu\nu\lambda}\Big(\hat\Gamma^{\sigma}{}_{\mu\rho}\partial_\nu\hat\Gamma^{\rho}{}_{\lambda\sigma}
+    +\frac{2}{3}\hat\Gamma^{\tau}{}_{\mu\rho}\hat\Gamma^{\rho}{}_{\nu\sigma}{}\hat\Gamma^{\sigma}{}_{\lambda\tau}{}\Big) 
+    + A_8\epsilon^{\lambda\mu\nu\rho}\hat\Gamma^{\sigma}{}_{\mu\sigma}\partial_\nu\hat\Gamma^{\tau}{}_{\rho\tau}
+    +A_9 R_{\mu\nu}{}^{\lambda}{}_{\rho} T^{\rho,\mu\nu}
+    +A_{10}T^{\lambda,\alpha\beta}T^{\kappa,\gamma\delta} A_\kappa\epsilon_{\alpha\beta\gamma\delta}
+    \bigg)
+    +B_1 \hat R_{\mu\nu}{}^{\mu}{}_{\rho} T^{\nu,\alpha\beta}T^{\rho,\gamma\delta}\epsilon_{\alpha\beta\gamma\delta}
+    +B_2 \Big(\hat R_{\mu\nu}{}^{\sigma}{}_\rho+\frac{2}{3}\delta^\sigma{}_{[\mu}\hat R_{\nu]\lambda}{}^{\lambda}{}_\rho \Big) T^{\beta,\mu\nu}T^{\rho,\gamma\delta}\epsilon_{\sigma\beta\gamma\delta}
+    +B_3 \hat R_{\mu\nu}{}^{\mu}{}_{\rho} T^{(\nu,\rho)\sigma}A_\sigma
+    + B_4\Big(\hat R_{\mu\nu}{}^{\sigma}{}_\rho+\frac{2}{3}\delta^\sigma{}_{[\mu}\hat R_{\nu]\lambda}{}^{\lambda}{}_\rho \Big)\Big(T^{\rho,\mu\nu}A_\sigma-\frac{1}{4}\delta^\rho_\sigma T^{\kappa,\mu\nu}A_\kappa\Big)
+    +B_5\hat R_{\mu\nu}{}^{\rho}{}_\rho T^{\sigma,\mu\nu}A_\sigma
+    +C_1 \hat R_{\mu\nu}{}^{\mu}{}_{\rho} \hat\nabla_\sigma T^{(\nu,\rho)\sigma}
+    +C_2\Big(\hat R_{\mu\nu}{}^{\sigma}{}_\rho+\frac{2}{3}\delta^\sigma{}_{[\mu}\hat R_{\nu]\lambda}{}^{\lambda}{}_\rho \Big)\Big(\hat\nabla_\sigma T^{\rho,\mu\nu}-\frac{1}{4}\delta^\rho_\sigma \hat\nabla_\kappa T^{\kappa,\mu\nu}\Big)
+    +C_3\hat R_{\mu\nu}{}^{\rho}{}_\rho \hat\nabla_\sigma T^{\sigma,\mu\nu} 
+    +D_1T^{\alpha,\mu\nu}T^{\beta,\rho\sigma}\hat\nabla_\gamma T^{(\lambda, \kappa) \gamma}\epsilon_{\beta\mu\nu\lambda}\epsilon_{\alpha\rho\sigma\kappa}
+    +D_2T^{\alpha,\mu\nu}T^{\lambda,\beta\gamma}\hat\nabla_\lambda T^{\delta,\rho\sigma}\epsilon_{\alpha\beta\gamma\delta}\epsilon_{\mu\nu\rho\sigma}
+    +D_3T^{\mu,\alpha\beta}T^{\lambda,\nu\gamma}\hat\nabla_\lambda T^{\delta,\rho\sigma}\epsilon_{\alpha\beta\gamma\delta}\epsilon_{\mu\nu\rho\sigma}
+    +D_4T^{\lambda,\mu\nu}T^{\kappa,\rho\sigma}\hat\nabla_{(\lambda} A_{\kappa)} \epsilon_{\mu\nu\rho\sigma}
+    +D_5T^{\lambda,\mu\nu}\hat\nabla_{[\lambda}T^{\kappa,\rho\sigma} A_{\kappa]} \epsilon_{\mu\nu\rho\sigma}
+    +D_6T^{\lambda,\mu\nu}A_\nu\hat\nabla_{(\lambda} A_{\mu)}
+    +D_7T^{\lambda,\mu\nu}A_\lambda\hat\nabla_{[\mu} A_{\nu]} 
+    +E_1\hat\nabla_{(\rho} T^{\rho,\mu\nu}\hat\nabla_{\sigma)} T^{\sigma,\lambda\kappa}\epsilon_{\mu\nu\lambda\kappa}
+    +E_2\hat\nabla_{(\lambda} T^{\lambda,\mu\nu}\hat\nabla_{\mu)} A_\nu
+    +T^{\alpha,\beta\gamma}T^{\delta,\eta\kappa}T^{\lambda,\mu\nu}T^{\rho,\sigma\tau}
+    \big(\Lambda_1\epsilon_{\beta\gamma\eta\kappa}\epsilon_{\alpha\rho\mu\nu}\epsilon_{\delta\lambda\sigma\tau}
+    +\Lambda_2\epsilon_{\beta\lambda\eta\kappa}\epsilon_{\gamma\rho\mu\nu}\epsilon_{\alpha\delta\sigma\tau}\big) 
+    +\Lambda_3 T^{\rho,\alpha\beta}T^{\gamma,\mu\nu}T^{\lambda,\sigma\tau}A_\tau \epsilon_{\alpha\beta\gamma\lambda}\epsilon_{\mu\nu\rho\sigma}
+    +\Lambda_4T^{\eta,\alpha\beta}T^{\kappa,\gamma\delta}A_\eta A_\kappa\epsilon_{\alpha\beta\gamma\delta}\Bigg],
+  \end{dmath}
+  where the $A_i$ series of terms contribute solely to the boundary conditions, and the terms $B_2$, $B_4$ and $C_2$ contain a traceless contribution of the curvature.
 \end{widetext}
-In this case, the induced density 1 inverse metric (\ref{metric}) is 
-\begin{dmath}\label{4dMetric}\sqrt{-g}g^{\mu\nu}=B_1T^{\mu,\lambda\kappa}T^{\nu,\rho\sigma}\epsilon_{\lambda\kappa\rho\sigma}+B_3T^{(\mu,\nu)\lambda}A_\lambda+C_1\hat\nabla_\lambda T^{(\mu,\nu)\lambda},\end{dmath}
+In this case, the induced  inverse metric density [see Eq.~\eqref{metric}] is 
+\begin{dmath}
+  \label{4dMetric}
+  \sqrt{-g}g^{\mu\nu} = B_1T^{\mu,\lambda\kappa}T^{\nu,\rho\sigma}\epsilon_{\lambda\kappa\rho\sigma} + B_3T^{(\mu,\nu)\lambda}A_\lambda + C_1\hat\nabla_\lambda T^{(\mu,\nu)\lambda}.
+\end{dmath}
 
 
 \subsection*{3+1 Decomposition  and Degrees of Freedom}
