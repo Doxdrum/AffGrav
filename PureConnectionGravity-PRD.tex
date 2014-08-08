@@ -68,7 +68,7 @@
 %------------------
 \begin{document}
 
-\title{Purely affine gravity (Mach)}
+\title{Purely affine gravity}
 
 
 \author{Aureliano \surname{Skirzewski}}
@@ -93,7 +93,7 @@
 \section{Introduction}
 
 
-Mach proposed that inertial forces should have a dynamical rather than a kinematical origin. Suppose for a second the possibility that there were no stars to be seen and no reference with respect to which an astronaut on space, simply floating either rotating or not, could say that he is rotating. Then, one cannot argue that he is rotating unless inertial forces appear.  The question arises, Should inertial forces  be in correspondence with the presence of matter elsewhere in the universe?  The attention of the reader is called to the fact that any locally Minkowskian metric in the kinematics of the description of spacetime will introduce a notion of inertial forces at a microscopic level. One will therefore explore the dynamical origin of inertial forces, by studying the appearance of a spacetime metric from a renormalizable model to describe the evolution of the affine connection of a manifold with torsion. In this model, the action has been constructed the most general action that might be power counting renormalizable that includes only the 64 components gauge connection associated with diffeomorphisms invariance.
+Mach proposed that inertial forces should have a dynamical rather than a kinematical origin. Suppose for a second the possibility that there were no stars to be seen and no reference with respect to which an astronaut on space, simply floating either rotating or not, could say that he is rotating. Then, one cannot argue that he is rotating unless inertial forces appear.  The question arises, Should inertial forces  be in correspondence with the presence of matter elsewhere in the universe?  The attention of the reader is called to the fact that any locally Minkowskian metric in the kinematics of the description of spacetime will introduce a notion of inertial forces at a microscopic level. One will therefore explore the dynamical origin of inertial forces, by studying the appearance of a spacetime metric from a renormalizable model to describe the evolution of the affine connection of a manifold with torsion. In this model, it has been constructed the most general action that might be power counting renormalizable that includes only the 64 components gauge connection associated with diffeomorphisms invariance.
 
 General Relativity (GR) has proven to be the most successful theory of gravity.  However,  it is not as successful as we may wish. Part of the problem with GR is that the standard quantization procedure cannot be applied  properly on it. Moreover, not only it is not renormalizable, but there are  problems with the choice of variables to be quantized and the choice of the Hilbert space to be used. 
 
@@ -290,24 +290,25 @@ Additionally, since no metric is present  the epsilon symbols are not related by
   \end{dmath}
   where the $A_i$ series of terms contribute solely to the boundary conditions, and the terms $B_2$, $B_4$ and $C_2$ contain a traceless contribution of the curvature.
 \end{widetext}
-In this case, the induced  inverse metric density [see Eq.~\eqref{metric}] is 
+In this case, the induced  ``inverse metric density'' [see Eq.~\eqref{metric}] is 
 \begin{dmath}
   \label{4dMetric}
-  \bar{g}^{\mu\nu} \equiv \sqrt{-g}g^{\mu\nu} = B_1T^{\mu,\lambda\kappa}T^{\nu,\rho\sigma}\epsilon_{\lambda\kappa\rho\sigma} + B_3T^{(\mu,\nu)\lambda}A_\lambda + C_1\hat{\nabla}_\lambda T^{(\mu,\nu)\lambda}.
+  \bar{g}^{\mu\nu} \equiv \sqrt{-g}g^{\mu\nu} = B_1 T^{\mu,\lambda\kappa}T^{\nu,\rho\sigma}\epsilon_{\lambda\kappa\rho\sigma} + B_3 T^{(\mu,\nu)\lambda}A_\lambda + C_1 \hat{\nabla}_\lambda T^{(\mu,\nu)\lambda}.
 \end{dmath}
 
-
-Let us define the compatible connection $\bar\Gamma^{\lambda}{}_{\mu\nu}(\bar g)$ 
+A connection compatible with the above tensor density,   $\bar\Gamma^{\lambda}{}_{\mu\nu}(\bar{g})$, could be found through the compatibility condition
 \begin{dmath*}
   \bar{\Gamma}^{\kappa}{}_{\rho\sigma}\bar{g}^{\rho\mu}\bar{g}^{\sigma\nu} = \frac{1}{2} (\bar{g}^{\lambda\kappa}\partial_\lambda\bar{g}^{\mu\nu} -\bar{g}^{\lambda\mu}\partial_\lambda\bar{g}^{\nu\kappa} -\bar{g}^{\lambda\nu}\partial_\lambda\bar{g}^{\mu\kappa}) + \frac{1}{4}\partial_\lambda (\ln\det(\bar{g}^{\mu\nu})) (-\bar{g}^{\lambda\kappa}\bar{g}^{\mu\nu} +\bar{g}^{\lambda\mu}\bar{g}^{\nu\kappa} +\bar{g}^{\lambda\nu}\bar{g}^{\mu\kappa}).
 \end{dmath*}
-    {\color{red}podemos quitarle las barras a g y quitamos la segunda linea :P si quieres pero asi es como lo voy a calcular porque no hay que des-densitizar la metrica inversa}
-    In $d=4$, (\ref{4dMetric}) could be argued to be the metric of the manifold if  $\Gamma^\lambda{}_{\mu\nu}=\bar{\Gamma}^\lambda{}_{\mu\nu}+{\mathcal K}^\lambda{}_{\mu\nu}$, where ${\mathcal K}^\lambda{}_{\mu\nu}$ is the Contorsion tensor, or equivalently in our variables
-    \begin{dmath}\label{MetricityCondition}
-      \Big(\hat{\Gamma}^{\tau}{}_{\mu\nu}-\bar{\Gamma}^{\tau}{}_{\mu\nu}\Big)\bar{g}^{\mu\rho}\bar{g}^{\nu\sigma}=
-      -T^{(\rho}{}_{\mu\nu}\bar{g}^{\sigma)\mu}\bar{g}^{\nu\tau}	.
-    \end{dmath} 
-    If satisfied, this condition would confirm our supposition that what couples to the Ricci is the metric. On the other hand, there could be large sectors of the space of solutions that would not satisfy this requirement but we are specifically tilted towards pseudo-Riemannian spacetimes. In particular, Eq.~\eqref{MetricityCondition} can be solved perturbatively taking care to solve the equations of motion as well.
+Nonetheless, unlike in the three-dimensional case, the $\bar{g}^{\mu\nu}$ in Eq.~\eqref{4dMetric} does not accept a direct interpretation as a metric density. However, it could be argued to be the metric of the manifold if
+$$\Gamma^\lambda{}_{\mu\nu} = \bar{\Gamma}^\lambda{}_{\mu\nu}+\mathcal{K}^\lambda{}_{\mu\nu},$$
+where $\mathcal{K}^\lambda{}_{\mu\nu}$ is the contorsion tensor, or equivalently in our variables
+\begin{dmath}
+  \label{MetricityCondition}
+  \Big(\hat{\Gamma}^{\tau}{}_{\mu\nu}-\bar{\Gamma}^{\tau}{}_{\mu\nu}\Big)\bar{g}^{\mu\rho}\bar{g}^{\nu\sigma} =
+  -T^{(\rho}{}_{\mu\nu}\bar{g}^{\sigma)\mu}\bar{g}^{\nu\tau}	.
+\end{dmath} 
+If satisfied, this condition would confirm the proposal that what couples to the Ricci is the metric. On the other hand, there could be large sectors of the space of solutions that would not satisfy this requirement but we are specifically tilted towards pseudo-Riemannian spacetimes. In particular, Eq.~\eqref{MetricityCondition} can be solved perturbatively taking care to solve the equations of motion as well.
 
 
 
