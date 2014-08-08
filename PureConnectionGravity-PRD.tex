@@ -293,8 +293,17 @@ Additionally, since no metric is present  the epsilon symbols are not related by
 In this case, the induced  inverse metric density [see Eq.~\eqref{metric}] is 
 \begin{dmath}
   \label{4dMetric}
-  \sqrt{-g}g^{\mu\nu} = B_1T^{\mu,\lambda\kappa}T^{\nu,\rho\sigma}\epsilon_{\lambda\kappa\rho\sigma} + B_3T^{(\mu,\nu)\lambda}A_\lambda + C_1\hat\nabla_\lambda T^{(\mu,\nu)\lambda}.
+  \bar{g}^{\mu\nu} \equiv \sqrt{-g}g^{\mu\nu} = B_1T^{\mu,\lambda\kappa}T^{\nu,\rho\sigma}\epsilon_{\lambda\kappa\rho\sigma} + B_3T^{(\mu,\nu)\lambda}A_\lambda + C_1\hat{\nabla}_\lambda T^{(\mu,\nu)\lambda}.
 \end{dmath}
+
+Let us define the compatible connection $\bar{\Gamma}^{\lambda}_{\mu\nu}$ (associated to $\bar g^{\mu\nu}$ through $\bar{\nabla}_\lambda \bar{ g}^{\mu\nu}=0$). In $d=4$, (\ref{4dMetric}) could be argued to be the metric if  $\Gamma^\lambda{}_{\mu\nu}=\bar\Gamma^\lambda{}_{\mu\nu}
++{\mathcal K}^\lambda{}_{\mu\nu}$, where ${\mathcal K}^\lambda{}_{\mu\nu}$ is the Contorsion tensor, or equivalently in our variables
+\begin{dmath}\label{MetricityCondition}
+\Big(\hat\Gamma^{\tau}{}_{\mu\nu}-\bar\Gamma^{\tau}{}_{\mu\nu}\Big)\bar g^{\mu\rho}\bar g^{\nu\sigma}=
+-T^{(\rho}{}_{\mu\nu}\bar g^{\sigma)\mu}\bar g^{\nu\tau}	.
+\end{dmath} 
+If satisfied, this condition would confirm our supposition that what couples to the Ricci is the metric. On the other hand, there could be large sectors of the space of solutions that would not satisfy this requirement but we are specifically tilted towards pseudo-Riemannian spacetimes. In particular, Eq.~\eqref{MetricityCondition} can be solved perturbatively taking care to solve the equations of motion as well.
+
 
 
 \subsection*{Symmetry breaking and Equations of motion }
