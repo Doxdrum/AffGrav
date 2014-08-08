@@ -339,12 +339,19 @@ A_1\hat R_{\mu(\nu}{}^{\mu}{}_{\rho)} T^{\nu,\rho\lambda}
 where the $A_i$ series of terms contribute solely to the boundary conditions, and the terms $B_2$, $B_4$ and $C_2$ contain a traceless contribution of the curvature.
 \end{widetext}
 In this case, the induced density 1 inverse metric (\ref{metric}) is 
-\begin{dmath}\label{4dMetric}\sqrt{-g}g^{\mu\nu}=B_1T^{\mu,\lambda\kappa}T^{\nu,\rho\sigma}\epsilon_{\lambda\kappa\rho\sigma}+B_3T^{(\mu,\nu)\lambda}A_\lambda+C_1\hat\nabla_\lambda T^{(\mu,\nu)\lambda},\end{dmath}
-
+\begin{dmath}\label{4dMetric}\bar g^{\mu\nu}\equiv\sqrt{-g}g^{\mu\nu}=B_1T^{\mu,\lambda\kappa}T^{\nu,\rho\sigma}\epsilon_{\lambda\kappa\rho\sigma}+B_3T^{(\mu,\nu)\lambda}A_\lambda+C_1\hat\nabla_\lambda T^{(\mu,\nu)\lambda}.\end{dmath}
+Let us define the compatible connection $\bar\Gamma^{\lambda}_{\mu\nu}$ (associated to $\bar g^{\mu\nu}$
+through $\bar\nabla_\lambda \bar g^{\mu\nu}=0$). In $d=4$, (\ref{4dMetric}) could be argued to be the metric if  $\Gamma^\lambda{}_{\mu\nu}=\bar\Gamma^\lambda{}_{\mu\nu}
++{\mathcal K}^\lambda{}_{\mu\nu}$, where ${\mathcal K}^\lambda{}_{\mu\nu}$ is the Contorsion tensor, or equivalently in our variables
+\begin{dmath}\label{MetricityCondition}
+\Big(\hat\Gamma^{\tau}{}_{\mu\nu}-\bar\Gamma^{\tau}{}_{\mu\nu}\Big)\bar g^{\mu\rho}\bar g^{\nu\sigma}=
+-T^{(\rho}{}_{\mu\nu}\bar g^{\sigma)\mu}\bar g^{\nu\tau}	.
+\end{dmath} 
+If satisfied, this condition would confirm our supposition that what couples to the Ricci is the metric. On the other hand, there could be large sectors of the space of solutions that would not satisfy this requirement but we are specifically tilted towards pseudo-Riemannian spacetimes. In particular, (\ref{MetricityCondition}) can be solved perturbatively taking care to solve the equations of motion as well.
 
 \subsection*{3+1 Decomposition  and Degrees of Freedom}
 
-The  analysis of the degrees of freedom of the 2+1 action is pretty straightforward because it clearly corresponds to a gravitational action plus some extra stuff. In 3+1 dimensions there is not a clear  equivalence between the model described by Eq.~\eqref{3+1full} to anything known, an deeper  analysis should be done. Hence, one proposes a decomposition of the fields
+The  analysis of the degrees of freedom of the 2+1 action is pretty straightforward{\color{red} NOT TRUE} because it clearly corresponds to a gravitational action plus some extra stuff. In 3+1 dimensions there is not a clear  equivalence between the model described by Eq.~\eqref{3+1full} to anything known, an deeper  analysis should be done. Hence, one proposes a decomposition of the fields
 \begin{align}
   A_\mu &= \delta_\mu^0 A_0+\delta_\mu^iA_i \\
   \intertext{and }
