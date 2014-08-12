@@ -366,12 +366,17 @@ Therefore, whether the four-dimensional metric structure is Riemannian or pseudo
 which can be solved in many ways.
 %for example,  $L_3=0$, $C_2=\frac{3}{4}C_1$, $D_3=D_1-2D_2$ and $A=0$, and $G=\frac{6B_3+16B_4+3E_2}{-12B_3+16B_4+6E_2}F$. 
 However, we are interested in solutions that contain the maximum symmetry (because symmetries often protect the solutions from changes with conserved quantities). We are going to use
-$D_3 = D_1-2D_2$,
-$D_6 = 0$,
-$E_2 = 2 B_3 - \frac{8}{3} B_4$,
-$L_3 = 0$,
-$F = 0$, and
-$G = \frac{B_3 + \frac{4}{3} B_4}{C_1 - \frac{4}{3}C_2} A \equiv \sigma A$,
+\begin{align*}
+  D_3 & = D_1 - 2D_2, & D_6 & = 0, & E_2 & = 2 B_3 - \tfrac{8}{3} B_4, \\
+  %   &               &     &      &     & \\
+  L_3 & = 0,          & F   & = 0, & G   & = \frac{B_3 + \tfrac{4}{3} B_4}{C_1 - \tfrac{4}{3}C_2} A \equiv \sigma A,
+\end{align*}
+%% $D_3 = D_1-2D_2$,
+%% $D_6 = 0$,
+%% $E_2 = 2 B_3 - \frac{8}{3} B_4$,
+%% $L_3 = 0$,
+%% $F = 0$, and
+%% $G = \frac{B_3 + \frac{4}{3} B_4}{C_1 - \frac{4}{3}C_2} A \equiv \sigma A$,
 because this particular choice solves Eq.~\eqref{EOM0thOrder} while setting Ricci curvature tensor to zero, which leads to a global $SO(3,1)$ symmetry on the induced metric [see Eq.~\eqref{3+1metric}].
 
 
@@ -405,6 +410,29 @@ because this particular choice solves Eq.~\eqref{EOM0thOrder} while setting Ricc
 
 %% The second order perturbative expansion  is
 
+
+\subsection*{Scalar modes  and Newtonian limit}
+
+In order to obtain the non-relativistic limit, \emph{i.e.}, the Newtonian potential, one performs the scalar mode perturbative expansion. One proceeds by substituting the connection and torsion components by their scalar perturbation decomposition,
+\begin{equation}
+  a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_L,
+\end{equation}
+\begin{dmath}
+  t^{\mu,\nu\rho} \to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
+  +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
+  + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
+  +\delta^{\mu}_m \delta^{\nu}_{n} \delta^{\rho}_{p} \Big(\epsilon^{n p q}\partial_q \partial^m d_1 +  (\delta^{m n} \partial^p - \delta^{m p} \partial^n)d_2\Big),
+\end{dmath}
+and 
+\begin{dmath}
+  \gamma^\lambda_{\mu\nu} \to
+  \delta^\lambda_0\delta^0_\mu\delta^0_\nu u 
+  + \delta^\lambda_m \delta^0_\mu\delta^0_\nu \partial^m v_L
+  + 2\delta^\lambda_0 \delta^0_{(\mu}\delta^m_{\nu)} \partial_m w_L
+  + \delta^\lambda_0 \delta^m_\mu\delta^n_\nu \Big(x \delta_{mn} + \partial_m \partial_n x_L\Big)
+  + 2\delta^\lambda_m \delta^0_{(\mu}\delta^n_{\nu)} \Big(y_1 \delta^m{}_n + \epsilon^{m p}{}_{n} \partial_p y_2 + \partial^m \partial_n y_L\Big)
+  + \delta^\lambda_m \delta^n_{\mu}\delta^p_{\nu} \Big(\delta_{n p} \partial^m z_1 + (\delta^m{}_n \partial_p+\delta^m{}_p \partial_n) z_2 +  (\epsilon^{m q}{}_n \partial_p+\epsilon^{m q}{}_p \partial_n) \partial_q z_3 + \partial^m \partial_n \partial_p z_L\Big)
+\end{dmath}
 
 
 \nocite{Tucker:1996sx,Horava:2009uw,Lu:2009em,Gibbs:1995gj,WheelerPre,Peeters:2007wn,peeters2007symbolic,Peeters2007550,sage}
