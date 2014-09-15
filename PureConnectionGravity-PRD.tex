@@ -13,6 +13,7 @@
 ]{hyperref}
 \usepackage{etoolbox}
 \usepackage{breqn}
+
 \makeatletter
 \let\cat@comma@active\@empty
 \makeatother
@@ -20,30 +21,30 @@
 %------------------
 %--------- Definitions
 %------------------
-%% \def\be{\begin{equation}}
-%% \def\ee{\end{equation}}
-%% \def\ba{\begin{eqnarray}}
-%% \def\ea{\end{eqnarray}}
-\def\md{{\mathrm{d}}}
-%\def\mx{{\mathrm{x}}}
-\def\my{{\mathrm{y}}}
-\def\mz{{\mathrm{z}}}
-\def\l{\left}
-\def\r{\right}
-\def\ll{\left\{}
-\def\rl{\right\}}
-\def\lp{\left(}
-\def\rp{\right)}
-\def\lc{\left[}
-\def\rc{\right]}
+%% \newcommand\be{\begin{equation}}
+%% \newcommand\ee{\end{equation}}
+%% \newcommand\ba{\begin{eqnarray}}
+%% \newcommand\ea{\end{eqnarray}}
+\newcommand\md{{\mathrm{d}}}
+%\newcommand\mx{{\mathrm{x}}}
+\newcommand\my{{\mathrm{y}}}
+\newcommand\mz{{\mathrm{z}}}
+\renewcommand\l{\left}
+\renewcommand\r{\right}
+\renewcommand\ll{\left\{}
+\newcommand\rl{\right\}}
+\newcommand\lp{\left(}
+\newcommand\rp{\right)}
+\newcommand\lc{\left[}
+\newcommand\rc{\right]}
 %% \renewcommand{\{}{\left\{}
 %% \renewcommand{\}}{\right\}}
 %% \renewcommand{\[}{\left[}
 %% \renewcommand{\]}{\right]}
 %% \renewcommand{\(}{\left(}
 %% \renewcommand{\)}{\right)}
-\def\la{\left\langle}
-\def\ra{\right\rangle} 
+\newcommand\la{\left\langle}
+\newcommand\ra{\right\rangle} 
 %% \DeclareMathOperator{\det}{det}
 %% \newcommand\tor[3]{\ensuremath{T_{#1}{}^{#2}{}_{#3}}}
 %% %\renewcommand\Authands{ and }
@@ -82,7 +83,7 @@
 
 %--------- Abstract
 \begin{abstract}
-  We develop a topological theory of gravity with torsion where metric has a dynamical rather than a kinematical origin. This approach towards gravity resembles pre-geometrical approaches in which a fundamental metric is not assumed even though the  affine connection gives place to a local inertial structure, which reminds us of Mach's principle that assumes the inertial forces, subject to locally Minkowskian metric structures, should have dynamical origin. Additionally a Newtonian like gravitational force is obtained in the perturbative limit of the theory.
+  We develop a topological theory of gravity with torsion where metric has a dynamical rather than a kinematical origin. This approach towards gravity resembles pre-geometrical approaches in which a fundamental metric is not assumed (see Ref.~\cite{WheelerPre}), even though the  affine connection gives place to a local inertial structure. Such feature reminds us of Mach's principle that assumes the inertial forces, subject to locally Minkowskian metric structures, should have dynamical origin. Additionally, a Newtonian-like gravitational force is obtained in the perturbative limit of the theory.
 \end{abstract}
 
 \pacs{04.50.-h,04.62.+v,11.25.Mj,11.25.-w}
@@ -93,15 +94,13 @@
 \section{Introduction}
 
 
-Mach proposed that inertial forces should have a dynamical rather than a kinematical origin. Suppose for a second the possibility that there were no stars to be seen and no reference with respect to which an astronaut on space, simply floating either rotating or not, could say that he is rotating. Then, one cannot argue that he is rotating unless inertial forces appear.  The question arises, Should inertial forces  be in correspondence with the presence of matter elsewhere in the universe?  The attention of the reader is called to the fact that any locally Minkowskian metric in the kinematics of the description of spacetime will introduce a notion of inertial forces at a microscopic level. One will therefore explore the dynamical origin of inertial forces, by studying the appearance of a spacetime metric from a renormalizable model to describe the evolution of the affine connection of a manifold with torsion. In this model, it has been constructed the most general action that might be power counting renormalizable that includes only the 64 components gauge connection associated with diffeomorphisms invariance.
+Mach proposed that inertial forces should have a dynamical rather than a kinematical origin. Consider for a second the possibility that there were no stars to be seen and no reference with respect to which an astronaut on empty space, simply floating either rotating or not, could say that he is rotating. Then, we cannot argue that he is rotating unless inertial forces appear.  The question arises, Should inertial forces  be in correspondence with the presence of matter elsewhere in the universe?  We wish to call the attention of the reader to the fact that any locally Minkowskian metric in the kinematics of the description of spacetime will introduce a notion of inertial forces at a microscopic level~\cite{Sciama:1964wt}. With this in mind, we wish to explore the dynamical origin of inertial forces, studying the appearance of a spacetime metric from a renormalizable model to describe the dynamics of the affine connection of a manifold with torsion. In this model, we use the most general action that might be power counting renormalizable that includes only the sixty-four components gauge connection associated with diffeomorphisms invariance.
 
-General Relativity (GR) has proven to be the most successful theory of gravity.  However,  it is not as successful as we may wish. Part of the problem with GR is that the standard quantization procedure cannot be applied  properly on it. Moreover, not only it is not renormalizable, but there are  problems with the choice of variables to be quantized and the choice of the Hilbert space to be used. 
+During the last years there have been an increasing amount of alternative theories of gravity being tested. Yet, General Relativity (GR) has proven to be the most successful theory of gravity.  However,  it is not as successful as we may wish~\cite{Kiefer:2013jqa}. Part of the problem with GR is that the standard quantization procedure cannot be applied  properly on it. Moreover, not only it is not renormalizable, but there are  problems with the choice of variables to be quantized and the choice of the Hilbert space to be used. Although there is nothing wrong about metric spacetimes,  certainly it is an issue to sum over all possible field configurations of the metric, as this would imply summing Euclidean and Minkowski like contributions to the transition amplitudes on equal terms. Additionally, we might also consider the difficulties of  quantizing  non polynomial field theories, and more specifically square roots of the metric that appears in the Hamiltonian in an ADM formulation of GR, such as the square root of the metric's determinant or the Ricci scalar.
 
-Although there is nothing wrong about metric spacetimes,  certainly it is an issue to sum over all possible field configurations of the metric, as this would imply summing Euclidean and Minkowski like contributions to the transition amplitudes on equal terms. Additionally, we might also consider the difficulties of  quantizing  non polynomial functions of the three-dimensional metric that appears in the Hamiltonian in an ADM formulation of GR, such as the square root of the metric's determinant or the Ricci scalar.
+In order to bypass some of these issues, several approaches have been designed that use the connection as a fundamental field. For instance, in the context of Cartan formulations of gravity, letting the metric background become flat we can rewrite Einstein-Hilbert's Lagrangian as a function of the torsion field. This approach is known as Teleparallel Gravity and is equivalent to GR in spite of taking torsion as the fundamental gravitational field.
 
-In order to address some of these issues, several approaches have been designed that use the connection as a fundamental field. For instance, in the context of Cartan formulations of gravity, letting the metric background become flat we can rewrite Einstein-Hilbert's Lagrangian as a function of the torsion field. This approach is known as Teleparallel Gravity and is equivalent to GR in spite of taking torsion as the fundamental gravitational field.
-
-Furthermore, another alternative description of GR developed initially by Ashtekar uses the spin connection as the fundamental field and the frame field turns out to be its canonically conjugated momentum. In the context of Loop Quantum Gravity (LQG), using Ashtekar variables, a successful quantization program has been achieved. Some  strengths of this quantization program lies within a theorem by Hanno Sahlman that states the only diffeomorphisms invariant Hilbert space that supports the Heisenberg algebra, for the connection and its associated momentum, is the one of Loop Quantum Gravity. In spite of its success, LQG has not advanced enough to conclude that its low energy effective description is GR. Currently, there is no clue about the LQG effective description at other scales,  nor its continuum spacetime limit either. Therefore, we cannot conclude that the search for a fundamental theory of gravitational interactions has ended. On the contrary, there are many alternatives to the usual metric description of Gravity and they all must be tested against experiments and observations.
+Furthermore, another alternative description of GR developed initially by Ashtekar uses the spin connection as the fundamental field and the frame field turns out to be its canonically conjugated momentum. In the context of Loop Quantum Gravity (LQG), using Ashtekar variables, a successful quantization program has been achieved. Some  strengths of this quantization program lies within a theorem by Lewandowski \textit{et al.} in Ref.~\cite{Lewandowski:2005jk} that states the only diffeomorphisms invariant Hilbert space that supports the Heisenberg algebra, for the connection and its associated momentum, is the one of Loop Quantum Gravity. In spite of its success, LQG has not advanced enough to conclude that its low energy effective description is GR. Currently, there is no clue about the LQG effective description at other scales,  nor its continuum spacetime limit either. Therefore, we cannot conclude that the search for a fundamental theory of gravitational interactions has ended. On the contrary, there are many alternatives to the usual metric description of Gravity and they all must be tested against experiments and observations.
 
 In this article we study a diffeomorphism invariant ``toy'' model  consisting  solely of an affine connection  (with torsion), and the strict commitment to formulate a power counting renormalizable action.  We find the condition on the background metric to be exactly zero to be appealing because the use of a background metric such as in teleparallel theories of gravity would in principle break background independence. We expect  this strategy may serve to overcome  the uniqueness theorem about diffeomorphism invariant theories of connections, since we  have no fundamental metric field to quantize. The earliest model (that we know of) that argues  a description of gravitational interaction in terms of connections as fundamental fields  was presented by Eddington~\cite{Eddington1923math}, for an spacetime with positive cosmological constant. He proposed the square root of the determinant of the Ricci tensor as the gravitational Lagrangian. His aim was not to solve the problems of quantum gravity,  others have emphasized the character of GR as a gauge theory in order to address the issues of quantization and regularization, as in LQG.
 %% Among other, the work by  Krasnov studies a BF model that is conceived to {\bfseries \color{blue} TO BE CONTINUED...}{\color{red}no se que decir al respecto}
@@ -122,37 +121,38 @@ The structure of the paper ...
 %--------- Scattered Ideas
 \section{Warming up: The three-dimensional case}
 
-Formally, the curvature of a manifold is defined through the commutator of covariant derivatives under diffeomorphims, $\nabla_\mu$, but for general choice of the connection, $\Ga^\mu{}_{\nu\lambda}$, there is an extra contribution given by its antisymmetric part in the lower indices, $T^\mu{}_{\nu\lambda}=2\Ga^\mu{}_{[\nu\lambda]}$. Therefore, the commutator of the covariant derivatives yields,
+Formally, the curvature of a manifold is defined through the commutator of covariant derivatives under diffeomorphims, $\nabla_\mu$, but for general choice of the connection, $\Ga^\mu{}_{\nu\lambda}$, there is an extra contribution given by its antisymmetric part in the lower indices, $T^\mu{}_{\nu\lambda} = 2\Ga^\mu{}_{[\nu\lambda]}$. Therefore, the commutator of the covariant derivatives yields,
 \begin{equation}
   \comm{\nab{\mu}}{\nab{\nu}}V^\rho = R_{\mu\nu}{}^\rho{}_\lambda V^\lambda - T^\rho{}_{\mu\nu}\nab{\rho}V^\rho.
   \label{curvdef}
 \end{equation}
 Note that $T^\rho{}_{\mu\nu}$ is a $\tfrac{d^2(d-1)}{2}$ dimensional tensor representation under diffeomorphisms.
 
-In order to build topological invariants of density one, one can use the skew-symmetric Levi-\v{C}ivita tensor $\epsilon^{\mu_1\mu_2\dots\mu_n}$ in $n$-dimensional space(-time).
+In order to build topological invariants of density one, we can use the skew-symmetric Levi-\v{C}ivita tensor $\epsilon^{\mu_1\mu_2\dots\mu_n}$ in $n$-dimensional space(-time).
 
 \begin{widetext}
-  With these ingredients, in a three-dimensional space one can write an action 
+  With these ingredients, in a three-dimensional space we write an action 
   \begin{dmath}
     \label{accion3d}
     %\begin{split}      
     S[\Gamma] =
-    \int \dn{3}{x}  \Bigg\{R_{\mu_1\mu_2}{}^\rho{}_{\mu_3} T^\sigma{}_{\mu_4\mu_5}\sum_{\pi \in  \mathrm{Z}_5}C_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\epsilon^{\mu_{\pi(3)}\mu_{\pi(4)}\mu_{\pi(5)}}  + T^\rho{}_{\mu_1\mu_2} T^\sigma{}_{\mu_3\mu_4}T^\tau{}_{\mu_5\mu_6} \sum_{\pi \in \mathrm{Z}_6}D_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\delta_\tau^{\mu_{\pi(3)}}\epsilon^{\mu_{\pi(4)}\mu_{\pi(5)}\mu_{\pi(6)}} + T^\rho{}_{\mu_1\mu_2}\nabla_{\mu_3} T^\sigma{}_{\mu_4\mu_5}\sum_{\pi \in \mathrm Z_5}E_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\epsilon^{\mu_{\pi(3)}\mu_{\pi(4)}\mu_{\pi(5)}} \Bigg\}, 
+    \int \dn{3}{x}  \Bigg\{ R_{\mu_1\mu_2}{}^\rho{}_{\mu_3} T^\sigma{}_{\mu_4\mu_5} \sum_{\pi \in  \mathrm{Z}_5}C_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}} \epsilon^{\mu_{\pi(3)}\mu_{\pi(4)}\mu_{\pi(5)}}  + T^\rho{}_{\mu_1\mu_2} T^\sigma{}_{\mu_3\mu_4} T^\tau{}_{\mu_5\mu_6} \sum_{\pi \in \mathrm{Z}_6}D_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\delta_\tau^{\mu_{\pi(3)}}\epsilon^{\mu_{\pi(4)}\mu_{\pi(5)}\mu_{\pi(6)}} + T^\rho{}_{\mu_1\mu_2}\nabla_{\mu_3} T^\sigma{}_{\mu_4\mu_5}\sum_{\pi \in \mathrm Z_5}E_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\epsilon^{\mu_{\pi(3)}\mu_{\pi(4)}\mu_{\pi(5)}} \Bigg\}, 
     %\end{split}
   \end{dmath}
-  where all possible permutations of $n$ elements $\pi\in\mathrm{Z}_n$ have been included in the sums with  different constants $C_\pi$, $D_\pi$ and $E_\pi$ for  permutation. 
+  where all possible permutations of $n$ elements $\pi \in \mathrm{Z}_n$ have been included in the sums with  different constants $C_\pi$, $D_\pi$ and $E_\pi$ for  permutation. 
 \end{widetext}
 
 The torsion field can be decomposed into invariant tensors respecting the symmetry,
 \begin{equation}
-  T^\sigma{}_{\mu\nu}=\epsilon_{\mu\nu\rho} T^{\sigma\rho}+A_{[\mu}\delta^\sigma{}_{\nu]},
+  T^\sigma{}_{\mu\nu} = \epsilon_{\mu\nu\rho} T^{\sigma\rho} + A_{[\mu}\delta^\sigma{}_{\nu]},
 \end{equation}
-with a symmetric $T^{\sigma\rho}$ of density weight  $w =1$, and \mbox{$A_\mu=T^\nu{}_{\mu\nu}$} is the trace part of the more arbitrary $T^\sigma{}_{\mu\nu}$.
+with a symmetric $T^{\sigma\rho}$ of density weight  $w = 1$, and \mbox{$A_\mu = T^\nu{}_{\mu\nu}$} is the trace part of the more arbitrary $T^\sigma{}_{\mu\nu}$.
 
 The action in Eq.~\eqref{accion3d} can be rewritten as
-\begin{dmath}[compact, spread=2pt]
+\begin{dmath}
   \label{accion3dnew}
-  S[\Gamma]=\int\dn{3}{x} \Bigg( 
+  S[\Gamma] =
+  \int\dn{3}{x} \Bigg( 
   B_1R_{\mu\nu}{}^\mu{}_{\rho} T^{\nu\rho} 
   +B_2\epsilon^{\mu\nu\rho}R_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho 
   +B_3 \epsilon^{\mu\nu\rho}R_{\mu\nu}{}^\lambda{}_\rho A_\lambda 
@@ -170,7 +170,7 @@ where the coefficients $B_i$ are related with the original coefficients $C_i$, $
   \Gamma^\lambda{}_{\mu\rho}=\hat{\Gamma}^\lambda{}_{(\mu\rho)} + \epsilon_{\mu\rho\sigma}T^{\lambda\sigma} + A_{[\mu}\delta^\lambda{}_{\rho]},
 \end{equation}
 where  $\epsilon_{\mu\rho\sigma}$ has been introduced, and it is related to the skew symmetric $\epsilon^{\mu\rho\sigma}$ through the identity \mbox{$\epsilon^{\lambda\mu\nu}\epsilon_{\rho\sigma\tau}=3!\delta^{\lambda}{}_{[\rho}\delta^\mu{}_{\sigma}\delta^{\nu}{}_{\tau]}$.} Therefore, the curvature tensor can be expressed as 
-\begin{dmath}[compact, spread=2pt]
+\begin{dmath}
   \label{RiemmanDecomposition}
   R_{\mu\nu}{}^\sigma{}_\rho=
   \hat{R}_{\mu\nu}{}^\sigma{}_\rho
@@ -188,8 +188,8 @@ where $ \hat\nabla_\rho$ and $\hat{R}_{\mu\nu}{}^\lambda{}_\rho$ are the covaria
   \epsilon^{\mu\nu\rho} R_{\mu\nu}{}^\lambda{}_\rho = 4\hat\nabla_\rho T^{\rho\lambda}
   +2\epsilon^{\mu\nu\lambda}\partial_\mu A_\nu-4T^{\lambda\rho}A_\rho. 
 \end{equation}
-Using the  Eqs.~\eqref{RiemmanDecomposition} and \eqref{bianchi} one can rewrite the action in Eq.~\eqref{accion3dnew} as
-\begin{dmath}[compact, spread=2pt]
+Using the  Eqs.~\eqref{RiemmanDecomposition} and~\eqref{bianchi} one can rewrite the action in Eq.~\eqref{accion3dnew} as
+\begin{dmath}
   \label{accion3dfinal} 
   S[\Gamma] = \int\dn{3}{x} \Bigg(  
   (B_1+2B_9) \hat R_{\mu\nu}{}^\mu{}_{\rho} T^{\nu\rho}   
@@ -203,7 +203,7 @@ Using the  Eqs.~\eqref{RiemmanDecomposition} and \eqref{bianchi} one can rewrite
   + \partial_\alpha\Big( 4B_3T^{\alpha\mu} A_\mu +B_9(2\Gamma^{[\delta}{}_{\delta\beta}T^{\alpha]\beta}-T^{\alpha\beta}A_\beta+\frac{1}{2}\epsilon^{\beta\alpha\eta}A_\eta\Gamma^{\delta}{}_{\delta\beta})  +B_8\epsilon^{\beta\alpha\eta}A_\eta\hat\Gamma^{\delta}{}_{\delta\beta}\Big)  \Bigg),
 \end{dmath}
 or after dropping the boundary terms and rename the coefficients,
-\begin{dmath}[compact, spread=2pt]
+\begin{dmath}
   S[\hat\Gamma,T,A] =
   \int \dn{3}{x} \bigg( 
   A_1\hat{R}_{\mu\nu}{}^{\mu}{}_\rho T^{\nu\rho} 
@@ -239,7 +239,7 @@ As a matter of fact, the vector field and the ``gravitational" sector of the tor
 
 \section{Four-dimensional metricless (and torsionful) action}
 
-Following the precepts  already learnt, one starts  by defining an irreducible representation decomposition for the full connection field 
+Following the precepts  already learnt, we start  by defining an irreducible representation decomposition for the full connection field 
 \begin{equation}
   \Gamma^\mu{}_{\rho\sigma} = \hat{\Gamma}^\mu{}_{\rho\sigma} + T^\mu{}_{\rho\sigma} = \hat{\Gamma}^\mu{}_{\rho\sigma} + \epsilon_{\rho\sigma\lambda\kappa}T^{\mu,\lambda\kappa}+A_{[\rho}\delta^\mu_{\nu]},
 \end{equation}
@@ -488,9 +488,9 @@ Regarding to the equivalence of Einstein's theory of gravity to the action in Eq
 
 
 
-\nocite{Tucker:1996sx,Horava:2009uw,Lu:2009em,Gibbs:1995gj,WheelerPre,Peeters:2007wn,peeters2007symbolic,Peeters2007550,sage}
+\nocite{WorldSpinors,Tucker:1996sx,Horava:2009uw,Lu:2009em,Gibbs:1995gj,Peeters:2007wn,peeters2007symbolic,Peeters2007550,sage}
 
-\bibliographystyle{aipauth4-1}
+\bibliographystyle{apsrev4-1}
 \bibliography{References.bib}
 
 \end{document}
