@@ -321,16 +321,19 @@ Therefore, whether the four-dimensional metric structure is Riemannian or pseudo
 \end{widetext}
 and we are most interested in solutions to the connection field whose contribution to the parallel transport equation of a test particle's velocity is that of a free particle, at least at the low velocity regime
 \begin{equation} 
-\ddot{x}^i+2F\dot{x}^0\dot{x}^i=0\text{,\qquad and }\qquad\ddot{x}^0+E{(\dot{x}^i)^2}+G(\dot{x}^0)^2=0,
+  \ddot{x}^i+2F\dot{x}^0\dot{x}^i=0, \quad \text{and} \quad \ddot{x}^0 + E \, (\dot{x}^i)^2 + G \, (\dot{x}^0)^2 = 0,
 \end{equation}
-which we can achieve by setting $F=G=0$ and $E\not=0$ since $(\dot{x}^i)^2$ is already second order in the velocities. Thus, looking again at the equations of motion we can find a non trivial solution if we set all coupling constants to zero but $B_3\not{=}0$, $B_4=-3/2 B_3$, $C_1\not{=}0$ and $E_2= 6 B_3$. 
+which we can achieve by setting $F=G=0$ and $E \neq 0$ since $(\dot{x}^i)^2$ is already second order in the velocities. Thus, looking again at the equations of motion we can find a non trivial solution if we set all coupling constants to zero but $B_3 \neq 0$, $B_4 = -\tfrac{3}{2} B_3$, $C_1\neq 0$ and $E_2= 6 B_3$. 
 
-Additionally, we can think of adding {\color{red}no se como poner esto bien} perturbative inhomogeneous sources to the connection field equations and check on
-how these fluctuations affect motion. 
-For this, let'us study a matter's lagrangian. Its dependence on the affine connection can be almost arbitrary. However, we will presume that it will depend only on the barred metric (referirEcuacion) $${\mathcal L}_{Matter}={\mathcal L}_{Matter}[\bar{g}^{\mu\nu}].$$ 
-Thus, an unmoving Matter point particle at the origin of the reference frame will contribute to the equations of motion for the gravitational field through the component $\bar{g}^{00}$ following the symmetries of the matter source 
-\begin{dmath}[compact, spread=2pt]\label{mattervariation}
-\delta{\mathcal L}_{Matter}=  \Big(- \frac{1}{2} {dg}^{0} _{m n} C1 T {\delta}^{m n} - \frac{1}{2}  {dt}^{0 0 m} C1 i {p}_{m} + \frac{1}{2}  {dt}^{m 0 n} C1 E {\delta}_{m n}\Big)\frac{\partial{\mathcal L}_{Matter}}{\partial \bar{g}^{00}}.
+Additionally, we can think of adding {\color{red}no se como poner esto bien}
+perturbative inhomogeneous sources to the connection field equations and check on how these fluctuations affect motion. For this, let us study a matter's action. %% Lagrangian.
+Its dependence on the affine connection can be almost arbitrary. However, we will presume that it will depend only on the barred metric in Eq.~\eqref{4dMetric}
+$$ S_{\text{Matter}} = {S}_{\text{Matter}}[\bar{g}^{\mu\nu}].$$
+%% $$\mathcal{L}_{\text{Matter}} = \mathcal{L}_{\text{Matter}}[\bar{g}^{\mu\nu}].$$
+Thus, a non-moving matter point particle at the origin of the reference frame will contribute to the equations of motion for the gravitational field through the component $\bar{g}^{00}$ following the symmetries of the matter source 
+\begin{dmath}
+  \label{mattervariation}
+  \delta {S}_{\text{Matter}} =  C_1 \Big(- \frac{1}{2} ({\delta\Gamma}^{0}{}_{m n})  T {\delta}^{m n} - \frac{1}{2}  ({\delta T}^{0 0 m})  \imath {p}_{m} + \frac{1}{2}  ({\delta T}^{m 0 n})  E {\delta}_{m n} \Big)\frac{\partial\mathcal{L}_{\text{Matter}}}{\partial \bar{g}^{00}}.
 \end{dmath}
 
 
@@ -340,7 +343,7 @@ In order to obtain the non-relativistic limit, \emph{i.e.}, the Newtonian potent
 \begin{equation}
   a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_L,
 \end{equation}
-
+\mbox{}
 \begin{dmath}
   t^{\mu,\nu\rho} \to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
   +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
@@ -360,7 +363,7 @@ and
 \end{dmath}
 where the scalar fields identified with the sub-index ``L'' correspond to longitudinal degrees of freedom. Vector and tensor perturbations are left for further investigations of the structure of the model.
 
-The first order perturbative expansion of the equations of motion around the described background is given by
+The first order perturbative expansion of the equations of motion around the already described background in momentum space with $p_0=0$ is given by
 \begin{widetext}
   \begin{dmath}
     \delta S =
@@ -381,17 +384,45 @@ The first order perturbative expansion of the equations of motion around the des
     + \bigg(6 B_3 E a + \frac{1}{2} C_1 E u - C_1 E E v_L + \frac{1}{2} C_1 E y_1 - \frac{3}{2} C_1 E p^2 y_L - C_1 p^2 z_1 \bigg) \imath {p}_{m} {\,\delta}_{n p} {\,\delta t}^{n m p}.
   \end{dmath}
 \end{widetext}
+which we will add to the variations of the action of the matter from Eq.~\eqref{mattervariation}
+%% \begin{dmath}
+%%   \label{mattervariation}
+%% \delta{\mathcal L}_{\text{Matter}} =  \Big(- \frac{1}{2} {dg}^{0} _{m n} C1 T {\delta}^{m n} - \frac{1}{2}  {dt}^{0 0 m} C1 i {p}_{m} + \frac{1}{2}  {dt}^{m 0 n} C1 E {\delta}_{m n}\Big)\frac{\partial{\mathcal L}_{\text{Matter}}}{\partial \bar{g}^{00}}
+%% \end{dmath}
+and set $\delta S_{\text{total}}=0$.
+
+Solutions to this set of equations are in general a highly difficult problem that concerns $20$ equations of motion and $20$ scalar fields to be fixed by the equations. Yet, knowledge of the value of some of these scalars does not necessarily help to determine how geodesics are affected. For this, we only need $\gamma^i{}_{00}$ and $\gamma^0{}_{00}$ as these provide the first order contributions to the equations
+\begin{equation}
+  \label{geodesic1stOrder}
+  \ddot{x}^i + \gamma^i{}_{00}(\dot{x}^0)^2 = 0,
+  \quad \text{and} \quad
+  \ddot{x}^0 + \gamma^0{}_{00}(\dot{x}^0)^2 = 0.
+\end{equation}
+From Eq.~\eqref{geodesic1stOrder} we can conclude that we need only know $\gamma^i{}_{00} = \partial^i v_L$, which we obtain in Fourier space to be
+
+\begin{equation}
+  v_L=\frac{1}{2}\frac{\partial\mathcal{L}_{\text{Matter}}}{\partial\bar{g}^{00}}\frac{1}{p^2}.
+\end{equation}
+In position space, 
+\begin{equation}
+  v_L = \frac{1}{8\pi} \frac{ \partial\mathcal{L}_{\text{Matter}} }{ \partial \bar{g}^{00} } \frac{1}{|\vec{x}|}
+\end{equation}
+is the usual Newtonian potential for a massive far off source.
 
 
-\section{Matter fields}
+%% \section{Matter fields}
 
-Until now the most general diffeomorphism invariant and power counting renormalizable for an affine connection has been constructed. The theory does not possess a metric of the spacetime, instead one can find an induced inverse metric density arising as the functional variation of the action with respect to the symmetric part of the Ricci tensor.
+%% Until now the most general diffeomorphism invariant and power counting renormalizable for an affine connection has been constructed. The theory does not possess a metric of the spacetime, instead one can find an induced inverse metric density arising as the functional variation of the action with respect to the symmetric part of the Ricci tensor.
 
-Regarding to the equivalence of Einstein's theory of gravity to the action in Eq.~\eqref{4dfull},  no definite statement is made because \out{the number of local degrees of freedom disagree and} we have not been able to make out such correspondence. However, one of the major issues one could think of, is that even if there is an equivalence, the description of matter fields with half integer spin would be missing in a theory with no metric. The aim of this section is to describe the inclusion of Dirac spinor without a local Lorentz symmetry. 
+%% Regarding to the equivalence of Einstein's theory of gravity to the action in Eq.~\eqref{4dfull},  no definite statement is made because \out{the number of local degrees of freedom disagree and} we have not been able to make out such correspondence. However, one of the major issues one could think of, is that even if there is an equivalence, the description of matter fields with half integer spin would be missing in a theory with no metric. The aim of this section is to describe the inclusion of Dirac spinor without a local Lorentz symmetry.
+
+\begin{acknowledgements}
+ 
+\end{acknowledgements}
 
 
-
-\nocite{WorldSpinors,Tucker:1996sx,Horava:2009uw,Lu:2009em,Gibbs:1995gj,Peeters:2007wn,peeters2007symbolic,Peeters2007550,sage}
+\nocite{%WorldSpinors,Tucker:1996sx,Horava:2009uw,Lu:2009em,
+  Gibbs:1995gj,Peeters:2007wn,peeters2007symbolic,Peeters2007550,sage}
 
 \bibliographystyle{apsrev4-1}
 \bibliography{References.bib}
