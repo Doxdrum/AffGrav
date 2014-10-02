@@ -297,27 +297,27 @@ In this case, the induced  ``inverse metric density'' [see Eq.~\eqref{metric}] i
   \bar{g}^{\mu\nu} \equiv \sqrt{-g}g^{\mu\nu} = B_1 T^{\mu,\lambda\kappa}T^{\nu,\rho\sigma}\epsilon_{\lambda\kappa\rho\sigma} + B_3 T^{(\mu,\nu)\lambda}A_\lambda + C_1 \hat{\nabla}_\lambda T^{(\mu,\nu)\lambda}.
 \end{dmath}
 
-A connection compatible with the above tensor density,   $\bar\Gamma^{\lambda}{}_{\mu\nu}(\bar{g})$, could be found through the compatibility condition
-\begin{dmath*}
-  \bar{\Gamma}^{\kappa}{}_{\rho\sigma}\bar{g}^{\rho\mu}\bar{g}^{\sigma\nu} = \frac{1}{2} (\bar{g}^{\lambda\kappa}\partial_\lambda\bar{g}^{\mu\nu} -\bar{g}^{\lambda\mu}\partial_\lambda\bar{g}^{\nu\kappa} -\bar{g}^{\lambda\nu}\partial_\lambda\bar{g}^{\mu\kappa}) + \frac{1}{4}\partial_\lambda (\ln\det(\bar{g}^{\mu\nu})) (-\bar{g}^{\lambda\kappa}\bar{g}^{\mu\nu} +\bar{g}^{\lambda\mu}\bar{g}^{\nu\kappa} +\bar{g}^{\lambda\nu}\bar{g}^{\mu\kappa}).
-\end{dmath*}
-Nonetheless, unlike in the three-dimensional case, the $\bar{g}^{\mu\nu}$ in Eq.~\eqref{4dMetric} does not accept a direct interpretation as a metric density. However, it could be argued to be the metric of the manifold if
-$$\Gamma^\lambda{}_{\mu\nu} = \bar{\Gamma}^\lambda{}_{\mu\nu}+\mathcal{K}^\lambda{}_{\mu\nu},$$
-where $\mathcal{K}^\lambda{}_{\mu\nu}$ is the contorsion tensor, or equivalently in our variables
-\begin{dmath}
-  \label{MetricityCondition}
-  \Big(\hat{\Gamma}^{\tau}{}_{\mu\nu}-\bar{\Gamma}^{\tau}{}_{\mu\nu}\Big)\bar{g}^{\mu\rho}\bar{g}^{\nu\sigma} =
-  -T^{(\rho}{}_{\mu\nu}\bar{g}^{\sigma)\mu}\bar{g}^{\nu\tau}	.
-\end{dmath} 
-If satisfied, this condition would confirm the proposal that what couples to the Ricci is the metric. On the other hand, there could be large sectors of the space of solutions that would not satisfy this requirement but we are specifically tilted towards pseudo-Riemannian spacetimes. In particular, Eq.~\eqref{MetricityCondition} can be solved perturbatively taking care to solve the equations of motion as well.
+%% A connection compatible with the above tensor density,   $\bar\Gamma^{\lambda}{}_{\mu\nu}(\bar{g})$, could be found through the compatibility condition
+%% \begin{dmath*}
+%%   \bar{\Gamma}^{\kappa}{}_{\rho\sigma}\bar{g}^{\rho\mu}\bar{g}^{\sigma\nu} = \frac{1}{2} (\bar{g}^{\lambda\kappa}\partial_\lambda\bar{g}^{\mu\nu} -\bar{g}^{\lambda\mu}\partial_\lambda\bar{g}^{\nu\kappa} -\bar{g}^{\lambda\nu}\partial_\lambda\bar{g}^{\mu\kappa}) + \frac{1}{4}\partial_\lambda (\ln\det(\bar{g}^{\mu\nu})) (-\bar{g}^{\lambda\kappa}\bar{g}^{\mu\nu} +\bar{g}^{\lambda\mu}\bar{g}^{\nu\kappa} +\bar{g}^{\lambda\nu}\bar{g}^{\mu\kappa}).
+%% \end{dmath*}
+%% Nonetheless, unlike in the three-dimensional case, the $\bar{g}^{\mu\nu}$ in Eq.~\eqref{4dMetric} does not accept a direct interpretation as a metric density. However, it could be argued to be the metric of the manifold if
+%% $$\Gamma^\lambda{}_{\mu\nu} = \bar{\Gamma}^\lambda{}_{\mu\nu}+\mathcal{K}^\lambda{}_{\mu\nu},$$
+%% where $\mathcal{K}^\lambda{}_{\mu\nu}$ is the contorsion tensor, or equivalently in our variables
+%% \begin{dmath}
+%%   \label{MetricityCondition}
+%%   \Big(\hat{\Gamma}^{\tau}{}_{\mu\nu}-\bar{\Gamma}^{\tau}{}_{\mu\nu}\Big)\bar{g}^{\mu\rho}\bar{g}^{\nu\sigma} =
+%%   -T^{(\rho}{}_{\mu\nu}\bar{g}^{\sigma)\mu}\bar{g}^{\nu\tau}	.
+%% \end{dmath} 
+%% If satisfied, this condition would confirm the proposal that what couples to the Ricci is the metric. On the other hand, there could be large sectors of the space of solutions that would not satisfy this requirement but we are specifically tilted towards pseudo-Riemannian spacetimes. In particular, Eq.~\eqref{MetricityCondition} can be solved perturbatively taking care to solve the equations of motion as well.
 
 
 
-\subsection*{Symmetry breaking and Equations of motion }
+\subsection*{Symmetric solution to the equations of motion}
 
-In four dimensions there is no obvious equivalence of Eq.~\eqref{4dfull} with GR, specially due to the lack of a fundamental metric field in the given model. However, both models are explicitly invariant under diffeomorphisms, and even if their structures and number of degrees of freedom differ, the action in Eq.~\eqref{4dfull} provides a context where parallel transport of particle velocities on a purely torsional background is nontrivial.
+In four dimensions there is no obvious equivalence of Eq.~\eqref{4dfull} with GR, specially due to the lack of a fundamental metric field in the given model. However, both models are explicitly invariant under diffeomorphisms, and even if their structures and number of degrees of freedom differ, the action in Eq.~\eqref{4dfull} provides a context where parallel transport of particle's velocities on a purely torsional background is nontrivial.
 
-Here, we will stablish the model's non-relativistic (Newtonian) limit for the ``geodesic" deviation of ``inertial" observers at rest with respect to a static, isotropic, homogeneous and spatially flat background. In order to properly analyse the model, we  propose the following decomposition of the fields
+Here, we wish to stablish the model's non-relativistic (Newtonian) limit for the ``geodesic" deviation of ``inertial" observers at rest with respect to a static, isotropic, homogeneous and spatially flat background within the context provided by Eq.~\eqref{4dfull}. In order to properly analyse the model, we  propose the following decomposition of the fields
 \begin{align}
   A_\mu &= \delta_\mu^0 A + a_\mu,\\
   T^{\mu,\nu\rho} &= \delta^{\mu}_m\delta^{\nu\rho}_{m0}T + t^{\mu,\nu\rho},\\
@@ -331,16 +331,18 @@ Here, we will stablish the model's non-relativistic (Newtonian) limit for the ``
 %% \begin{dmath}
 %%   T^{\mu,\nu\rho} = \delta^{\mu}_i\delta^{\nu\rho}_{jk}T^{i,jk} + (\delta^{\mu}_0\delta^{\nu\rho}_{ij}-\delta^{\mu}_i\delta^{\nu\rho}_{j0})a^{[ij]} + \delta^{\mu}_i\delta^{\nu\rho}_{j0}T^{(ij)} + \delta^{\mu}_0\delta^{\nu\rho}_{i0}c^i,
 %% \end{dmath}
-where $\delta^{\mu\nu}_{\lambda\kappa}=\delta^{\mu}_{\lambda}\delta^{\nu}_{\kappa}-\delta^{\mu}_{\kappa}\delta^{\nu}_{\lambda}$.%, $T^{i,jk}\epsilon_{ijk}=0$, $a^{ij}$ is antisymmetric, $T^{ij}$ is a symmetric tensor and $c^i$ an arbitrary vector.
+where $\delta^{\mu\nu}_{\lambda\kappa}=\delta^{\mu}_{\lambda}\delta^{\nu}_{\kappa}-\delta^{\mu}_{\kappa}\delta^{\nu}_{\lambda}$.
+%%, $T^{i,jk}\epsilon_{ijk}=0$, $a^{ij}$ is antisymmetric, $T^{ij}$ is a symmetric tensor and $c^i$ an arbitrary vector.
 
-In order to make perturbation theory we will expand around a static, isotropic and homogeneous solution of the equations of motion, because these are characteristic of the observable universe. To make sure that it is a solution of the equations of motion, we can expand the action in Eq.~\eqref{4dfull} around the field configuration given by
-\begin{align}
-  A_\mu &= \delta_\mu^0 A,\\
-  T^{\mu,\nu\rho} &= \delta^{\mu}_m \delta^{\nu \rho}_{m 0} T\\
-  \shortintertext{and}
-  \hat{\Gamma}^\lambda{}_{\mu\nu} &= E \delta^\lambda_0 \delta^a_\mu\delta^a_\nu + F\delta^\lambda_a \delta^a_{(\mu}\delta^0_{\nu)} + G\delta^\lambda_0 \delta^0_{\mu}\delta^0_{\nu},
-\end{align}
-with the small perturbations $a_\mu$, $t^{\mu,\nu\rho}$, and $\gamma^\lambda{}_{\mu\nu}$ and fixed $A$,  $T$, $E$, $F$ and $G$, such that the action is extreme, \emph{i.e.}, there must be no contribution due to first order perturbations.
+In order to make perturbation theory we will expand around a static, isotropic and homogeneous solution of the equations of motion, because these are characteristic of the observable universe.
+%% To make sure that it is a solution of the equations of motion, we can expand the action in Eq.~\eqref{4dfull} around the field configuration given by
+%% \begin{align}
+%%   A_\mu &= \delta_\mu^0 A,\\
+%%   T^{\mu,\nu\rho} &= \delta^{\mu}_m \delta^{\nu \rho}_{m 0} T\\
+%%   \shortintertext{and}
+%%   \hat{\Gamma}^\lambda{}_{\mu\nu} &= E \delta^\lambda_0 \delta^a_\mu\delta^a_\nu + F\delta^\lambda_a \delta^a_{(\mu}\delta^0_{\nu)} + G\delta^\lambda_0 \delta^0_{\mu}\delta^0_{\nu},
+%% \end{align}
+%% with the small perturbations $a_\mu$, $t^{\mu,\nu\rho}$, and $\gamma^\lambda{}_{\mu\nu}$ and fixed $A$,  $T$, $E$, $F$ and $G$, such that the action is extreme, \emph{i.e.}, there must be no contribution due to first order perturbations.
 
 The induced metric in Eq.~\eqref{4dMetric}  on the background is
 \begin{dmath}
