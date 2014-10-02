@@ -316,55 +316,9 @@ Therefore, whether the four-dimensional metric structure is Riemannian or pseudo
     + \bigg( ( \frac{1}{2}\, B_3 + \frac{4}{3}\, B_4 + \frac{1}{4}\, E_2) A F + ( B_3 - \frac{4}{3}\, B_4 - \frac{1}{2}\, E_2) A G + (C_1 - \frac{4}{3}\, C_2) F F + ( - C_1 + \frac{4}{3}\, C_2) F G - D_6 A A \bigg) T \delta{\Gamma}^{0 m}\,_{m}
     + \bigg( \Big(- (\frac{1}{2}\, B_3 + \frac{4}{3}\, B_4 + \frac{1}{4}\, E_2) A F + ( - B_3+ \frac{4}{3}\, B_4 + \frac{1}{2}\, E_2) A G + ( - C_1 + \frac{4}{3}\, C_2) F F + (C_1 - \frac{4}{3}\, C_2) F G + D_6 A A \Big) E + \Big( 12\, ( D_1 - 2\, D_2 - D_3) F + 24\, L_3 A \Big) T T \bigg)\delta{T}_{m}\,^{0 m}
     + \bigg( ( 3\, B_3 - 4\, B_4 - \frac{3}{2}\, E_2) A + ( - 3\, C_1 + 4\, C_2) F \bigg) E T \delta{\Gamma}^{0}\,_{0 0}
-    + \bigg( 3\Big( - 2\, D_6 A + ( \frac{1}{2}\, B_3 + \frac{4}{3}\, B_4 + \frac{1}{4}\, E_2) F + ( B_3 - \frac{4}{3}\, B_4 - \frac{1}{2}\, E_2) G \Big) E - 24\, L_3 T T \bigg) T \delta{A}_{0}=0,
+    + \bigg( 3\Big( - 2\, D_6 A + ( \frac{1}{2}\, B_3 + \frac{4}{3}\, B_4 + \frac{1}{4}\, E_2) F + ( B_3 - \frac{4}{3}\, B_4 - \frac{1}{2}\, E_2) G \Big) E - 24\, L_3 T T \bigg) T \delta{A}_{0}=0.
   \end{dmath}
 \end{widetext}
-which can be solved in many ways.
-%for example,  $L_3=0$, $C_2=\frac{3}{4}C_1$, $D_3=D_1-2D_2$ and $A=0$, and $G=\frac{6B_3+16B_4+3E_2}{-12B_3+16B_4+6E_2}F$. 
-However, we are interested in solutions that contain the maximum symmetry (because symmetries often protect the solutions from changes with conserved quantities). We are going to use
-\begin{align*}
-  D_3 & = D_1 - 2D_2, & D_6 & = 0, & E_2 & = 2 B_3 - \tfrac{8}{3} B_4, \\
-  %   &               &     &      &     & \\
-  L_3 & = 0,          & F   & = 0, & G   & = \frac{B_3 + \tfrac{4}{3} B_4}{C_1 - \tfrac{4}{3}C_2} A \equiv \sigma A,
-\end{align*}
-
-
-
-
-
-
-because this particular choice solves Eq.~\eqref{EOM0thOrder} while setting Ricci curvature tensor to zero, which leads to a global $SO(3,1)$ symmetry on the induced metric [see Eq.~\eqref{3+1metric}].
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 \subsection*{Scalar modes  and Newtonian limit}
@@ -373,13 +327,15 @@ In order to obtain the non-relativistic limit, \emph{i.e.}, the Newtonian potent
 \begin{equation}
   a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_L,
 \end{equation}
+
 \begin{dmath}
   t^{\mu,\nu\rho} \to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
   +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
   + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
   +\delta^{\mu}_m \delta^{\nu}_{n} \delta^{\rho}_{p} \Big(\epsilon^{n p q}\partial_q \partial^m d_1 +  (\delta^{m n} \partial^p - \delta^{m p} \partial^n)d_2\Big)
 \end{dmath}
-and 
+and
+
 \begin{dmath}
   \gamma^\lambda_{\mu\nu} \to
   \delta^\lambda_0\delta^0_\mu\delta^0_\nu u 
@@ -394,40 +350,7 @@ where the scalar fields identified with the sub-index ``L'' correspond to longit
 The first order perturbative expansion of the equations of motion around the described background is given by
 \begin{widetext}
   \begin{dmath*}
-    \delta S = \big(D_7 T p^2 a_L + T ( - 8\, D_4 + 4\, D_5) p^2 b + (D_7 + 2\, B_3 \sigma- \frac{8}{3}\, B_4 \sigma) A p^2 c_L + ( - 8\, D_4 + 4\, D_5) E T p^2 d_1 + ( - 4\, B_3 + \frac{16}{3}\, B_4) E p^2 d_2 + (2\, B_3 - \frac{8}{3}\, B_4) p^2 t + ( - 2\, B_3 + \frac{8}{3}\, B_4) p^4 t_L + (2\, B_3 - \frac{8}{3}\, B_4) T p^2 w_L + (6\, B_3 + 4\, B_4) E T y_1 + ( - 2\, B_3 - \frac{4}{3}\, B_4) E T p^2 y_L + (4\, B_3 - \frac{28}{3}\, B_4) T p^2 z_1 + (6\, B_3 - 4\, B_4) T p^2 z_2 + ( - 2\, B_3 + \frac{8}{3}\, B_4) T p^4 z_L\big) {da}_{0} 
-    + \big( D_7 T a - 16\, L_4 A T b - 8\, D_4 T p^2 d_1 + (2\, B_3 \sigma + \frac{4}{3}\, B_4 \sigma ) A E d_2 + (\frac{1}{2}\, B_3 + \frac{1}{3}\, B_4 + 2\, B_5) T u + ( - 2\, B_3 - \frac{4}{3}\, B_4) E T v_L + (\frac{3}{2}\, B_3 + B_4 + 6\, B_5) T y_1 + 8\, D_5 T T y_2 + ( - \frac{1}{2}\, B_3 - \frac{1}{3}\, B_4 - 2\, B_5 ) T p^2 y_L\big) \imath {p}^{m} {da}_{m} 
-    + \big((\frac{1}{2}\, B_3 + \frac{1}{3}\, B_4 + 2\, B_5) T p^2 a_L + (8\, B_1 + \frac{16}{3}\, B_2) T p^2 b + (\frac{1}{2}\, B_3 + \frac{1}{3}\, B_4 + 2\, B_5 - \frac{1}{2}\, C_1 \sigma + \frac{5}{3}\, C_2 \sigma + 2\, C_3 \sigma) A p^2 c_L + (8\, B_1 + \frac{4}{3}\, B_2 - 4\, E_1) E T p^2 d_1 + ( - C_1 - \frac{2}{3}\, C_2 - 4\, C_3) E p^2 d_2 + (\frac{1}{2}\, C_1 + \frac{1}{3}\, C_2 + 2\, C_3) p^2 t + ( - \frac{1}{2}\, C_1 - \frac{1}{3}\, C_2 - 2\, C_3) p^4 t_L + ( - \frac{1}{2}\, C_1 + \frac{5}{3}\, C_2 + 2\, C_3) T p^2 w_L + ( - 6\, C_1 + 8\, C_2) E T y_1 + (2\, C_1 - \frac{8}{3}\, C_2) E T p^2 y_L + (\frac{3}{2}\, C_1 + C_2 + 6\, C_3) T p^2 z_1 + (C_1 + \frac{2}{3}\, C_2 + 4\, C_3) T p^2 z_2
-    %    \textcolor{white}{\delta S =}
-    + ( - \frac{1}{2}\, C_1 - \frac{1}{3}\, C_2 - 2\, C_3) T p^4 z_L\big) {dg}^{0}\,_{0 0} 
-    + \big((2\, B_3 - \frac{8}{3}\, B_4) T a + 16\, D_4 A T b + (8\, B_1 + \frac{4}{3}\, B_2 + 4\, E_1) T p^2  d_1 + (- \frac{4}{3}\, B_4 - 2\, B_3) A E d_2 + ( - \frac{1}{2}\, C_1 + \frac{5}{3}\, C_2 + 2\, C_3) T u + (2\, C_1 - \frac{8}{3}\, C_2) E T v_L + (\frac{1}{2}\, C_1 + \frac{7}{3}\, C_2 + 6\, C_3) T y_1 + (8\, B_2 - 8\, E_1) T T y_2 + ( - \frac{3}{2}\, C_1 + C_2 - 2\, C_3) T p^2 y_L\big) \imath {p}^{m} {dg}^{0}\,_{0 m} 
-    + \big(( - B_3 - \frac{2}{3}\, B_4 - C_1 \sigma + \frac{4}{3}\, C_2 \sigma ) A p^2 d_2 + (C_1 - \frac{4}{3}\, C_2) T p^2 v_L + (2\, B_3 + \frac{4}{3}\, B_4 - 2\, C_1 \sigma + \frac{8}{3}\, C_2 \sigma) A T y_1 + ( - B_3 - \frac{2}{3}\, B_4 + C_1 \sigma - \frac{4}{3}\, C_2 \sigma) A T p^2 y_L\big) {\delta}^{m n} {dg}^{0}\,_{m n} 
-    + \big((8\, B_1 \sigma + \frac{4}{3}\, B_2 \sigma - 8\, D_4 + 4\, D_5 - 4\, E_1 \sigma) T d_1 + (B_3 + \frac{2}{3}\, B_4 + C_1 \sigma - \frac{4}{3}\, C_2 \sigma ) d_2 + (B_3 + \frac{2}{3}\, B_4 - C_1 \sigma + \frac{4}{3}\, C_2 \sigma) T y_L\big) A {p}^{m} {p}^{n} {dg}^{0}\,_{m n} 
-    + \big(( - 2\, B_3 - \frac{4}{3}\, B_4) E T a_L + (16\, B_1 - \frac{40}{3}\, B_2 - 24\, E_1) E T b + ( - C_1 + \frac{4}{3}\, C_2) p^2 c_L + (2\, C_1 - \frac{8}{3}\, C_2) E E d_2 + (4\, C_1 - \frac{16}{3}\, C_2) E t + ( - 2\, C_1 + \frac{8}{3}\, C_2) E p^2 t_L + (2\, C_1 - \frac{8}{3}\, C_2) E T w_L + (3\, C_1 - 4\, C_2) T x + ( - C_1 + \frac{4}{3}\, C_2) T p^2 x_L + ( - 10\, C_1 + \frac{40}{3}\, C_2) E T z_2 + (2\, C_1 - \frac{8}{3}\, C_2) E T p^2 z_L\big) \imath {p}_{m} {dg}^{m}\,_{0 0} 
-    + \big((2\, B_3 + \frac{4}{3}\, B_4) E T a + (\frac{1}{2}\, B_3 + \frac{1}{3}\, B_4 + 2\, B_5) T p^2  a_L + T (8\, B_1 - \frac{20}{3}\, B_2 - 12\, E_1) p^2 b + (- \frac{1}{2}\, B_3 - \frac{1}{3}\, B_4 + 2\, B_5 + \frac{1}{2}\, C_1 \sigma + \frac{1}{3}\, C_2 \sigma + 2\, C_3 \sigma) A p^2 c_L + (8\, B_1 - \frac{20}{3}\, B_2 - 4\, E_1) E T p^2 d_1 + (C_1 - \frac{10}{3}\, C_2 - 4\, C_3) E p^2 d_2 + ( (2\, B_3 +\frac{4}{3}\, B_4 - 2\, C_1 \sigma + \frac{8}{3}\, C_2 \sigma) A E + (\frac{1}{2}\, C_1 + \frac{1}{3}\, C_2 + 2\, C_3) p^2 ) t + ((- B_3 - \frac{2}{3}\, B_4 + C_1 \sigma - \frac{4}{3}\, C_2 \sigma) A E + ( - \frac{1}{2}\, C_1 - \frac{1}{3}\, C_2 - 2\, C_3) p^2) p^2 t_L + ( - 2\, C_1 + \frac{8}{3}\, C_2) E T u + ( - \frac{1}{2}\, C_1 + \frac{5}{3}\, C_2 + 2\, C_3) T p^2  w_L + (2\, B_3 + \frac{4}{3}\, B_4 - 2\, C_1 \sigma + \frac{8}{3}\, C_2 \sigma) A T x + ( - B_3  - \frac{2}{3}\, B_4 + C_1 \sigma - \frac{4}{3}\, C_2 \sigma) A T p^2 x_L + (8\, C_1 - \frac{32}{3}\, C_2) E T y_1 + ( - 2\, C_1 + \frac{8}{3}\, C_2) E T p^2 y_L + (\frac{1}{2}\, C_1 + \frac{7}{3}\, C_2 + 6\, C_3) T p^2 z_1 + (C_1 + \frac{2}{3}\, C_2 + 4\, C_3) T p^2 z_2
-  \end{dmath*}
-  
-  \begin{dmath}
-    \textcolor{white}{=}
-    + (4\, B_2 + 4\, E_1) T T p^2 z_3 + ( - \frac{1}{2}\, C_1 - \frac{1}{3}\, C_2 - 2\, C_3) T p^4 z_L\big) {dg}^{m}\,_{0 m} 
-    + \big(- 4\, D_5 T T a_L + (3\, B_3 + 2\, B_4 + 3\, C_1 \sigma - 4\, C_2 \sigma) A E  b + ( - 4\, B_2 \sigma - 4\, D_5 + 4\, E_1 \sigma) A T c_L - 16\, E_1 E T d_2 - 8\, B_2 T t + ( 4\, B_2 - 4\, E_1) T p^2  t_L + ( - 4\, B_2 + 4\, E_1) T T w_L + ( 6\, C_1 - 8\, C_2) E T y_2 + ( - 4\, B_2 + 20\, E_1) T T z_1 + (4\, B_2 + 20\, E_1) T T z_2  - 8\, E_1 T T p^2 z_L \big) {\epsilon}_{m}\,^{n p} \imath {p}_{p} {dg}^{m}\,_{0 n} 
-    + \big( (- 16\, B_1 + 7\, B_2 + 20\, E_1) T b + ( B_3 + \frac{2}{3}\, B_4 + C_1 \sigma - \frac{4}{3}\, C_2 \sigma ) A c_L + ( - 16\, B_1 + \frac{16}{3}\, B_2 + 16\, E_1) E T d_1 + ( - 4\, C_1 + \frac{16}{3}\, C_2) E d_2 + ( - C_1 + \frac{4}{3}\, C_2)  t + ((B_3 + \frac{2}{3}\, B_4 +  - C_1 \sigma + \frac{4}{3}\, C_2 \sigma) A E + (C_1 - \frac{4}{3}\, C_2) p^2) t_L + (2\, C_1 - \frac{8}{3}\, C_2) T w_L + ( B_3 + \frac{2}{3}\, B_4 - C_1 \sigma + \frac{4}{3}\, C_2 \sigma) A T x_L + ( - 2\, C_1 + \frac{8}{3}\, C_2) E T y_L + ( - 2\, C_1 + \frac{8}{3}\, C_2  ) T z_1 + (  - 12\, B_2 - 8\, E_1 - 4\, E_1) T T z_3 + (C_1 - \frac{4}{3}\, C_2) T p^2 z_L\big)  {p}_{m} {p}^{n} {dg}^{m}\,_{0 n}
-    + \big((B_3 - \frac{10}{3}\, B_4) T a + 8\, D_5 A T b+ 4\, E_1 T p^2 d_1 + (( - B_3  - \frac{2}{3}\, B_4 - C_1 \sigma + \frac{4}{3}\, C_2 \sigma) A E + (C_1 - \frac{4}{3}\, C_2) p^2) d_2 + ( - B_3 - \frac{2}{3}\, B_4) A t + (\frac{1}{2}\, C_1 + \frac{1}{3}\, C_2 + 2\, C_3) T u + (C_1 - \frac{4}{3}\, C_2) E T  v_L + ( - \frac{1}{2}\, C_1 + \frac{11}{3}\, C_2 + 6\, C_3) T y_1 + (4\, B_2 - 12\, E_1) T T y_2 + (\frac{1}{2}\, C_1 - \frac{5}{3}\, C_2 - 2\, C_3) T p^2 y_L + (B_3 + \frac{2}{3}\, \imath B_4 ) A T z_1 + (2\, B_3 + \frac{4}{3}\, B_4) A T z_2 + ( - B_3 - \frac{2}{3}\, B_4) A T p^2 z_L \big) \imath {p}_{m} {\delta}^{n p} {dg}^{m}\,_{n p} 
-    +\big((B_3 + \frac{2}{3}\, B_4) T a + (8\, B_1 - \frac{8}{3}\, B_2 - 4\, E_1) T p^2 d_1 + ( B_3 + \frac{2}{3}\, B_4 + C_1 \sigma - \frac{4}{3}\, C_2 \sigma) A E d_2 + ( B_3 + \frac{2}{3}\, B_4) A t + (- B_3 - \frac{2}{3}\, B_4 ) A p^2 t_L + ( - 3\, C_1 + 4\, C_2) E T v_L + (C_1 - \frac{4}{3}\, C_2) T y_1 + (  - 4\, B_2 - 4\, E_1 ) T T y_2 + ( - C_1 + \frac{4}{3}\, C_2) T p^2 y_L + ( B_3 + \frac{2}{3}\, \imath B_4) A T z_1 + (- B_3 - \frac{2}{3}\, B_4) A T p^2 z_L \big) \imath {p}^{n} {\delta}_{m}\,^{p} {dg}^{m}\,_{n p} 
-    + \big( ( B_3 + \frac{2}{3}\, B_4 + C_1 \sigma - \frac{4}{3}\, C_2 \sigma) A E d_1 + ( 4\, B_2 - 4\, E_1 ) T d_2 + (- 4\, B_2 - 4\, E_1) T T y_L + (- 2\, B_3 - \frac{4}{3}\, B_4 ) A T z_3 \big) {\epsilon}_{m q}\,^{n} {p}^{p} {p}^{q} {dg}^{m}\,_{n p} 
-    + \big((- 8\, B_1 + \frac{8}{3}\, B_2 + 8\, E_1) T d_1 + ( - C_1 + \frac{4}{3}\, C_2)  d_2 + (B_3 + \frac{2}{3}\, B_4) A t_L + (C_1 - \frac{4}{3}\, C_2) T y_L + ( 2\, B_3 + \frac{4}{3}\, B_4) A T z_L \big) \imath {p}^{n} {p}^{p} {p}_{m} {dg}^{m}\,_{n p} 
-    + \big( ( - 2\, B_3 \sigma + \frac{8}{3}\, B_4 \sigma - D_7 ) A a + ( - 16\, D_4 \sigma + 16\, L_4) A A b + (4\, D_5 - 8\, E_1 \sigma) A p^2  d_1 + ( - \frac{1}{2}\, B_3 - \frac{1}{3}\, B_4 - 2\, B_5 + \frac{1}{2}\, C_1 \sigma - \frac{5}{3}\, C_2 \sigma - 2\, C_3 \sigma) A u + (C_1 - \frac{4}{3}\, C_2) p^2 v_L + (\frac{1}{2}\, B_3 + \frac{1}{3}\, B_4 - 6\, B_5 - \frac{5}{2}\, C_1 \sigma + \frac{1}{3}\, C_2 \sigma - 6\, C_3 \sigma) A y_1 + ( - 8\, B_2 \sigma - 8\, D_5 + 8\, E_1 \sigma) A T y_2 + (\frac{1}{2}\, B_3 + \frac{1}{3}\, B_4 + 2\, B_5 + \frac{3}{2}\, C_1 \sigma - C_2 \sigma + 2\, C_3 \sigma) A p^2 y_L\big) \imath {p}_{m} {dt}^{0 0 m} 
-    + \big(( - 2\, D_4 + D_5) T a - 4\, L_4 A T a_L + (4\, D_4 \sigma - 4\, L_4) A A c_L + (12\, D_2 - 4\, D_1) T p^2 d_1 + (( - 4\, D_5 + 4\, E_1 \sigma) A E  + ( - 8\, L_1 + 8\, L_2) T T ) d_2 + 2\, D_5 A t - 2\, D_5 A p^2 t_L + (2\, B_1 + \frac{4}{3}\, B_2) T u + (4\, B_1 + \frac{2}{3}\, B_2 - 6\, E_1) E T v_L + 4\, D_4 A T w_L + (2\, B_1 - \frac{2}{3}\, B_2 - 2\, E_1) T y_1 + (( - B_3 - \frac{2}{3}\, B_4 - C_1 \sigma + \frac{4}{3}\, C_2 \sigma) A E + 8\, D_2 T T) y_2 + (2\, B_1 - \frac{2}{3}\, B_2 - 2\, E_1) T p^2  y_L + 6\, D_5 A T z_1 + 4\, D_5 A T z_2 - 2\, D_5 A T p^2 z_L\big) \imath {\epsilon}_{m n p} {p}^{m} {dt}^{0 n p} 
-  \end{dmath}
-\end{widetext}
-
-\begin{widetext}
-  \begin{dmath*}
-    {\color{white} \delta S =} %\scriptstyle
-    + \Big( (16\, L_1 - 16\, L_2) T T p^2 d_1 + ( - C_1 + \frac{4}{3}\, C_2) E p^2 v_L + (- 2\, B_3 - \frac{4}{3}\, B_4 + 2\, C_1 \sigma - \frac{8}{3}\, C_2 \sigma ) A E y_1 + ( - 4\, B_2 - 4\, E_1) p^2 T y_2 + (B_3 + \frac{2}{3}\, B_4 - C_1 \sigma + \frac{4}{3}\, C_2 \sigma) A E p^2 y_L + (B_3 + \frac{2}{3}\, B_4 ) A p^2 z_1 \Big) {\delta}_{m n} {dt}^{m 0 n} 
-    +\Big(( - 2\, B_3 + \frac{8}{3}\, B_4 ) a - 8\, D_5 A b + ( ( - 8\, B_1 \sigma - \frac{4}{3}\, B_2 \sigma + 8\, D_4 - 4\, D_5 + 4\, E_1 \sigma) A E - 8\, E_1 p^2 ) d_1 + ( - \frac{1}{2}\, C_1 - \frac{1}{3}\, C_2 - 2\, C_3) u + E ( - C_1 + \frac{4}{3}\, C_2) v_L + ( - \frac{1}{2}\, C_1 - \frac{7}{3}\, C_2 - 6\, C_3) y_1 + ( - 4\, B_2 + 12\, E_1) T y_2 + ((- B_3 - \frac{2}{3}\, B_4 + C_1 \sigma - \frac{4}{3}\, C_2 \sigma) A E + ( - \frac{1}{2}\, C_1 + \frac{5}{3}\, C_2 + 2\, C_3) p^2) y_L + (- B_3 - \frac{2}{3}\, B_4) A z_1 + ( - 2\, B_3 - \frac{4}{3}\, B_4) A z_2 \Big) {p}_{m} {p}_{n} {dt}^{m 0 n} 
-    + \Big( (4\, D_1 - 8\, D_2) T p^2 d_1 + (( - 8\, B_1 \sigma + \frac{20}{3}\, B_2 \sigma + 8\, D_4 - 4\, D_5 + 4\, E_1 \sigma) A E + (16\, L_1 - 16\, L_2) T T ) d_2 - 8\, B_2 E T  v_L + ( - 4\, B_2 - 4\, E_1) T y_1 + ( (-  B_3 A E - \frac{2}{3}\, B_4 - C_1 \sigma + \frac{4}{3}\, C_2 \sigma) A E - 16\, D_2 T T) y_2\Big) \imath {p}^{p} {\epsilon}_{m n p} {dt}^{m 0 n} 
-    +\Big( 4\, D_4  T a_L + A (2\, D_5 - 4\, E_1 \sigma) c_L + 8\, E_1 E d_2 - 4\, E_1 t + ((4\, B_1 \sigma + \frac{2}{3}\, B_2 \sigma - 4\, D_4 + 2\, D_5 - 2\, E_1 \sigma) A E + 4\, E_1 p^2 ) t_L + (- 4\, B_1 - \frac{2}{3}\, B_2 - 2\, E_1 ) T w_L + (4\, B_1 \sigma + \frac{2}{3}\, B_2 \sigma - 4\, D_4 + 2\, D_5 - 2\, E_1 \sigma) A T x_L + (- 8\, B_1 + \frac{8}{3}\, B_2 + 8\, E_1 ) E T y_L + ( - 4\, B_1 + \frac{10}{3}\, B_2 - 6\, E_1 ) T z_1 + ( - 8\, B_1 + \frac{2}{3}\, B_2 - 2\, E_1) T z_2 + ( \frac{3}{2}\, B_3 + B_4 + \frac{3}{2}\, C_1 \sigma - 2\, C_2 \sigma ) A E z_3 + 4\, E_1 T p^2 z_L \Big) {p}_{m} {p}^{q} {\epsilon}_{n p q}  {dt}^{m n p}
-    + \Big(( - 2\, B_3 + \frac{8}{3}\, B_4) E a + (B_3 \sigma + \frac{2}{3}\, B_4 \sigma ) A E a_L  + ( - 8\, B_1 \sigma + \frac{20}{3}\, B_2 \sigma + 8\, D_4 - 12\, D_5 + 12\, E_1 \sigma) A E b - 8\, E_1 E p^2 d_1 + (- \frac{1}{2}\, C_1 - \frac{1}{3}\, C_2 - 2\, C_3) E u + ( C_1 - \frac{4}{3}\, C_2) E E v_L + (- B_3 - \frac{2}{3}\, B_4) A E w_L + ( - B_3 - \frac{2}{3}\, B_4 - C_1 \sigma + \frac{4}{3}\, C_2 \sigma) A x + ( -  \frac{1}{2}\, C_1 - \frac{7}{3}\, C_2 - 6\, C_3 ) E y_1 + 16\, E_1 E T y_2 + ( \frac{3}{2}\, C_1 - C_2 + 2\, C_3) E p^2 y_L + ( (- B_3 - \frac{2}{3}\, B_4 - C_1 \sigma + \frac{4}{3}\, C_2 \sigma) A E + ( C_1 - \frac{4}{3}\, C_2) p^2 ) z_1 + ( B_3 + \frac{2}{3}\, B_4 + C_1 \sigma - \frac{4}{3}\, C_2 \sigma) A E z_2 + ( 4\, B_2 + 4\, E_1) T p^2 z_3 \Big) \imath {\delta}_{m n} {p}_{p}  {dt}^{m n p}
+    \delta S = 
   \end{dmath*}
 \end{widetext}
 
