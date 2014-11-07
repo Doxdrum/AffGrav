@@ -38,7 +38,228 @@
 \newcommand{\hl}[1]{{\color{red} \textbf{#1}}}
 
 
-\input{Def-article.tex}
+%% \input{Def-article.tex}
+\usepackage{mathtools,amsmath,amssymb,amsfonts,dsfont,mathrsfs,amsthm}
+\usepackage{graphicx}
+\usepackage{centernot}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{linktocpage,colorlinks=true,urlcolor=blue!80!red,linkcolor=blue,citecolor=red}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{ulem}
+\usepackage{braket}
+
+%-------------------------------Theorems
+\newtheorem{Def}{Definition}
+\newtheorem{Thm}{Theorem}
+\newtheorem{Lem}{Lemma}
+\newtheorem{Pos}{Postulate}
+\newtheorem{Exa}{Example}
+\newtheorem{Cor}{Corrolary}
+\newtheorem{Pro}{Proposition}
+
+%---------------------------------New commands
+\newcommand{\A}{\mathcal{A}} 
+\newcommand{\abs}[1]{\left|{#1}\right|}
+\newcommand{\Ag}{\mathcal{A}_{(1)}}
+\newcommand{\Agf}{\boldsymbol{\mathcal{A}}}
+\newcommand{\Af}{\, {\mathbf{A}} }
+\newcommand{\AF}[1]{\, {\mathbf{A}}_{({#1})} }
+\newcommand{\hAf}{\, \hat{\mathbf{A}}_{(1)} }
+\newcommand{\hAF}[1]{\, \hat{\mathbf{A}}_{(#1)} }
+\newcommand{\bboxed}[1]{{\color{red}{\boxed{\boxed{\textcolor{black}{#1}}}}}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Cl}{\mathcal{C}\!\ell}
+\newcommand{\cdf}[1][]{\,{\boldsymbol{\mathcal{D}}}{#1}\!}
+\newcommand{\covd}{\mathcal{D}}
+\newcommand{\D}{\mathscr{D}}
+\newcommand{\df}[1][]{\,{\mathbf{d}}{#1}\!}
+\newcommand{\dfd}{\,{\mathbf{d}}^\dag\!}
+\newcommand{\ele}[2][]{\frac{d}{dt}\left(\frac{\partial\mathcal{L}}{\partial \dot{#2}^{#1}}\right) - \frac{\partial\mathcal{L}}{\partial {#2}^{#1}}}
+\newcommand{\fele}[2][]{\partial_\mu \left(\frac{\delta\mathcal{L}}{\delta\left(\partial_\mu{#2}^{#1}\right)}\right) - \frac{\delta\mathcal{L}}{\delta {#2}^{#1}}}
+\newcommand{\vb}[1]{\vec{e}_{#1}}
+\newcommand{\fb}[1]{\widetilde{e}{}^{\, #1}}
+\newcommand\fder[3][]{\frac{\delta^{#1}{#2}}{\delta {#3}^{#1}}}
+\newcommand\fdern[4][]{\frac{\delta^{#1}{#2}}{\delta {#3} \cdots \delta {#4}}}
+\newcommand{\F}{\,\boldsymbol{\mathcal{F}}}
+\newcommand{\Fg}{\,\boldsymbol{\mathcal{F}}_{(2)}}
+\newcommand{\Ff}{\,{\mathbf{F}}}
+\newcommand{\FF}[1]{\,{\mathbf{F}}_{(#1)}}
+\newcommand{\hFF}[1]{\,{\mathbf{\hat{F}}}_{(#1)}}
+\newcommand{\fy}{\centernot}
+\newcommand{\G}{\mathscr{G}}
+\newcommand{\ga}{\gamma}
+\newcommand{\gf}{\,\boldsymbol{\gamma}}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\conn}[3]{\left(\Gamma_{#1}\right)^{#2}{}_{#3}}
+\newcommand{\Ha}{\mathscr{H}}
+\newcommand{\He}{\mathbb{H}}
+\newcommand{\Hi}{\mathcal{H}}
+\newcommand{\Hint}{\underline{\sc Hint:} }
+\DeclareMathOperator{\hs}{\,\star\!\!}
+\newcommand{\J}{\mathscr{J}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\KK}{Kaluza-Klein{\;}}
+\newcommand{\Lag}{\mathscr{L}}
+\newcommand{\Li}{\mathcal{L}}
+\newcommand{\La}[1][]{\triangle_{#1}}
+\newcommand{\Lap}{\nabla^2}
+\newcommand{\lr}[1]{\stackrel{\leftrightarrow}{#1}}
+\newcommand{\M}{\ensuremath{\mathscr{M}}}
+\newcommand{\Mi}{\mathcal{M}}
+\newcommand{\MN}{Maldacena-N\'u\~nez{\;}}
+\newcommand{\N}{\ensuremath{\mathscr{N}}}
+\newcommand{\Na}{\mathbb{N}}
+\newcommand{\No}{\mathcal{N}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\Op}{\mathcal{O}}
+\newcommand{\Or}{\mathscr{O}}
+\newcommand\pder[3][]{\frac{\partial^{#1}{#2}}{\partial {#3}^{#1}}}
+\newcommand\pdern[4][]{\frac{\partial^{#1}#2}{\partial #3\cdots\partial #4}}
+\newcommand{\Qh}[1][]{\ensuremath{\hat{Q}_{#1}}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Ri}{\mathcal{R}}
+\newcommand{\SM}{Standard Model {}}%\mathscr{S}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\tor}{\mathcal{T}}
+\newcommand{\tors}[3]{\mathcal{T}{}_{#1}{}^{#2}{}_{#3}}
+\newcommand\vdj[1]{\left< \Delta J \right>_{#1}}
+\newcommand{\w}{{\scriptstyle\wedge}\!}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\dbar}[1]{\ensuremath{\mathchar'26\mkern-12mu \mathrm{d}^{#1}}\!}
+
+
+%--------------------------- New Greek
+\newcommand{\tht}{\ensuremath{\theta}}
+\newcommand{\bet}{\ensuremath{\bar{\eta}}}
+\newcommand{\bps}{\ensuremath{\bar{\psi}}}
+\newcommand{\bc}{\ensuremath{\bar{\chi}}}
+\newcommand{\Bps}{\ensuremath{\bar{\Psi}}}
+\newcommand{\Bx}{\ensuremath{\bar{\Xi}}}
+\newcommand{\bph}{\ensuremath{\bar{\phi}}}
+\newcommand{\vph}{\ensuremath{\varphi}}
+\newcommand{\bvph}{\ensuremath{\bar{\varphi}}}
+\newcommand{\bth}{\ensuremath{\bar{\theta}}}
+\newcommand{\hph}{\ensuremath{\hat{\phi}}}
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+
+
+\renewcommand{\div}{{\mathbf{div}}}
+\newcommand{\grad}{{\mathbf{grad}}}
+\newcommand{\curl}{{\mathbf{curl}}}
+
+\newcommand\VI[2]{\,\hat{e}^{\hat{#1}}_{\hat{#2}}}
+\newcommand\VIF[1]{\,\hat{\boldsymbol{e}}^{\hat{#1}}}
+\newcommand\VIN[2]{\;\hat{E}^{\hat{#1}}_{\hat{#2}}}
+\newcommand\VINF[1]{\,\hat{\mathbf{E}}_{\hat{#1}}}
+\newcommand\hvi[2]{\;\hat{e}^{{#1}}_{{#2}}}
+\newcommand\hvin[2]{\;\hat{E}^{{#1}}_{{#2}}}
+\newcommand\hvif[1]{\,\hat{\mathbf{e}}^{{#1}}}
+\newcommand\hvinf[1]{\,\hat{\mathbf{E}}_{{#1}}}
+\newcommand\vi[2]{e^{{#1}}_{{#2}}}
+\newcommand\vin[2]{E^{{#1}}_{{#2}}}
+\newcommand\vif[1]{\,{\mathbf{e}}^{{#1}}}
+\newcommand\vinf[1]{\,{\mathbf{E}}_{{#1}}}
+\newcommand\GAM[1]{{\gamma}^{\hat{#1}}}
+\newcommand\gam[1]{\gamma^{{#1}}}
+\newcommand\hgam[1]{\hat{\gamma}^{{#1}}}
+\newcommand\NAB[1]{\hat{\nabla}_{\hat{#1}}}
+\newcommand\Nab[1]{\nabla_{\hat{#1}}}
+\newcommand\hnab[1][]{\hat{\nabla}_{#1}}
+\newcommand\nab[1]{\nabla_{{#1}}}
+\newcommand\PA[1]{\partial_{\hat{#1}}}
+\newcommand\pa[1]{\partial_{{#1}}}
+\newcommand\PAU[1]{\partial^{\hat{#1}}}
+\newcommand\pau[1]{\partial^{{#1}}}
+\newcommand\lf[1]{{\omega}^{{#1}}}
+\newcommand\lft[1]{\hat{\omega}^{{#1}}}
+\newcommand\SPI[1]{\;\hat{\omega}_{\hat{#1}}}
+\newcommand\SPIF[2]{\,\hat{\boldsymbol{\omega}}^{\hat{#1}}{}_{\hat{#2}}}
+\newcommand\spi[1]{\omega_{{#1}}}
+\newcommand\tspi[1]{\tilde{\omega}_{{#1}}}
+\newcommand\spif[2]{\,{\boldsymbol{\omega}}^{{#1}}{}_{{#2}}}
+\newcommand\tspif[2]{\,{\tilde{\boldsymbol{\omega}}}^{{#1}}{}_{{#2}}}
+\newcommand\hspi[1]{\hat{\omega}_{{#1}}}
+\newcommand\hspif[2]{\,\hat{\boldsymbol{\omega}}^{{#1}}{}_{{#2}}}
+\newcommand{\RIF}[2]{\,\hat{\boldsymbol{\mathcal{R}}}^{\hat{#1}}{}_{\hat{#2}}}
+\newcommand{\hRif}[2]{\,\hat{\boldsymbol{\mathcal{R}}}^{{#1}}{}_{{#2}}}
+\newcommand{\Rif}[2]{\,\boldsymbol{\mathcal{R}}^{{#1}}{}_{{#2}}}
+\newcommand{\tRif}[2]{\,\tilde{\boldsymbol{\mathcal{R}}}^{{#1}}{}_{{#2}}}
+\newcommand{\Tf}[1]{\,\boldsymbol{\mathcal{T}}^{#1}}
+\newcommand{\TF}[1]{\,\hat{\boldsymbol{\mathcal{T}}}^{\hat{#1}}}
+\newcommand{\Tor}[2]{\mathcal{T}^{#1}{}_{#2}}
+\newcommand{\cont}[3]{\mathcal{K}_{#1}{}^{#2}{}_{#3}}
+\newcommand{\contf}[2]{\,\boldsymbol{\mathcal{K}}^{#1}{}_{#2}}
+\newcommand{\hcont}[3]{\hat{\mathcal{K}}_{#1}{}^{#2}{}_{#3}}
+\newcommand{\hcontf}[2]{\,\hat{\boldsymbol{\mathcal{K}}}^{#1}{}_{#2}}
+\newcommand{\CONT}[3]{\hat{\mathcal{K}}_{\hat{#1}}{}^{\hat{#2}}{}_{\hat{#3}}}
+\newcommand{\CONTF}[2]{\,\hat{\boldsymbol{\mathcal{K}}}^{\hat{#1}}{}_{\hat{#2}}}
+\renewcommand\bra[1]{\Bra{#1}}
+\renewcommand\ket[1]{\Ket{#1}}
+\newcommand{\bkt}[3]{\Braket{ {#1} | {#2} | {#3} } }
+\newcommand{\bk}[2]{\Braket{ {#1} | {#2} } }
+\newcommand{\comm}[2]{\left[#1,#2\right]}
+\newcommand{\acomm}[2]{\left\{#1,#2\right\}}
+\newcommand{\vev}[1]{\ensuremath{\left<#1\right>}}
+\renewcommand{\set}[1]{\ensuremath{\Set{ #1 }}}
+
+\newcommand{\relphantom}[1]{\mathrel{\phantom{#1}}}
+
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand*{\diag}{\operatorname{diag}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\Ln}{\operatorname{Ln}}
+\newcommand{\Ei}{\operatorname{Ei}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand{\arcsinh}{\operatorname{arcsinh}}
+\DeclareMathOperator\Br{Br}
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\ber}{\begin{eqnarray}}
+\newcommand{\eer}{\end{eqnarray}}
+
+\renewcommand{\(}{\left(}
+\renewcommand{\)}{\right)}
+\renewcommand{\[}{\left[}
+\renewcommand{\]}{\right]}
+
+\newcommand{\uf}[2][]{\ensuremath{u_{#1}\(\vec{#2}\)}}
+\newcommand{\ufb}[2][]{\ensuremath{\bar{u}_{#1}\(\vec{#2}\)}}
+\newcommand{\vf}[2][]{\ensuremath{v_{#1}\(\vec{#2}\)}}
+\newcommand{\vfb}[2][]{\ensuremath{\bar{v}_{#1}\(\vec{#2}\)}}
+\newcommand\pol[2][]{\ensuremath{\varepsilon_{#1}(\vec{#2})}}
+\newcommand\polc[2][]{\ensuremath{\varepsilon^*_{#1}(\vec{#2})}}
+\newcommand{\ann}[3]{\ensuremath{#1\(\vec{#2},#3\)}}
+\newcommand{\cre}[3]{\ensuremath{#1^\dag\(\vec{#2},#3\)}}
+
+\newcommand{\dif}{{\mathrm{d}}}
+\newcommand{\difn}[1]{{\mathrm{d}}^{#1}}
+\newcommand{\dn}[2]{\,{\mathrm{d}}^{#1}\!{#2}\;}
+\newcommand{\dbarn}[2]{\,\dbar{#1}{#2}\;}
+\newcommand*{\de}[1]{\mathop{\mathrm{d}#1}\nolimits}% differential, facultative argoment between square parentheses
+\newcommand*{\desec}[1][]{\mathop{\mathrm{d^2}#1}\nolimits}% second differential, facultative argoment between square parentheses
+\newcommand{\der}[2]{\frac{\de{#1}}{\de{#2}}}% first derivative 
+%\newcommand{\pder}[2]{\frac{\pa{}#1}{\pa{}{#2}}}% first derivative 
+\newcommand{\inlineder}[2]{\mathrm{d}{#1}/\mathrm{d}{#2}}% in-line first derivative
+\newcommand{\dersec}[2]{\frac{{\desec[#1]}}{\de[{#2}^2]}}% second derivative
+ 
+ 
+%\newcommand{\df}{\de[f]}
+
+%------------------
+%--------- Format
+%------------------
+\newcommand{\out}[1]{{\color{red} \sout{#1}}}
+\newcommand{\pro}[1]{{\color{blue!70!black} #1}}
+
+
 
 \hypersetup{%
   pdftitle={Purely Affine Gravity},
@@ -58,7 +279,7 @@
 
 
 \author{Aureliano \surname{Skirzewski}}
-\email[Corresponding Author: ]{askirz@gmail.com}
+\email{askirz@gmail.com}
 \affiliation{Centro de F\'\i sica Fundamental,  Universidad de los Andes, 5101 M\'erida, Venezuela.}
 
 \author{Oscar \surname{Castillo-Felisola}}
@@ -68,8 +289,9 @@
 
 %--------- Abstract
 \begin{abstract}
+  We present a purely affine gravitational model in four dimensions constructed entirely on the bases of full diffeomorphism invariance, and power counting renormalizability. We show that its non-relativistic limit around a homogeneous and isotropic spacetime yields to a Newtonian gravity. We also highlight the possibility of using standard methods to quantize the model, due to its polynomial construction, and also the likelihood of evading the uniqueness of diffeomorphism invariant Hilbert space (due to Sahlmann and collaborators).
   %% We develop a topological theory of gravity with torsion where metric has a dynamical rather than a kinematical origin. This approach towards gravity resembles pre-geometrical approaches in which a fundamental metric does not exist (see Ref.~\cite{WheelerPre,*Gibbs:1995gj}), but the  affine connection gives place to a local inertial structure. Such feature reminds us of Mach's principle, that assumes the inertial forces should have dynamical origin.
-  We construct a topological theory for an affine connection field, invariant under the full group of diffeomorphisms. Interestingly, the polynomial construction of the model suggests that a quantum version of it could be obtained through standard quantization techniques. Although a fundamental metric does not exist, the  affine connection gives place to a local inertial structure. Additionally, a Newtonian gravitational force is obtained in the non-relativistic limit of the theory.
+  %% We construct a topological theory for an affine connection field, invariant under the full group of diffeomorphisms. Interestingly, the polynomial construction of the model suggests that a quantum version of it could be obtained through standard quantization techniques. Although a fundamental metric does not exist, the  affine connection gives place to a local inertial structure. Additionally, a Newtonian gravitational force is obtained in the non-relativistic limit of the theory.
 \end{abstract}
 
 \pacs{02.40.Ma,04.50.Kd,04.90.+e}
@@ -478,11 +700,278 @@ Thus, several topological scalars can be added to the Lagrangian density
 
 
 
-\nocite{%WorldSpinors,Tucker:1996sx,Horava:2009uw,Lu:2009em,
-  Gibbs:1995gj,sage}
+%% \nocite{%WorldSpinors,Tucker:1996sx,Horava:2009uw,Lu:2009em,
+%%   Gibbs:1995gj,sage}
 
-\bibliographystyle{apsrev4-1}
-\bibliography{References.bib}
+%% \bibliographystyle{apsrev4-1}
+%% \bibliography{References.bib}
+%merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (72) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{25}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Lichtenegger}\ and\ \citenamefont
+  {Mashhoon}(2004)}]{Lichtenegger:2004re}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Lichtenegger}}\ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Mashhoon}},\ }\href@noop {} {\  (\bibinfo {year} {2004})},\ \Eprint
+  {http://arxiv.org/abs/physics/0407078} {arXiv:physics/0407078
+  [physics.hist-ph]} \BibitemShut {NoStop}%
+%%CITATION = PHYSICS/0407078;%%
+\bibitem [{\citenamefont {Sciama}(1964)}]{Sciama:1964wt}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~W.}\ \bibnamefont
+  {Sciama}},\ }\href {\doibase 10.1103/RevModPhys.36.1103} {\bibfield
+  {journal} {\bibinfo  {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo {volume}
+  {36}},\ \bibinfo {pages} {463} (\bibinfo {year} {1964})}\BibitemShut
+  {NoStop}%
+%%CITATION = RMPHA,36,463;%%
+\bibitem [{\citenamefont {Kiefer}(2013)}]{Kiefer:2013jqa}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Kiefer}},\ }\href {\doibase 10.1155/2013/509316} {\bibfield  {journal}
+  {\bibinfo  {journal} {ISRN Math. Phys.}\ }\textbf {\bibinfo {volume}
+  {2013}},\ \bibinfo {pages} {509316} (\bibinfo {year} {2013})},\ \Eprint
+  {http://arxiv.org/abs/1401.3578} {arXiv:1401.3578 [gr-qc]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1401.3578;%%
+\bibitem [{\citenamefont {Aldrovandi}\ and\ \citenamefont
+  {Pereira}(2013)}]{Teleparallel}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Aldrovandi}}\ and\ \bibinfo {author} {\bibfnamefont {J.~G.}\ \bibnamefont
+  {Pereira}},\ }\href {\doibase 10.1007/978-94-007-5143-9} {\emph {\bibinfo
+  {title} {Teleparallel Gravity}}},\ \bibinfo {series} {Fundamental Theories of
+  Physics}, Vol.\ \bibinfo {volume} {173}\ (\bibinfo  {publisher} {Springer},\
+  \bibinfo {year} {2013})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Baez}\ and\ \citenamefont
+  {Wise}(2012)}]{Baez:2012bn}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
+  {Baez}}\ and\ \bibinfo {author} {\bibfnamefont {D.~K.}\ \bibnamefont
+  {Wise}},\ }\href@noop {} {\  (\bibinfo {year} {2012})},\ \Eprint
+  {http://arxiv.org/abs/1204.4339} {arXiv:1204.4339 [gr-qc]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1204.4339;%%
+\bibitem [{\citenamefont {Ashtekar}\ and\ \citenamefont
+  {Lewandowski}(2004)}]{Ashtekar:2004eh}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Ashtekar}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Lewandowski}},\ }\href {\doibase 10.1088/0264-9381/21/15/R01} {\bibfield
+  {journal} {\bibinfo  {journal} {Class. Quant. Grav.}\ }\textbf {\bibinfo
+  {volume} {21}},\ \bibinfo {pages} {R53} (\bibinfo {year} {2004})},\ \Eprint
+  {http://arxiv.org/abs/gr-qc/0404018} {arXiv:gr-qc/0404018 [gr-qc]}
+  \BibitemShut {NoStop}%
+%%CITATION = GR-QC/0404018;%%
+\bibitem [{\citenamefont {Thiemann}(2007)}]{thiemann2007loop}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Thiemann}},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {Approaches to
+  Fundamental Physics}}}\ (\bibinfo  {publisher} {Springer},\ \bibinfo {year}
+  {2007})\ pp.\ \bibinfo {pages} {185--263}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Thiemann}(1998)}]{Thiemann:1996aw}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Thiemann}},\ }\href {\doibase 10.1088/0264-9381/15/4/011} {\bibfield
+  {journal} {\bibinfo  {journal} {Class. Quant. Grav.}\ }\textbf {\bibinfo
+  {volume} {15}},\ \bibinfo {pages} {839} (\bibinfo {year} {1998})},\ \Eprint
+  {http://arxiv.org/abs/gr-qc/9606089} {arXiv:gr-qc/9606089 [gr-qc]}
+  \BibitemShut {NoStop}%
+%%CITATION = GR-QC/9606089;%%
+\bibitem [{\citenamefont {Lewandowski}\ \emph {et~al.}(2006)\citenamefont
+  {Lewandowski}, \citenamefont {Okolow}, \citenamefont {Sahlmann},\ and\
+  \citenamefont {Thiemann}}]{Lewandowski:2005jk}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Lewandowski}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Okolow}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Sahlmann}}, \ and\
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Thiemann}},\ }\href
+  {\doibase 10.1007/s00220-006-0100-7} {\bibfield  {journal} {\bibinfo
+  {journal} {Commun. Math. Phys.}\ }\textbf {\bibinfo {volume} {267}},\
+  \bibinfo {pages} {703} (\bibinfo {year} {2006})},\ \Eprint
+  {http://arxiv.org/abs/gr-qc/0504147} {arXiv:gr-qc/0504147 [gr-qc]}
+  \BibitemShut {NoStop}%
+%%CITATION = GR-QC/0504147;%%
+\bibitem [{\citenamefont {Eddington}(1923)}]{Eddington1923math}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~S.}\ \bibnamefont
+  {Eddington}},\ }\href@noop {} {\emph {\bibinfo {title} {The mathematical
+  theory of relativity}}}\ (\bibinfo  {publisher} {Cambridge University
+  Press},\ \bibinfo {year} {1923})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Poplawski}(2014)}]{Poplawski:2012bw}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Poplawski}},\ }\href {\doibase 10.1007/s10714-013-1625-7} {\bibfield
+  {journal} {\bibinfo  {journal} {Gen. Rel. Grav.}\ }\textbf {\bibinfo {volume}
+  {46}},\ \bibinfo {pages} {1625} (\bibinfo {year} {2014})},\ \Eprint
+  {http://arxiv.org/abs/1203.0294} {arXiv:1203.0294 [gr-qc]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1203.0294;%%
+\bibitem [{\citenamefont {Krasnov}(2011)}]{Krasnov:2011pp}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Krasnov}},\ }\href {\doibase 10.1103/PhysRevLett.106.251103} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {106}},\ \bibinfo {pages} {251103} (\bibinfo {year} {2011})},\
+  \Eprint {http://arxiv.org/abs/1103.4498} {arXiv:1103.4498 [gr-qc]}
+  \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1103.4498;%%
+\bibitem [{\citenamefont {Curtright}(1985)}]{Curtright:1980yk}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Curtright}},\ }\href {\doibase 10.1016/0370-2693(85)91235-3} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Lett. B}\ }\textbf {\bibinfo {volume}
+  {165}},\ \bibinfo {pages} {304} (\bibinfo {year} {1985})}\BibitemShut
+  {NoStop}%
+%%CITATION = PHLTA,B165,304;%%
+\bibitem [{\citenamefont {Buchholz}\ and\ \citenamefont
+  {Fredenhagen}(1977)}]{Buchholz:1976hz}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Buchholz}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Fredenhagen}},\ }\href {\doibase 10.1063/1.523370} {\bibfield  {journal}
+  {\bibinfo  {journal} {J.Math.Phys.}\ }\textbf {\bibinfo {volume} {18}},\
+  \bibinfo {pages} {1107} (\bibinfo {year} {1977})}\BibitemShut {NoStop}%
+%%CITATION = JMAPA,18,1107;%%
+\bibitem [{\citenamefont {Maldacena}(2011)}]{Maldacena:2011mk}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Maldacena}},\ }\href@noop {} {\  (\bibinfo {year} {2011})},\ \Eprint
+  {http://arxiv.org/abs/1105.5632} {arXiv:1105.5632 [hep-th]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1105.5632;%%
+\bibitem [{Note1()}]{Note1}%
+  \BibitemOpen
+  \bibinfo {note} {There is a controversy between the experimental results
+  obtained by BICEP2~\cite {Ade:2014xna} and Planck~\cite {Adam:2014bub} in the
+  respect of their interpretation associated with inflation.}\BibitemShut
+  {Stop}%
+\bibitem [{\citenamefont {Ho\v{r}ava}(2009)}]{Horava:2009uw}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Ho\v{r}ava}},\ }\href {\doibase 10.1103/PhysRevD.79.084008} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume}
+  {79}},\ \bibinfo {pages} {084008} (\bibinfo {year} {2009})},\ \Eprint
+  {http://arxiv.org/abs/0901.3775} {arXiv:0901.3775 [hep-th]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:0901.3775;%%
+\bibitem [{\citenamefont {Sotiriou}(2011)}]{Sotiriou:2010wn}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~P.}\ \bibnamefont
+  {Sotiriou}},\ }\href {\doibase 10.1088/1742-6596/283/1/012034} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Phys. Conf. Ser.}\ }\textbf {\bibinfo
+  {volume} {283}},\ \bibinfo {pages} {012034} (\bibinfo {year} {2011})},\
+  \Eprint {http://arxiv.org/abs/1010.3218} {arXiv:1010.3218 [hep-th]}
+  \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1010.3218;%%
+\bibitem [{\citenamefont {Peeters}(2007{\natexlab{a}})}]{Peeters:2007wn}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Peeters}},\ }\href@noop {} {\  (\bibinfo {year} {2007}{\natexlab{a}})},\
+  \Eprint {http://arxiv.org/abs/hep-th/0701238} {arXiv:hep-th/0701238 [HEP-TH]}
+  \BibitemShut {NoStop}%
+%%CITATION = HEP-TH/0701238;%%
+\bibitem [{\citenamefont {Peeters}(2007{\natexlab{b}})}]{peeters2007symbolic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Peeters}},\ }\href
+  {http://www.fachgruppe-computeralgebra.de/CA-Rundbrief/car41.pdf} {\bibfield
+  {journal} {\bibinfo  {journal} {Computeralgebra Rundbrief}\ }\textbf
+  {\bibinfo {volume} {41}},\ \bibinfo {pages} {16} (\bibinfo {year}
+  {2007}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Peeters}(2007{\natexlab{c}})}]{Peeters2007550}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Peeters}},\ }\href {\doibase http://dx.doi.org/10.1016/j.cpc.2007.01.003}
+  {\bibfield  {journal} {\bibinfo  {journal} {Comput. Phys. Commun.}\ }\textbf
+  {\bibinfo {volume} {176}},\ \bibinfo {pages} {550 } (\bibinfo {year}
+  {2007}{\natexlab{c}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Stein}\ \emph {et~al.}(2014)\citenamefont {Stein}
+  \emph {et~al.}}]{sage}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Stein}} \emph {et~al.},\ }\href {http://www.sagemath.org} {\emph {\bibinfo
+  {title} {{S}age {M}athematics {S}oftware ({V}ersion 6.3)}}},\ \bibinfo
+  {organization} {The Sage Development Team} (\bibinfo {year}
+  {2014})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gibbs}(1995)}]{Gibbs:1995gj}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Gibbs}},\ }\href@noop {} {\  (\bibinfo {year} {1995})},\ \Eprint
+  {http://arxiv.org/abs/hep-th/9506171} {arXiv:hep-th/9506171 [hep-th]}
+  \BibitemShut {NoStop}%
+%%CITATION = HEP-TH/9506171;%%
+\bibitem [{\citenamefont {Ade}\ \emph {et~al.}(2014)\citenamefont {Ade} \emph
+  {et~al.}}]{Ade:2014xna}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~A.~R.}\
+  \bibnamefont {Ade}} \emph {et~al.} (\bibinfo {collaboration} {BICEP2
+  Collaboration}),\ }\href {\doibase 10.1103/PhysRevLett.112.241101} {\bibfield
+   {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {112}},\ \bibinfo {pages} {241101} (\bibinfo {year} {2014})},\
+  \Eprint {http://arxiv.org/abs/1403.3985} {arXiv:1403.3985 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1403.3985;%%
+\bibitem [{\citenamefont {Adam}\ \emph {et~al.}(2014)\citenamefont {Adam} \emph
+  {et~al.}}]{Adam:2014bub}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Adam}} \emph {et~al.} (\bibinfo {collaboration} {Planck Collaboration}),\
+  }\href@noop {} {\  (\bibinfo {year} {2014})},\ \Eprint
+  {http://arxiv.org/abs/1409.5738} {arXiv:1409.5738 [astro-ph.CO]} \BibitemShut
+  {NoStop}%
+%%CITATION = ARXIV:1409.5738;%%
+\end{thebibliography}%
+
 
 \end{document}
 
