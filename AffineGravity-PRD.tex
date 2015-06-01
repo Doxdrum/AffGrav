@@ -1,29 +1,30 @@
-\documentclass[twocolumn,aps,
-  showpacs,showkeys,prd,superscriptaddress]{revtex4-1}
+\documentclass{ws-mpla}
+    %% [twocolumn,aps,
+  %% showpacs,showkeys,prd,superscriptaddress]{revtex4-1}
 
-\usepackage{amsmath,amsthm,latexsym,amssymb,amsfonts,epsfig}
+\usepackage{amsmath,latexsym,amssymb,amsfonts,epsfig}
 \usepackage[%
   colorlinks=true,
   urlcolor=blue,
   linkcolor=blue,
   citecolor=blue
 ]{hyperref}
-\usepackage{etoolbox}
+%%\usepackage{etoolbox}
 \usepackage{breqn}
 
-\makeatletter
-\let\cat@comma@active\@empty
-\makeatother
+%% \makeatletter
+%% \let\cat@comma@active\@empty
+%% \makeatother
 
 %------------------
 %--------- Definitions
 %------------------
 \newcommand{\hl}[1]{{\color{red} \textbf{#1}}}
-\usepackage{mathtools,amsmath,amssymb,amsfonts,dsfont,mathrsfs,amsthm}
+\usepackage{mathtools,amsmath,amssymb,amsfonts,dsfont,mathrsfs}
 \usepackage{centernot}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\hypersetup{linktocpage,colorlinks=true,urlcolor=blue!80!red,linkcolor=blue,citecolor=red}
+%\hypersetup{linktocpage,colorlinks=true,urlcolor=blue!80!red,linkcolor=blue,citecolor=red}
 \usepackage{siunitx}
 \usepackage{array}
 \usepackage{braket}
@@ -31,7 +32,7 @@
 \newcommand{\fy}{\centernot}
 \newcommand{\Ga}{\Gamma}
 \newcommand\nab[1]{\nabla_{{#1}}}
-\newcommand\hnab[1][]{\hat{\nabla}_{#1}}
+\newcommand\hnab[1]{\hat{\nabla}_{#1}}
 \newcommand{\comm}[2]{\left[#1,#2\right]}
 \newcommand{\acomm}[2]{\left\{#1,#2\right\}}
 \newcommand*{\diag}{\operatorname{diag}}
@@ -50,8 +51,8 @@
 %------------------
 %--------- Format
 %------------------
-\newcommand{\out}[1]{{\color{red} \sout{#1}}}
-\newcommand{\pro}[1]{{\color{blue!70!black} #1}}
+%% \newcommand{\out}[1]{{\color{red} \sout{#1}}}
+%% \newcommand{\pro}[1]{{\color{blue!70!black} #1}}
 
 \newcommand\UTFSM{Departamento de F\'\i sica, Universidad T\'{e}cnica Federico Santa Mar\'\i a, \\ Casilla 110-V, Valpara\'\i so, Chile}
 \newcommand\CCTVal{Centro Cient\'\i fico Tecnol\'ogico de Valpara\'\i so, \\ Casilla 110-V, Valpara\'\i so, Chile}
@@ -72,43 +73,54 @@
 %------------------
 \begin{document}
 
-\title{Purely affine gravity}
+\markboth{O. Castillo-Felisola and A. Skirzewski}{Purely affine gravity}
 
 
-\author{Aureliano \surname{Skirzewski}}
-\email{askirz@gmail.com}
-\affiliation{\CFF.}
+%%%%%%%%%%%%%%%%%%%%% Publisher's Area please ignore %%%%%%%%%%%%%%
+\catchline{}{}{}{}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\author{Oscar \surname{Castillo-Felisola}}
-\email{o.castillo.felisola@gmail.com}
-\affiliation{\CCTVal.}
-\affiliation{\UTFSM.}
+\title{PURELY AFFINE GRAVITY}
+
+
+
+\author{OSCAR {CASTILLO-FELISOLA}}
+%% \email{o.castillo.felisola@gmail.com}
+\address{\CCTVal, and \\ \UTFSM.}
+
+\author{AURELIANO {SKIRZEWSKI}}
+%% \email{askirz@gmail.com}
+\address{\CFF.}
+
+\maketitle
+\pub{Received (Day Month Year)}{Revised (Day Month Year)}
 
 %--------- Abstract
 \begin{abstract}
   We present a purely affine gravitational model in four dimensions built up entirely on the bases of full diffeomorphism invariance, and power-counting renormalizability. We show that its non-relativistic limit around a homogeneous and isotropic spacetime yields to a Newtonian gravity.
+  \keywords{Affine Gravity; Torsion; Generalised Gravity.}
 \end{abstract}
 
-\pacs{02.40.Ma,04.50.Kd,04.90.+e}
-\keywords{Affine Gravity, Torsion, Generalised Gravity.}
+\ccode{PACS: 02.40.Ma, 04.50.Kd, 04.90.+e}
 
 
-\maketitle
+
+
 
 
 \section{Introduction}
 
-In a critique to Newtonian mechanics, Mach proposed that inertial forces should have a dynamical rather than a kinematical origin (for a deeper discussion on the subject of Mach's principle see Ref.~\cite{Lichtenegger:2004re} and references therein).  Any locally Minkowskian metric in the kinematics of the description of spacetime will introduce a notion of inertial forces at a microscopic level~\cite{Sciama:1964wt}. Hence, we will explore the dynamical origin of inertial forces, studying the dynamics of the affine connection of a non-metric manifold with torsion. To this end, we use the most general power-counting renormalizable action that includes only the gauge connection associated to diffeomorphisms invariance.
+In a critique to Newtonian mechanics, Mach proposed that inertial forces should have a dynamical rather than a kinematical origin (for a deeper discussion on the subject of Mach's principle see Ref.~\refcite{Lichtenegger:2004re} and references therein).  Any locally Minkowskian metric in the kinematics of the description of spacetime will introduce a notion of inertial forces at a microscopic level.\cite{Sciama:1964wt} Hence, we will explore the dynamical origin of inertial forces, studying the dynamics of the affine connection of a non-metric manifold with torsion. To this end, we use the most general power-counting renormalizable action that includes only the gauge connection associated to diffeomorphisms invariance.
 
-During the last years an increasing amount of alternative theories of gravity have being built and tested. Yet, General Relativity (GR) has proven to be the most successful theory of gravity~\cite{Berti:2015itd}.  However, we consider  as a problem
+During the last years an increasing amount of alternative theories of gravity have being built and tested. Yet, General Relativity (GR) has proven to be the most successful theory of gravity.\cite{Berti:2015itd}  However, we consider  as a problem
 %% Still,  it is not as successful as we may wish~\cite{Kiefer:2013jqa}. Part of the problem is
 that the standard quantization procedure cannot be applied  properly on GR. Moreover, not only it is not renormalizable, but there are  problems with the choice of variables to be quantized and the choice of the Hilbert space to be used. Additionally, to sum over all possible field configurations of the metric seems to be wrong, as this would imply summing Euclidean and Minkowski like contributions to the transition amplitudes on equal terms. We might also consider the difficulties of  in the quantization of  non-polynomial field theories, and more specifically the square root of the metric that appears in the Hamiltonian in an ADM formulation of GR.
 
-In order to bypass some of these issues, several approaches have been designed that use the connection as a fundamental field. For instance, a well-known example comes from the context of Cartan formulations of gravity, using the relation between the Weitzenb\"ock and Levi-Civita connections it is possible to obtain an equivalent Lagrangian to the one by Einstein and Hilbert, as a function of the torsion field. This approach is known as Teleparallel Gravity~(see Ref.~\cite{Maluf:2013gaa,Teleparallel,Baez:2012bn} and references within).
+In order to bypass some of these issues, several approaches have been designed that use the connection as a fundamental field. For instance, a well-known example comes from the context of Cartan formulations of gravity, using the relation between the Weitzenb\"ock and Levi-Civita connections it is possible to obtain an equivalent Lagrangian to the one by Einstein and Hilbert, as a function of the torsion field. This approach is known as Teleparallel Gravity~(see Ref.~\refcite{Maluf:2013gaa,Teleparallel,Baez:2012bn} and references within).
 
-Furthermore, another alternative description of GR developed initially by Ashtekar uses the spin connection as the fundamental field and the frame field turns out to be its canonically conjugated momentum. In the context of Loop Quantum Gravity (LQG), using Ashtekar connection, a successful quantization program has been achieved~\cite{Ashtekar:2004eh,thiemann2007loop}. Originally, this approach towards quantum gravity addressed the concerns of the quantization of non-polynomial functions of the gravitational field, but later on it turned out that diffeomorphisms symmetry would not show up when the quantum operators were not of the correct density weight, which forces one to reintroduce the squared root~\cite{Thiemann:1996aw}.  Some  strengths of this quantization program lies within a theorem by H. Sahlmann \emph{et al.} in Ref.~\cite{Lewandowski:2005jk} that states the only diffeomorphisms invariant Hilbert space that supports the Heisenberg algebra, for the connection and its associated momentum, is the one of LQG. In spite of its success, LQG has not advanced enough to conclude that its low energy effective description is GR. Currently, there is no good description for the LQG effective model at other scales,  nor its continuum spacetime limit either. Therefore, we cannot conclude that the search for a fundamental theory of gravitational interactions has ended. On the contrary, there are increasingly many alternatives to the usual metric description of gravity and they all must be tested against experiments and observations.
+Furthermore, another alternative description of GR developed initially by Ashtekar uses the spin connection as the fundamental field and the frame field turns out to be its canonically conjugated momentum. In the context of Loop Quantum Gravity (LQG), using Ashtekar connection, a successful quantization program has been achieved.\cite{Ashtekar:2004eh,thiemann2007loop} Originally, this approach towards quantum gravity addressed the concerns of the quantization of non-polynomial functions of the gravitational field, but later on it turned out that diffeomorphisms symmetry would not show up when the quantum operators were not of the correct density weight, which forces one to reintroduce the squared root.\cite{Thiemann:1996aw}  Some  strengths of this quantization program lies within a theorem by H. Sahlmann \emph{et al.} in Ref.~\refcite{Lewandowski:2005jk} that states the only diffeomorphisms invariant Hilbert space that supports the Heisenberg algebra, for the connection and its associated momentum, is the one of LQG. In spite of its success, LQG has not advanced enough to conclude that its low energy effective description is GR. Currently, there is no good description for the LQG effective model at other scales,  nor its continuum spacetime limit either. Therefore, we cannot conclude that the search for a fundamental theory of gravitational interactions has ended. On the contrary, there are increasingly many alternatives to the usual metric description of gravity and they all must be tested against experiments and observations.
 
-The earliest model that argues  a description of gravitational interaction in terms of connections as fundamental fields  was presented by Eddington~\cite{Eddington1923math}, for a spacetime with positive cosmological constant. He proposed the square root of the determinant of the Ricci tensor as the gravitational Lagrangian. Authors like N. Pop{\l}awski~\cite{Poplawski:2012bw} and K. Krasnov~\cite{Krasnov:2011pp} have advanced the road towards a pure connection gravity theory. In this paper we study a power-counting renormalizable,  diffeomorphism invariant model  consisting  solely of an affine connection with torsion. We expect  this model may  overcome  the uniqueness theorem about diffeomorphism invariant theories of connections, since we  have no fundamental metric field to quantize.  Additionally, all terms in the action will involve the torsion field, therefore three- and four-point graviton amplitudes will all include torsion too. This might be considered relevant to avoid the results pointing that there are no renormalizable three-point vertices for graviton interactions in a model independent way, since in a Lorentz invariant set up kinematics alone determines this result, as reviewed in Refs.~\cite{McGady:2013sga,Camanho:2014apa}.
+The earliest model that argues  a description of gravitational interaction in terms of connections as fundamental fields  was presented by Eddington,\cite{Eddington1923math} for a spacetime with positive cosmological constant. He proposed the square root of the determinant of the Ricci tensor as the gravitational Lagrangian. Authors like N. Pop{\l}awski\cite{Poplawski:2012bw} and K. Krasnov\cite{Krasnov:2011pp} have advanced the road towards a pure connection gravity theory. In this paper we study a power-counting renormalizable,  diffeomorphism invariant model  consisting  solely of an affine connection with torsion. We expect  this model may  overcome  the uniqueness theorem about diffeomorphism invariant theories of connections, since we  have no fundamental metric field to quantize.  Additionally, all terms in the action will involve the torsion field, therefore three- and four-point graviton amplitudes will all include torsion too. This might be considered relevant to avoid the results pointing that there are no renormalizable three-point vertices for graviton interactions in a model independent way, since in a Lorentz invariant set up kinematics alone determines this result, as reviewed in Refs.~\refcite{McGady:2013sga,Camanho:2014apa}.
 %% reviewed in Ref.~\cite{McGady:2013sga} and extended in Ref.~\cite{Camanho:2014apa} that conclude that there are no renormalizable three-point vertices for graviton interactions, no matter the theory, kinematics alone in a Lorentz invariant set up drives this results. 
  
 The article is organized as follows: In Sec.~\ref{sec:3} we analyse the three-dimensional theory built with the affine connection and power-counting renormalizable. In Sec.~\ref{sec:4} we study the four-dimensional model, built under the same precepts than before. Additionally, we find solutions to the equations of motion assuming a static, homogeneous and isotropic background, and show that in the non-relativistic limit of the theory the gravitational potential is Newtonian. Finally, in Sec.~\ref{sec:dis} we briefly discuss the reaching consequences of the model.
@@ -128,32 +140,32 @@ Note that $T^\rho{}_{\mu\nu}$ is a nine-dimensional tensor representation under 
 
 In order to build topological invariants of density one, we can use the skew-symmetric Levi-Civita tensor $\epsilon^{\mu_1\mu_2\dots\mu_n}$ in $n$-dimensional space(-time).
 
-\begin{widetext}
-  With these ingredients, in a three-dimensional space we write an action 
-  \begin{dmath}
-    \label{accion3d}
-    S[\hat{\Gamma}] =
+
+With these ingredients, in a three-dimensional space we write an action 
+\begin{equation}
+  \label{accion3d}
+  \begin{split}
+    S[\hat{\Gamma}] &=
     \int \dn{3}{x}  \Bigg\{
-    \hat{R}_{\mu_1\mu_2}{}^\rho{}_{\mu_3} T^\sigma{}_{\mu_4\mu_5} \sum_{\pi \in  \mathrm{Z}_5}C_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}} \epsilon^{\mu_{\pi(3)}\mu_{\pi(4)}\mu_{\pi(5)}}
-    + T^\rho{}_{\mu_1\mu_2} T^\sigma{}_{\mu_3\mu_4} T^\tau{}_{\mu_5\mu_6} \sum_{\pi \in \mathrm{Z}_6}D_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\delta_\tau^{\mu_{\pi(3)}}\epsilon^{\mu_{\pi(4)}\mu_{\pi(5)}\mu_{\pi(6)}}
-    + T^\rho{}_{\mu_1\mu_2} \hat{\nabla}_{\mu_3} T^\sigma{}_{\mu_4\mu_5}\sum_{\pi \in \mathrm Z_5}E_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\epsilon^{\mu_{\pi(3)}\mu_{\pi(4)}\mu_{\pi(5)}} \Bigg\}, 
-    %\end{split}
-  \end{dmath}
-  where all possible permutations of $n$ elements $\pi \in \mathrm{Z}_n$ have been included in the sums with  different constants $C_\pi$, $D_\pi$ and $E_\pi$ for  permutation. 
-\end{widetext}
+    \hat{R}_{\mu_1\mu_2}{}^\rho{}_{\mu_3} T^\sigma{}_{\mu_4\mu_5} \sum_{\pi \in  \mathrm{Z}_5}C_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}} \epsilon^{\mu_{\pi(3)}\mu_{\pi(4)}\mu_{\pi(5)}} \\
+    & \qquad + T^\rho{}_{\mu_1\mu_2} T^\sigma{}_{\mu_3\mu_4} T^\tau{}_{\mu_5\mu_6} \sum_{\pi \in \mathrm{Z}_6}D_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\delta_\tau^{\mu_{\pi(3)}}\epsilon^{\mu_{\pi(4)}\mu_{\pi(5)}\mu_{\pi(6)}} \\
+    & \qquad + T^\rho{}_{\mu_1\mu_2} \hat{\nabla}_{\mu_3} T^\sigma{}_{\mu_4\mu_5}\sum_{\pi \in \mathrm Z_5}E_\pi\delta_\rho^{\mu_{\pi(1)}} \delta_\sigma^{\mu_{\pi(2)}}\epsilon^{\mu_{\pi(3)}\mu_{\pi(4)}\mu_{\pi(5)}} \Bigg\},
+  \end{split}
+\end{equation}
+where all possible permutations of $n$ elements $\pi \in \mathrm{Z}_n$ have been included in the sums with  different constants $C_\pi$, $D_\pi$ and $E_\pi$ for  permutation. 
 
 The torsion field can be decomposed into invariant tensors respecting the symmetry,
 \begin{equation}
   T^\sigma{}_{\mu\nu} = \epsilon_{\mu\nu\rho} T^{\sigma\rho} + A_{[\mu}\delta^\sigma{}_{\nu]},
 \end{equation}
-with a symmetric $T^{\sigma\rho}$ of density weight  $w = 1$, and \mbox{$A_\mu = T^\nu{}_{\mu\nu}$} is the trace part of the more arbitrary $T^\sigma{}_{\mu\nu}$.
+with a symmetric $T^{\sigma\rho}$ of density weight  $w = 1$, and \mbox{$A_\mu = T^\nu{}_{\mu\nu}$} is the trace part of the torsion.
 In the action in Eq.~\eqref{accion3d} an extra Chern--Simons term, which in three dimensions is invariant under diffeomorphisms, with an independent coefficient.
 
 The affine connection can be decomposed into its symmetric and antisymmetric parts, 
 \begin{equation}
   \hat{\Gamma}^\lambda{}_{\mu\rho} = {\Gamma}^\lambda{}_{(\mu\rho)} + \epsilon_{\mu\rho\sigma}T^{\lambda\sigma} + A_{[\mu}\delta^\lambda{}_{\rho]},
 \end{equation}
-where  $\epsilon_{\mu\rho\sigma}$ has been introduced, and it is related to the skew-symmetric $\epsilon^{\mu\rho\sigma}$ through the identity \mbox{$\epsilon^{\lambda\mu\nu}\epsilon_{\rho\sigma\tau}=3!\delta^{\lambda}{}_{[\rho}\delta^\mu{}_{\sigma}\delta^{\nu}{}_{\tau]}$.} Therefore, the curvature tensor can be expressed as 
+and  $\epsilon^{\mu\rho\sigma}$ will be introduced through its relation with the skew-symmetric $\epsilon_{\mu\rho\sigma}$, $$\epsilon^{\lambda\mu\nu}\epsilon_{\rho\sigma\tau}=3!\delta^{\lambda}{}_{[\rho}\delta^\mu{}_{\sigma}\delta^{\nu}{}_{\tau]}.$$ Therefore, the curvature tensor can be expressed as 
 \begin{dmath}
   \label{RiemmanDecomposition}
   \hat{R}_{\mu\nu}{}^\sigma{}_\rho=
@@ -166,30 +178,38 @@ where  $\epsilon_{\mu\rho\sigma}$ has been introduced, and it is related to the 
   +\frac{1}{2}\delta^\sigma_{[\mu}A_{\nu]}A_\rho
   -2\epsilon_{\alpha\beta[\mu}\epsilon_{\nu]\rho\delta}T^{\sigma\alpha}T^{\beta\delta},
 \end{dmath}
-where $\nabla_\rho$ and ${R}_{\mu\nu}{}^\lambda{}_\rho$ are the covariant derivative and  curvature associated to the symmetric part of the connection. Notice that Bianchi identity for the Riemann curvature, obtained as $\epsilon^{\mu\nu\lambda} {R}_{\mu\nu}{}^\rho{}_\lambda=0$, leads us to
+with $\nabla_\rho$ and ${R}_{\mu\nu}{}^\lambda{}_\rho$ the covariant derivative and  curvature associated to the symmetric part of the connection. Notice that Bianchi identity for the Riemann curvature, obtained as $\epsilon^{\mu\nu\lambda} {R}_{\mu\nu}{}^\rho{}_\lambda=0$, leads us to
 \begin{equation}
   \label{bianchi}
   \epsilon^{\mu\nu\rho} \hat{R}_{\mu\nu}{}^\lambda{}_\rho = 4\nabla_\rho T^{\rho\lambda}
   +2\epsilon^{\mu\nu\lambda}\partial_\mu A_\nu-4T^{\lambda\rho}A_\rho. 
 \end{equation}
 Using the  Eqs.~\eqref{RiemmanDecomposition} and~\eqref{bianchi} one can rewrite the action (up to a boundary term) as
-\begin{dmath}
-  S[\Gamma,T,A] =
-  \int \dn{3}{x} \bigg( 
-  A_1{R}_{\mu\nu}{}^{\mu}{}_\rho T^{\nu\rho} 
-  +A_2\epsilon^{\mu\nu\rho}{R}_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
-  +A_3\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho
-  +A_4T^{\mu\nu}{\nabla}_\mu A_\nu
-  +A_5T^{\mu\nu}A_\mu A_\nu
-  +A_6\det(T^{\mu\nu}) 
-  +A_7\epsilon^{\mu\nu\lambda}\Big({\Gamma}^{\sigma}{}_{\mu\rho}\partial_\nu{\Gamma}^{\rho}{}_{\lambda\sigma}
-  +\frac{2}{3}{\Gamma}^{\tau}{}_{\mu\rho}{\Gamma}^{\rho}{}_{\nu\sigma}{}{\Gamma}^{\sigma}{}_{\lambda\tau}{}\Big)
-  + A_8\epsilon^{\mu\nu\rho}{\Gamma}^{\sigma}{}_{\mu\sigma}\partial_\nu{\Gamma}^{\tau}{}_{\rho\tau}
-  \bigg).
+\begin{equation}
+  \begin{split}    
+    S[\Gamma,T,A] &=
+    \int \dn{3}{x} \bigg( 
+    A_1{R}_{\mu\nu}{}^{\mu}{}_\rho T^{\nu\rho} 
+    +A_2\epsilon^{\mu\nu\rho}{R}_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
+    +A_3\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho
+    \\
+    & \qquad
+    +A_4T^{\mu\nu}{\nabla}_\mu A_\nu
+    +A_5T^{\mu\nu}A_\mu A_\nu
+    +A_6\det(T^{\mu\nu}) 
+    \\
+    & \qquad
+    +A_7\epsilon^{\mu\nu\lambda}\Big({\Gamma}^{\sigma}{}_{\mu\rho}\partial_\nu{\Gamma}^{\rho}{}_{\lambda\sigma}
+    +\frac{2}{3}{\Gamma}^{\tau}{}_{\mu\rho}{\Gamma}^{\rho}{}_{\nu\sigma}{}{\Gamma}^{\sigma}{}_{\lambda\tau}{}\Big)
+    \\
+    & \qquad
+    + A_8\epsilon^{\mu\nu\rho}{\Gamma}^{\sigma}{}_{\mu\sigma}\partial_\nu{\Gamma}^{\tau}{}_{\rho\tau}
+    \bigg).
+  \end{split}
   \label{accion3dfinal}
-\end{dmath}
+\end{equation}
 
-At this point, it is useful to introduce what we have called the ``Eddington's trick''~\cite{Eddington1923math}. First of all, notice that in the usual Einstein--Hilbert action the variation of the action with respect to the Ricci tensor yields an inverse metric density. Thus, a sort of dual theory could be obtained by identifying the tensor density obtained from the variation of the action with respect to the symmetric part of Ricci tensor with the inverse metric density (see Ref.~\cite{Eddington1923math,Poplawski:2012bw})
+At this point, it is useful to introduce what we have called the ``Eddington's trick''.\cite{Eddington1923math} First of all, notice that in the usual Einstein--Hilbert action the variation of the action with respect to the Ricci tensor yields an inverse metric density. Thus, a sort of dual theory could be obtained by identifying the tensor density obtained from the variation of the action with respect to the symmetric part of Ricci tensor with the inverse metric density (see Ref.~\refcite{Eddington1923math,Poplawski:2012bw})
 \begin{equation}
   \label{metric}
   \frac{\delta\ }{\delta R_{(\mu\nu)}} S[\hat{\Gamma}] \Longrightarrow \sqrt{\mathfrak{g}} \, \mathfrak{g}^{\mu\nu} \equiv \bar{g}^{\mu\nu}.
@@ -226,36 +246,35 @@ where ${\Gamma}^\mu{}_{\rho\sigma}$ denotes a forty-dimensional symmetric connec
 
 Additionally, since no metric is present  the epsilon symbols are not related by lowering or raising their indices, but instead one demands that \mbox{$\epsilon^{\delta\eta\lambda\kappa}\epsilon_{\mu\nu\rho\sigma}=4!\delta^{\delta}{}_{[\mu}\delta^\eta{}_{\nu}\delta^{\lambda}{}_{\rho} \delta^\kappa{}_{\sigma]}$.}
 
-\begin{widetext}
-  One can  write all the combinations of fields that would presumably be renormalizable with these three independent fields --- up to a boundary term ---,
-  \begin{dmath}[compact, spread=2pt] 
-    \label{4dfull}
-    S[{\Gamma},T,A] =
-    \int\dn{4}{x}\Bigg[
-      B_1  R_{\mu\nu}{}^{\mu}{}_{\rho} T^{\nu,\alpha\beta}T^{\rho,\gamma\delta}\epsilon_{\alpha\beta\gamma\delta}
-      +B_2 \Big( R_{\mu\nu}{}^{\sigma}{}_\rho+\frac{2}{3}\delta^\sigma{}_{[\mu} R_{\nu]\lambda}{}^{\lambda}{}_\rho \Big) T^{\beta,\mu\nu}T^{\rho,\gamma\delta}\epsilon_{\sigma\beta\gamma\delta}
-      +B_3  R_{\mu\nu}{}^{\mu}{}_{\rho} T^{(\nu,\rho)\sigma}A_\sigma
-      + B_4\Big( R_{\mu\nu}{}^{\sigma}{}_\rho+\frac{2}{3}\delta^\sigma{}_{[\mu} R_{\nu]\lambda}{}^{\lambda}{}_\rho \Big)\Big(T^{\rho,\mu\nu}A_\sigma-\frac{1}{4}\delta^\rho_\sigma T^{\kappa,\mu\nu}A_\kappa\Big)
-      +B_5 R_{\mu\nu}{}^{\rho}{}_\rho T^{\sigma,\mu\nu}A_\sigma
-      +C_1  R_{\mu\nu}{}^{\mu}{}_{\rho} \nabla_\sigma T^{(\nu,\rho)\sigma}
-      +C_2 R_{\mu\nu}{}^{\rho}{}_\rho \nabla_\sigma T^{\sigma,\mu\nu} 
-      +D_1T^{\alpha,\mu\nu}T^{\beta,\rho\sigma}\nabla_\gamma T^{(\lambda, \kappa) \gamma}\epsilon_{\beta\mu\nu\lambda}\epsilon_{\alpha\rho\sigma\kappa}
-      +D_2T^{\alpha,\mu\nu}T^{\lambda,\beta\gamma}\nabla_\lambda T^{\delta,\rho\sigma}\epsilon_{\alpha\beta\gamma\delta}\epsilon_{\mu\nu\rho\sigma}
-      +D_3T^{\mu,\alpha\beta}T^{\lambda,\nu\gamma}\nabla_\lambda T^{\delta,\rho\sigma}\epsilon_{\alpha\beta\gamma\delta}\epsilon_{\mu\nu\rho\sigma}
-      +D_4T^{\lambda,\mu\nu}T^{\kappa,\rho\sigma}\nabla_{(\lambda} A_{\kappa)} \epsilon_{\mu\nu\rho\sigma}
-      +D_5T^{\lambda,\mu\nu}\nabla_{[\lambda}T^{\kappa,\rho\sigma} A_{\kappa]} \epsilon_{\mu\nu\rho\sigma}
-      +D_6T^{\lambda,\mu\nu}A_\nu\nabla_{(\lambda} A_{\mu)}
-      +D_7T^{\lambda,\mu\nu}A_\lambda\nabla_{[\mu} A_{\nu]} 
-      +E_1\nabla_{(\rho} T^{\rho,\mu\nu}\nabla_{\sigma)} T^{\sigma,\lambda\kappa}\epsilon_{\mu\nu\lambda\kappa}
-      +E_2\nabla_{(\lambda} T^{\lambda,\mu\nu}\nabla_{\mu)} A_\nu
-      +T^{\alpha,\beta\gamma}T^{\delta,\eta\kappa}T^{\lambda,\mu\nu}T^{\rho,\sigma\tau}
-      \big(\Lambda_1\epsilon_{\beta\gamma\eta\kappa}\epsilon_{\alpha\rho\mu\nu}\epsilon_{\delta\lambda\sigma\tau}
-      +\Lambda_2\epsilon_{\beta\lambda\eta\kappa}\epsilon_{\gamma\rho\mu\nu}\epsilon_{\alpha\delta\sigma\tau}\big) 
-      +\Lambda_3 T^{\rho,\alpha\beta}T^{\gamma,\mu\nu}T^{\lambda,\sigma\tau}A_\tau \epsilon_{\alpha\beta\gamma\lambda}\epsilon_{\mu\nu\rho\sigma}
-      +\Lambda_4T^{\eta,\alpha\beta}T^{\kappa,\gamma\delta}A_\eta A_\kappa\epsilon_{\alpha\beta\gamma\delta}\Bigg],
-  \end{dmath}
-  where the terms $B_2$ and $B_4$  contain a traceless contribution of the curvature.
-\end{widetext}
+One can  write all the combinations of fields that would presumably be renormalizable with these three independent fields --- up to a boundary term ---,
+\begin{dmath}[compact, spread=2pt] 
+  \label{4dfull}
+  S[{\Gamma},T,A] =
+  \int\dn{4}{x}\Bigg[
+    B_1  R_{\mu\nu}{}^{\mu}{}_{\rho} T^{\nu,\alpha\beta}T^{\rho,\gamma\delta}\epsilon_{\alpha\beta\gamma\delta}
+    +B_2 \Big( R_{\mu\nu}{}^{\sigma}{}_\rho+\frac{2}{3}\delta^\sigma{}_{[\mu} R_{\nu]\lambda}{}^{\lambda}{}_\rho \Big) T^{\beta,\mu\nu}T^{\rho,\gamma\delta}\epsilon_{\sigma\beta\gamma\delta}
+    +B_3  R_{\mu\nu}{}^{\mu}{}_{\rho} T^{(\nu,\rho)\sigma}A_\sigma
+    + B_4\Big( R_{\mu\nu}{}^{\sigma}{}_\rho+\frac{2}{3}\delta^\sigma{}_{[\mu} R_{\nu]\lambda}{}^{\lambda}{}_\rho \Big)\Big(T^{\rho,\mu\nu}A_\sigma-\frac{1}{4}\delta^\rho_\sigma T^{\kappa,\mu\nu}A_\kappa\Big)
+    +B_5 R_{\mu\nu}{}^{\rho}{}_\rho T^{\sigma,\mu\nu}A_\sigma
+    +C_1  R_{\mu\nu}{}^{\mu}{}_{\rho} \nabla_\sigma T^{(\nu,\rho)\sigma}
+    +C_2 R_{\mu\nu}{}^{\rho}{}_\rho \nabla_\sigma T^{\sigma,\mu\nu} 
+    +D_1T^{\alpha,\mu\nu}T^{\beta,\rho\sigma}\nabla_\gamma T^{(\lambda, \kappa) \gamma}\epsilon_{\beta\mu\nu\lambda}\epsilon_{\alpha\rho\sigma\kappa}
+    +D_2T^{\alpha,\mu\nu}T^{\lambda,\beta\gamma}\nabla_\lambda T^{\delta,\rho\sigma}\epsilon_{\alpha\beta\gamma\delta}\epsilon_{\mu\nu\rho\sigma}
+    +D_3T^{\mu,\alpha\beta}T^{\lambda,\nu\gamma}\nabla_\lambda T^{\delta,\rho\sigma}\epsilon_{\alpha\beta\gamma\delta}\epsilon_{\mu\nu\rho\sigma}
+    +D_4T^{\lambda,\mu\nu}T^{\kappa,\rho\sigma}\nabla_{(\lambda} A_{\kappa)} \epsilon_{\mu\nu\rho\sigma}
+    +D_5T^{\lambda,\mu\nu}\nabla_{[\lambda}T^{\kappa,\rho\sigma} A_{\kappa]} \epsilon_{\mu\nu\rho\sigma}
+    +D_6T^{\lambda,\mu\nu}A_\nu\nabla_{(\lambda} A_{\mu)}
+    +D_7T^{\lambda,\mu\nu}A_\lambda\nabla_{[\mu} A_{\nu]} 
+    +E_1\nabla_{(\rho} T^{\rho,\mu\nu}\nabla_{\sigma)} T^{\sigma,\lambda\kappa}\epsilon_{\mu\nu\lambda\kappa}
+    +E_2\nabla_{(\lambda} T^{\lambda,\mu\nu}\nabla_{\mu)} A_\nu
+    +T^{\alpha,\beta\gamma}T^{\delta,\eta\kappa}T^{\lambda,\mu\nu}T^{\rho,\sigma\tau}
+    \big(\Lambda_1\epsilon_{\beta\gamma\eta\kappa}\epsilon_{\alpha\rho\mu\nu}\epsilon_{\delta\lambda\sigma\tau}
+    +\Lambda_2\epsilon_{\beta\lambda\eta\kappa}\epsilon_{\gamma\rho\mu\nu}\epsilon_{\alpha\delta\sigma\tau}\big) 
+    +\Lambda_3 T^{\rho,\alpha\beta}T^{\gamma,\mu\nu}T^{\lambda,\sigma\tau}A_\tau \epsilon_{\alpha\beta\gamma\lambda}\epsilon_{\mu\nu\rho\sigma}
+    +\Lambda_4T^{\eta,\alpha\beta}T^{\kappa,\gamma\delta}A_\eta A_\kappa\epsilon_{\alpha\beta\gamma\delta}\Bigg],
+\end{dmath}
+where the terms $B_2$ and $B_4$  contain a traceless contribution of the curvature.
+
 In this case, the Eddington's  ``inverse metric density'' [see Eq.~\eqref{metric}] is 
 \begin{dmath}
   \label{4dMetric}
@@ -290,18 +309,17 @@ while the Ricci curvature tensor calculated from Eq.~\eqref{GammaExp} is
   R_{\mu\nu} = \frac{1}{2} E F \delta^m_\mu \delta^m_\nu - \frac{3}{4} F^2 \delta^0_\mu \delta^0_\nu.
 \end{dmath}
 Therefore, whether the four-dimensional metric structure is Riemannian or pseudo-Riemannian will depend exclusively on the values of the parameters of the action in Eq.~\eqref{4dfull} and the signs of the components of the connection field. 
-\begin{widetext}
-  The first order perturbations of the action yields
-  \begin{dmath}[compact, spread=2pt]
-    \label{EOM0thOrder}
-    \delta S =
-    \bigg( \Big( ( B_3 + \frac{8}{3}\, B_4 + \frac{1}{2}\, E_2) A + 4\, C_1  F - 2\, C_1  G \Big) E + 8\, ( - D_1 + 2\, D_2 + D_3) T^2 \bigg) T \delta{\Gamma}^{m}\,_{0 m}
-    + \bigg( ( \frac{1}{2}\, B_3 + \frac{4}{3}\, B_4 + \frac{1}{4}\, E_2) A F + ( B_3 - \frac{4}{3}\, B_4 - \frac{1}{2}\, E_2) A G + C_1  F^2 - C_1 F G - D_6 A^2 \bigg) T \delta{\Gamma}^{0 m}\,_{m}
-    + \bigg( \Big(- (\frac{1}{2}\, B_3 + \frac{4}{3}\, B_4 + \frac{1}{4}\, E_2) A F + ( - B_3+ \frac{4}{3}\, B_4 + \frac{1}{2}\, E_2) A G - C_1  F^2 + C_1 F G + D_6 A^2 \Big) E + \Big( 12\, ( D_1 - 2\, D_2 - D_3) F + 24\, \Lambda_3 A \Big) T^2 \bigg)\delta{T}_{m}\,^{0 m}
-    + \bigg( ( 3\, B_3 - 4\, B_4 - \frac{3}{2}\, E_2) A - 3\, C_1 F \bigg) E T \delta{\Gamma}^{0}\,_{0 0}
-    + \bigg( 3\Big( - 2\, D_6 A + ( \frac{1}{2}\, B_3 + \frac{4}{3}\, B_4 + \frac{1}{4}\, E_2) F + ( B_3 - \frac{4}{3}\, B_4 - \frac{1}{2}\, E_2) G \Big) E - 24\, \Lambda_3 T^2 \bigg) T \delta{A}_{0}=0,
-  \end{dmath}
-\end{widetext}
+
+The first order perturbations of the action yields
+\begin{dmath}[compact, spread=2pt]
+  \label{EOM0thOrder}
+  \delta S =
+  \bigg( \Big( ( B_3 + \frac{8}{3}\, B_4 + \frac{1}{2}\, E_2) A + 4\, C_1  F - 2\, C_1  G \Big) E + 8\, ( - D_1 + 2\, D_2 + D_3) T^2 \bigg) T \delta{\Gamma}^{m}\,_{0 m}
+  + \bigg( ( \frac{1}{2}\, B_3 + \frac{4}{3}\, B_4 + \frac{1}{4}\, E_2) A F + ( B_3 - \frac{4}{3}\, B_4 - \frac{1}{2}\, E_2) A G + C_1  F^2 - C_1 F G - D_6 A^2 \bigg) T \delta{\Gamma}^{0 m}\,_{m}
+  + \bigg( \Big(- (\frac{1}{2}\, B_3 + \frac{4}{3}\, B_4 + \frac{1}{4}\, E_2) A F + ( - B_3+ \frac{4}{3}\, B_4 + \frac{1}{2}\, E_2) A G - C_1  F^2 + C_1 F G + D_6 A^2 \Big) E + \Big( 12\, ( D_1 - 2\, D_2 - D_3) F + 24\, \Lambda_3 A \Big) T^2 \bigg)\delta{T}_{m}\,^{0 m}
+  + \bigg( ( 3\, B_3 - 4\, B_4 - \frac{3}{2}\, E_2) A - 3\, C_1 F \bigg) E T \delta{\Gamma}^{0}\,_{0 0}
+  + \bigg( 3\Big( - 2\, D_6 A + ( \frac{1}{2}\, B_3 + \frac{4}{3}\, B_4 + \frac{1}{4}\, E_2) F + ( B_3 - \frac{4}{3}\, B_4 - \frac{1}{2}\, E_2) G \Big) E - 24\, \Lambda_3 T^2 \bigg) T \delta{A}_{0}=0,
+\end{dmath}
 and we are most interested in solutions to the connection field whose contribution to the parallel transport equation of a test particle's velocity is that of a free particle, at least at the low velocity regime
 \begin{equation} 
   \ddot{x}^i+2F\dot{x}^0\dot{x}^i=0, \quad \text{and} \quad \ddot{x}^0 + E \, (\dot{x}^i)^2 + G \, (\dot{x}^0)^2 = 0,
@@ -343,26 +361,24 @@ and
 where the scalar fields identified with the sub-index ``L'' correspond to longitudinal degrees of freedom. Vector and tensor perturbations are left for further investigations of the dynamical structure of the model.
 
 The first order perturbative expansion of the equations of motion around the already described background in momentum space with $p_0=0$ is given by
-\begin{widetext}
-  \begin{dmath}
-    \delta S =
-    \Big( - 2 E d_2 + t - p^2 t_L + T w_L + 3 T z_1 + 2 T z_2 - T p^2 z_L \Big) 6 B_3 p^2 {\,\delta A}_{0} 
-    + \bigg( - E p^2 d_2 + \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - \frac{1}{2} T p^2 w_L - 6 E T y_1 + 2 E T p^2 y_L + \frac{3}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^2 p^2 z_L \bigg) C_1 {\,\delta\Gamma}^{0}{}_{0 0} 
-    + \bigg(6 B_3 a - \frac{1}{2} C_1 u + 2 C_1 E v_L + \frac{1}{2} C_1 y_1 - \frac{3}{2} C_1 p^2 y_L \bigg) T \imath {p}^{m} {\,\delta\Gamma}^{0}{}_{0 m} 
-    + C_1 T p^2 v_L {\,\delta}^{m n} {\,\delta\Gamma}^{0}{}_{m n} 
-    + \Big( - p^2 c_L + 2 E^2 d_2 + 4 E t - 2 E p^2 t_L + 2 E T w_L + 3 T x - T p^2 x_L - 10 E T z_2 + 2 E T p^2 z_L \Big) C_1 \imath {p}_{m} {\,\delta\Gamma}^{m}{}_{0 0} 
-    + \bigg( E p^2 d_2 +  \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - 2 E T u - \frac{1}{2} T p^2 w_L + 8 E T y_1 - 2 E T p^2 y_L + \frac{1}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^4  z_L \bigg) C_1 {\,\delta}^{m}{}_{n} {\,\delta\Gamma}^{n}{}_{0 m} 
-    + \Big( - 4 E d_2  - t +  p^2 t_L + 2 T w_L - 2 E T y_L - 2 T z_1 + T p^2 z_L \Big)  C_1 {p}_{n} {p}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
-    - 6  E T y_2 C_1 \imath {p}^{p} {\epsilon}_{n p}{}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
-    + \bigg(6 B_3 T a + C_1 p^2 d_2 + \frac{1}{2} C_1 T u + C_1 E T v_L - \frac{1}{2} C_1 T y_1 + \frac{1}{2} C_1 T p^2 y_L \bigg) \imath {p}_{m} {\,\delta}^{n p} {\,\delta\Gamma}^{m}{}_{n p} 
-    + \Big( - 3 E v_L + y_1 - p^2 y_L\Big) C_1 T \imath {p}^{n} {\,\delta}_{m}{}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
-    + \Big( - d_2 + T y_L \Big) C_1 \imath {p}_{m} {p}^{n} {p}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
-    + v_L C_1 p^2 \imath {p}_{m} {\,\delta T}^{0 0 m} 
-    - v_L C_1 E p^2 {\,\delta}_{m n} {\,\delta T}^{m 0 n} 
-    + \bigg( - 6  B_3 a - \frac{1}{2}  C_1 u - C_1 E v_L - \frac{1}{2}  C_1 y_1 - \frac{1}{2}  C_1 p^2 y_L \bigg) {p}_{m} {p}_{n} {\,\delta T}^{m 0 n} 
-    + \bigg(6 B_3 E a + \frac{1}{2} C_1 E u - C_1 E^2 v_L + \frac{1}{2} C_1 E y_1 - \frac{3}{2} C_1 E p^2 y_L - C_1 p^2 z_1 \bigg) \imath {p}_{m} {\,\delta}_{n p} {\,\delta T}^{n m p}.
-  \end{dmath}
-\end{widetext}
+\begin{dmath}
+  \delta S =
+  \Big( - 2 E d_2 + t - p^2 t_L + T w_L + 3 T z_1 + 2 T z_2 - T p^2 z_L \Big) 6 B_3 p^2 {\,\delta A}_{0} 
+  + \bigg( - E p^2 d_2 + \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - \frac{1}{2} T p^2 w_L - 6 E T y_1 + 2 E T p^2 y_L + \frac{3}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^2 p^2 z_L \bigg) C_1 {\,\delta\Gamma}^{0}{}_{0 0} 
+  + \bigg(6 B_3 a - \frac{1}{2} C_1 u + 2 C_1 E v_L + \frac{1}{2} C_1 y_1 - \frac{3}{2} C_1 p^2 y_L \bigg) T \imath {p}^{m} {\,\delta\Gamma}^{0}{}_{0 m} 
+  + C_1 T p^2 v_L {\,\delta}^{m n} {\,\delta\Gamma}^{0}{}_{m n} 
+  + \Big( - p^2 c_L + 2 E^2 d_2 + 4 E t - 2 E p^2 t_L + 2 E T w_L + 3 T x - T p^2 x_L - 10 E T z_2 + 2 E T p^2 z_L \Big) C_1 \imath {p}_{m} {\,\delta\Gamma}^{m}{}_{0 0} 
+  + \bigg( E p^2 d_2 +  \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - 2 E T u - \frac{1}{2} T p^2 w_L + 8 E T y_1 - 2 E T p^2 y_L + \frac{1}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^4  z_L \bigg) C_1 {\,\delta}^{m}{}_{n} {\,\delta\Gamma}^{n}{}_{0 m} 
+  + \Big( - 4 E d_2  - t +  p^2 t_L + 2 T w_L - 2 E T y_L - 2 T z_1 + T p^2 z_L \Big)  C_1 {p}_{n} {p}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
+  - 6  E T y_2 C_1 \imath {p}^{p} {\epsilon}_{n p}{}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
+  + \bigg(6 B_3 T a + C_1 p^2 d_2 + \frac{1}{2} C_1 T u + C_1 E T v_L - \frac{1}{2} C_1 T y_1 + \frac{1}{2} C_1 T p^2 y_L \bigg) \imath {p}_{m} {\,\delta}^{n p} {\,\delta\Gamma}^{m}{}_{n p} 
+  + \Big( - 3 E v_L + y_1 - p^2 y_L\Big) C_1 T \imath {p}^{n} {\,\delta}_{m}{}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
+  + \Big( - d_2 + T y_L \Big) C_1 \imath {p}_{m} {p}^{n} {p}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
+  + v_L C_1 p^2 \imath {p}_{m} {\,\delta T}^{0 0 m} 
+  - v_L C_1 E p^2 {\,\delta}_{m n} {\,\delta T}^{m 0 n} 
+  + \bigg( - 6  B_3 a - \frac{1}{2}  C_1 u - C_1 E v_L - \frac{1}{2}  C_1 y_1 - \frac{1}{2}  C_1 p^2 y_L \bigg) {p}_{m} {p}_{n} {\,\delta T}^{m 0 n} 
+  + \bigg(6 B_3 E a + \frac{1}{2} C_1 E u - C_1 E^2 v_L + \frac{1}{2} C_1 E y_1 - \frac{3}{2} C_1 E p^2 y_L - C_1 p^2 z_1 \bigg) \imath {p}_{m} {\,\delta}_{n p} {\,\delta T}^{n m p}.
+\end{dmath}
 which we will add to the variations of the action of the matter from Eq.~\eqref{mattervariation} and set $\delta S_{\text{total}}=0$.
 
 Solutions to this set of equations are in general a highly difficult problem that concerns twenty equations of motion with twenty scalar fields to be fixed. Yet, knowledge of the value of some of these scalars does not necessarily help to determine how geodesics are affected. For this, we only need $\gamma^i{}_{00}$ and $\gamma^0{}_{00}$ as these provide the first order contributions to the equations
@@ -392,7 +408,7 @@ Since GR is the best gravitational theory we have so far, we are currently worki
 
 Additionally, within the model, all coupling constants turn out to be dimensionless, a property that has been related to scale invariance and conformally invariant theories (see Refs.~\cite{Buchholz:1976hz,Maldacena:2011mk}). In fact, renormalization is intimately related to the scaling properties of a model and it may be worth to study the quantization and renormalizability of this  model. In doing so, we believe the lack of metric may allow the model to bypass the uniqueness of the diffeomorphisms invariant Hilbert space stated in Ref.~\cite{Lewandowski:2005jk}.
 
-Sticking to the classical theory, the analysis of the cosmological implications is needed. In cosmology there are important aspects with unsatisfactory explanations, such as those related to the matter content of the Universe (in particular the dark energy sector), or the large scale structure formation~\footnote{There is a controversy between the experimental results obtained by BICEP2~\cite{Ade:2014xna} and Planck~\cite{Adam:2014bub} in the respect of their interpretation associated with inflation.}. Additionally, other formal aspects of the model remain unknown, such as the proper number of propagating degrees of freedom, and whether or not a duality exists between our model and one of the well-known metric models (say for example Ho\v{r}ava-Lifshitz gravity~\cite{Horava:2009uw,*Sotiriou:2010wn}).
+Sticking to the classical theory, the analysis of the cosmological implications is needed. In cosmology there are important aspects with unsatisfactory explanations, such as those related to the matter content of the Universe (in particular the dark energy sector), or the large scale structure formation~\footnote{There is a controversy between the experimental results obtained by BICEP2~\cite{Ade:2014xna} and Planck~\cite{Adam:2014bub} in the respect of their interpretation associated with inflation.}. Additionally, other formal aspects of the model remain unknown, such as the proper number of propagating degrees of freedom, and whether or not a duality exists between our model and one of the well-known metric models (say for example Ho\v{r}ava-Lifshitz gravity~\cite{Horava:2009uw,Sotiriou:2010wn}).
 
 We also believe that almost every aspect related to coupling gravity to matter fields can be extrapolated to couplings with the affine connection without making reference to a fundamental metric or a local Lorentz symmetry. This could be  done rewriting the affine connection in terms of a local $GL(4)$ connection
 $\omega_{\mu}{}^a{}_b$, relating the two of them through use of a frame field $e_\mu^a$ and its inverse $e^\mu_a$
@@ -402,9 +418,9 @@ $\omega_{\mu}{}^a{}_b$, relating the two of them through use of a frame field $e
  In particular, \mbox{$GL(4) = \mathbb{R}_+ \times SL(4)$} and using \mbox{$SL(4) \simeq SO(3,3)$,} we can define spinorial representations for the diffeomorphisms group, eventually we will be able to define an action for $SO(3,3)$ spinors in four dimensions (check Appendix~\ref{sec:matter}).
 
 
-\begin{acknowledgments}
-  We thank to J. Zanelli for fruitful discussions, and also to K. Peeters for helpful advises in the manipulation of the software \textsc{Cadabra}~\cite{Peeters:2007wn,*peeters2007symbolic,*Peeters2007550}, which was used extensively to achieve the results presented in this paper. Additionally, we thank the developers of the mathematical software \textsc{Sage}~\cite{sage}, used to achieve several manipulations. This work was partially supported by CONICYT (Chile) under grant No. 79140040.
-\end{acknowledgments}
+\section*{Acknowledgements}
+  We thank to J. Zanelli for fruitful discussions, and also to K. Peeters for helpful advises in the manipulation of the software \textsc{Cadabra}~\cite{Peeters:2007wn,peeters2007symbolic,Peeters2007550}, which was used extensively to achieve the results presented in this paper. Additionally, we thank the developers of the mathematical software \textsc{Sage}~\cite{sage}, used to achieve several manipulations. This work was partially supported by CONICYT (Chile) under grant No. 79140040.
+%\end{acknowledgments}
 
 
 \appendix
@@ -450,7 +466,7 @@ Thus, several topological scalars can be added to the Lagrangian density
 
 
 
-\bibliographystyle{apsrev4-1}
+\bibliographystyle{ws-mpla}
 \bibliography{References.bib}
 
 
