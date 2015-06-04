@@ -294,7 +294,7 @@ In this case, the Eddington's  ``inverse metric density'' [see Eq.~\eqref{metric
 \end{equation}
 
 
-\subsection*{Symmetric solution to the equations of motion}
+\subsection{Symmetric solution to the equations of motion}
 
 In four dimensions there is no obvious equivalence of Eq.~\eqref{4dfull} with GR, specially due to the lack of a fundamental metric field in the given model. However, both models are explicitly invariant under diffeomorphisms, and even if their structures and number of degrees of freedom differ, the action in Eq.~\eqref{4dfull} provides a context where parallel transport of particle's velocities on a purely torsional background is nontrivial.
 
@@ -358,59 +358,84 @@ which we can achieve by setting $F=G=0$ and $E \neq 0$ since $(\dot{x}^i)^2$ is 
 Additionally, we can incorporate perturbative inhomogeneous sources to the connection field equations and check on how these fluctuations affect motion. Therefore, we consider a matter action whose dependence on the affine connection can be almost arbitrary. However, we will presume that it will depend only on the barred metric in Eq.~\eqref{4dMetric}
 $$ S_{\text{Matter}} = {S}_{\text{Matter}}[\bar{g}^{\mu\nu}].$$
 Thus, a non-moving matter point particle at the origin of the reference frame will contribute to the equations of motion for the gravitational field through the component $\bar{g}^{00}$ following the symmetries of the matter source 
-\begin{dmath}
+\begin{equation}
   \label{mattervariation}
   \delta {S}_{\text{Matter}} =  C_1 \Big(- \frac{1}{2} ({\delta\Gamma}^{0}{}_{m n})  T {\delta}^{m n} - \frac{1}{2}  ({\delta T}^{0 0 m})  \imath {p}_{m} + \frac{1}{2}  ({\delta T}^{m 0 n})  E {\delta}_{m n} \Big)\frac{\partial\mathcal{L}_{\text{Matter}}}{\partial \bar{g}^{00}}.
-\end{dmath}
+\end{equation}
 
 
-\subsection*{Scalar modes  and Newtonian limit}
+\subsection{Scalar modes  and Newtonian limit}
 
-In order to obtain the non-relativistic limit, \emph{i.e.}, the Newtonian potential, one performs the scalar mode perturbative expansion. One proceeds by substituting the connection and torsion components by their scalar perturbation decomposition,
+In order to obtain the non-relativistic limit, \emph{i.e.}, the Newtonian potential, we make the scalar mode perturbative expansion. We substitute the connection and torsion components by their scalar perturbation decomposition,
 \begin{equation}
   a_\mu \to \delta_\mu^0 a+\delta_\mu^m \partial_{m}a_L,
 \end{equation}
-\mbox{}
-\begin{dmath}
-  t^{\mu,\nu\rho} \to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
-  +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
-  + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
-  +\delta^{\mu}_m \delta^{\nu}_{n} \delta^{\rho}_{p} \Big(\epsilon^{n p q}\partial_q \partial^m d_1 +  (\delta^{m n} \partial^p - \delta^{m p} \partial^n)d_2\Big)
-\end{dmath}
+\begin{equation}
+  \begin{split}
+    t^{\mu,\nu\rho} &\to \delta^{\mu}_m\delta^{\nu\rho}_{n0} \Big(t \delta^{m n} + \partial^m \partial^n t_L \Big)
+    +\delta^{\mu}_0 \delta^{\nu\rho}_{m0} \partial^m c_L
+    + \Big(\delta^{\mu}_0\delta^{\nu\rho}_{mn}-\delta^{\mu}_m\delta^{\nu\rho}_{n0}\Big)\epsilon^{m n p} \partial_{p} b
+    \\
+    & \quad +\delta^{\mu}_m \delta^{\nu}_{n} \delta^{\rho}_{p} \Big(\epsilon^{n p q}\partial_q \partial^m d_1 +  (\delta^{m n} \partial^p - \delta^{m p} \partial^n)d_2\Big)
+  \end{split}
+\end{equation}
 and
-\begin{dmath}
-  \gamma^\lambda_{\mu\nu} \to
-  \delta^\lambda_0\delta^0_\mu\delta^0_\nu u 
-  + \delta^\lambda_m \delta^0_\mu\delta^0_\nu \partial^m v_L
-  + 2\delta^\lambda_0 \delta^0_{(\mu}\delta^m_{\nu)} \partial_m w_L
-  + \delta^\lambda_0 \delta^m_\mu\delta^n_\nu \Big(x \delta_{mn} + \partial_m \partial_n x_L\Big)
-  + 2\delta^\lambda_m \delta^0_{(\mu}\delta^n_{\nu)} \Big(y_1 \delta^m{}_n + \epsilon^{m p}{}_{n} \partial_p y_2 + \partial^m \partial_n y_L\Big)
-  + \delta^\lambda_m \delta^n_{\mu}\delta^p_{\nu} \Big(\delta_{n p} \partial^m z_1 + (\delta^m{}_n \partial_p+\delta^m{}_p \partial_n) z_2 +  (\epsilon^{m q}{}_n \partial_p+\epsilon^{m q}{}_p \partial_n) \partial_q z_3 + \partial^m \partial_n \partial_p z_L\Big),
-\end{dmath}
+\begin{equation}
+  \begin{split}
+    \gamma^\lambda_{\mu\nu}
+    &\to
+    \delta^\lambda_0\delta^0_\mu\delta^0_\nu u 
+    + \delta^\lambda_m \delta^0_\mu\delta^0_\nu \partial^m v_L
+    + 2\delta^\lambda_0 \delta^0_{(\mu}\delta^m_{\nu)} \partial_m w_L+ \delta^\lambda_0 \delta^m_\mu\delta^n_\nu \Big(x \delta_{mn} + \partial_m \partial_n x_L\Big)
+    \\
+    & \quad + 2\delta^\lambda_m \delta^0_{(\mu}\delta^n_{\nu)} \Big(y_1 \delta^m{}_n + \epsilon^{m p}{}_{n} \partial_p y_2 + \partial^m \partial_n y_L\Big)
+    + \delta^\lambda_m \delta^n_{\mu}\delta^p_{\nu} \Big(\delta_{n p} \partial^m z_1
+    \\
+    & \qquad + (\delta^m{}_n \partial_p+\delta^m{}_p \partial_n) z_2 +  (\epsilon^{m q}{}_n \partial_p+\epsilon^{m q}{}_p \partial_n) \partial_q z_3 + \partial^m \partial_n \partial_p z_L\Big),
+  \end{split}
+\end{equation}
 where the scalar fields identified with the sub-index ``L'' correspond to longitudinal degrees of freedom. Vector and tensor perturbations are left for further investigations of the dynamical structure of the model.
 
 The first order perturbative expansion of the equations of motion around the already described background in momentum space with $p_0=0$ is given by
-\begin{dmath}
-  \delta S =
-  \Big( - 2 E d_2 + t - p^2 t_L + T w_L + 3 T z_1 + 2 T z_2 - T p^2 z_L \Big) 6 B_3 p^2 {\,\delta A}_{0} 
-  + \bigg( - E p^2 d_2 + \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - \frac{1}{2} T p^2 w_L - 6 E T y_1 + 2 E T p^2 y_L + \frac{3}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^2 p^2 z_L \bigg) C_1 {\,\delta\Gamma}^{0}{}_{0 0} 
-  + \bigg(6 B_3 a - \frac{1}{2} C_1 u + 2 C_1 E v_L + \frac{1}{2} C_1 y_1 - \frac{3}{2} C_1 p^2 y_L \bigg) T \imath {p}^{m} {\,\delta\Gamma}^{0}{}_{0 m} 
-  + C_1 T p^2 v_L {\,\delta}^{m n} {\,\delta\Gamma}^{0}{}_{m n} 
-  + \Big( - p^2 c_L + 2 E^2 d_2 + 4 E t - 2 E p^2 t_L + 2 E T w_L + 3 T x - T p^2 x_L - 10 E T z_2 + 2 E T p^2 z_L \Big) C_1 \imath {p}_{m} {\,\delta\Gamma}^{m}{}_{0 0} 
-  + \bigg( E p^2 d_2 +  \frac{1}{2} p^2 t - \frac{1}{2} p^4 t_L - 2 E T u - \frac{1}{2} T p^2 w_L + 8 E T y_1 - 2 E T p^2 y_L + \frac{1}{2} T p^2 z_1 + T p^2 z_2 - \frac{1}{2} T p^4  z_L \bigg) C_1 {\,\delta}^{m}{}_{n} {\,\delta\Gamma}^{n}{}_{0 m} 
-  + \Big( - 4 E d_2  - t +  p^2 t_L + 2 T w_L - 2 E T y_L - 2 T z_1 + T p^2 z_L \Big)  C_1 {p}_{n} {p}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
-  - 6  E T y_2 C_1 \imath {p}^{p} {\epsilon}_{n p}{}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
-  + \bigg(6 B_3 T a + C_1 p^2 d_2 + \frac{1}{2} C_1 T u + C_1 E T v_L - \frac{1}{2} C_1 T y_1 + \frac{1}{2} C_1 T p^2 y_L \bigg) \imath {p}_{m} {\,\delta}^{n p} {\,\delta\Gamma}^{m}{}_{n p} 
-  + \Big( - 3 E v_L + y_1 - p^2 y_L\Big) C_1 T \imath {p}^{n} {\,\delta}_{m}{}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
-  + \Big( - d_2 + T y_L \Big) C_1 \imath {p}_{m} {p}^{n} {p}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
-  + v_L C_1 p^2 \imath {p}_{m} {\,\delta T}^{0 0 m} 
-  - v_L C_1 E p^2 {\,\delta}_{m n} {\,\delta T}^{m 0 n} 
-  + \bigg( - 6  B_3 a - \frac{1}{2}  C_1 u - C_1 E v_L - \frac{1}{2}  C_1 y_1 - \frac{1}{2}  C_1 p^2 y_L \bigg) {p}_{m} {p}_{n} {\,\delta T}^{m 0 n} 
-  + \bigg(6 B_3 E a + \frac{1}{2} C_1 E u - C_1 E^2 v_L + \frac{1}{2} C_1 E y_1 - \frac{3}{2} C_1 E p^2 y_L - C_1 p^2 z_1 \bigg) \imath {p}_{m} {\,\delta}_{n p} {\,\delta T}^{n m p}.
-\end{dmath}
-which we will add to the variations of the action of the matter from Eq.~\eqref{mattervariation} and set $\delta S_{\text{total}}=0$.
+{\small
+\begin{equation*}
+  \begin{split}
+    \delta S
+    &=
+    \Big( t - 2 E d_2  - p^2 t_L + T w_L + 3 T z_1 + 2 T z_2 - T p^2 z_L \Big) 6 B_3 p^2 {\,\delta A}_{0} - \Big( E p^2 d_2 - \tfrac{1}{2} p^2 t
+    \\
+    & \quad + \tfrac{1}{2} p^4 t_L + \tfrac{1}{2} T p^2 w_L + 6 E T y_1 - 2 E T p^2 y_L - \tfrac{3}{2} T p^2 z_1 - T p^2 z_2 + \tfrac{1}{2} T p^2 p^2 z_L \Big) C_1 {\,\delta\Gamma}^{0}{}_{0 0}
+    \\
+    & + \Big(6 B_3 a - \tfrac{1}{2} C_1 u + 2 C_1 E v_L + \tfrac{1}{2} C_1 y_1 - \tfrac{3}{2} C_1 p^2 y_L \Big) T \imath {p}^{m} {\,\delta\Gamma}^{0}{}_{0 m} + C_1 T p^2 v_L {\,\delta}^{m n} {\,\delta\Gamma}^{0}{}_{m n} 
+    \\
+    & - \Big( p^2 c_L - 2 E^2 d_2 - 4 E t + 2 E p^2 t_L - 2 E T w_L - 3 T x + T p^2 x_L + 10 E T z_2 
+    \\
+    & \quad - 2 E T p^2 z_L \Big) C_1 \imath {p}_{m} {\,\delta\Gamma}^{m}{}_{0 0}  + \Big( E p^2 d_2 +  \tfrac{1}{2} p^2 t - \tfrac{1}{2} p^4 t_L - 2 E T u - \tfrac{1}{2} T p^2 w_L + 8 E T y_1 
+    \\
+    & \quad - 2 E T p^2 y_L + \tfrac{1}{2} T p^2 z_1 + T p^2 z_2 - \tfrac{1}{2} T p^4  z_L \Big) C_1 {\,\delta}^{m}{}_{n} {\,\delta\Gamma}^{n}{}_{0 m} 
+    \\
+    & - \Big( 4 E d_2  +t -  p^2 t_L - 2 T w_L + 2 E T y_L + 2 T z_1 - T p^2 z_L \Big)  C_1 {p}_{n} {p}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
+    \\
+    & - 6  E T y_2 C_1 \imath {p}^{p} {\epsilon}_{n p}{}^{m} {\,\delta\Gamma}^{n}{}_{0 m} 
+    + \Big(6 B_3 T a + C_1 p^2 d_2 + \tfrac{1}{2} C_1 T u + C_1 E T v_L - \tfrac{1}{2} C_1 T y_1
+    \\
+    & \quad + \tfrac{1}{2} C_1 T p^2 y_L \Big) \imath {p}_{m} {\,\delta}^{n p} {\,\delta\Gamma}^{m}{}_{n p} 
+    + \Big( - 3 E v_L + y_1 - p^2 y_L\Big) C_1 T \imath {p}^{n} {\,\delta}_{m}{}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
+    \\
+    & - \Big( d_2 - T y_L \Big) C_1 \imath {p}_{m} {p}^{n} {p}^{p} {\,\delta\Gamma}^{m}{}_{n p} 
+    + v_L C_1 p^2 \imath {p}_{m} {\,\delta T}^{0 0 m} 
+    - v_L C_1 E p^2 {\,\delta}_{m n} {\,\delta T}^{m 0 n} 
+    \\
+    & - \Big( 6  B_3 a + \tfrac{1}{2}  C_1 u + C_1 E v_L + \tfrac{1}{2}  C_1 y_1 + \tfrac{1}{2}  C_1 p^2 y_L \Big) {p}_{m} {p}_{n} {\,\delta T}^{m 0 n} 
+    + \Big(6 B_3 E a + \tfrac{1}{2} C_1 E u
+    \\
+    & \quad - C_1 E^2 v_L + \tfrac{1}{2} C_1 E y_1 - \tfrac{3}{2} C_1 E p^2 y_L - C_1 p^2 z_1 \Big) \imath {p}_{m} {\,\delta}_{n p} {\,\delta T}^{n m p},
+  \end{split}
+\end{equation*}%
+}%
+which we will add to the variations of the action of the matter from Eq.~\eqref{mattervariation} and set $\delta S_{\text{total}} = 0$.
 
-Solutions to this set of equations are in general a highly difficult problem that concerns twenty equations of motion with twenty scalar fields to be fixed. Yet, knowledge of the value of some of these scalars does not necessarily help to determine how geodesics are affected. For this, we only need $\gamma^i{}_{00}$ and $\gamma^0{}_{00}$ as these provide the first order contributions to the equations
+Finding solutions to this set of equations is in general a highly complicated problem that concerns twenty equations of motion with twenty scalar fields to be fixed. Yet, knowledge of the value of some of these scalars does not necessarily help to determine how geodesics are affected. For this, we only need $\gamma^i{}_{00}$ and $\gamma^0{}_{00}$ as these provide the first order contributions to the equations
 \begin{equation}
   \label{geodesic1stOrder}
   \ddot{x}^i + \gamma^i{}_{00}(\dot{x}^0)^2 = 0,
