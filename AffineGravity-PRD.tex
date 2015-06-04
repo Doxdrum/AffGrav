@@ -1,6 +1,4 @@
 \documentclass{ws-mpla}
-    %% [twocolumn,aps,
-  %% showpacs,showkeys,prd,superscriptaddress]{revtex4-1}
 
 \usepackage{amsmath,latexsym,amssymb,amsfonts,epsfig}
 \usepackage[%
@@ -215,23 +213,27 @@ At this point, it is useful to introduce what we have called the ``Eddington's t
   \frac{\delta\ }{\delta R_{(\mu\nu)}} S[\hat{\Gamma}] \Longrightarrow \sqrt{\mathfrak{g}} \, \mathfrak{g}^{\mu\nu} \equiv \bar{g}^{\mu\nu}.
 \end{equation}
 
-Noticing that in  the first term, the variation respect to the Ricci tensor yields to $T^{\mu\nu}$, it can be argued that in a standard theory of gravity this tensor density corresponds to $\bar{g}^{\mu\nu}$. Therefore, Eq.~\eqref{accion3dfinal} reveals a one-to-one correspondence with general relativity nonminimally coupled to the $A_\mu$ field,
-\begin{dmath}
+Noticing that in  the first term of Eq.~\eqref{accion3dfinal}, the variation respect to the Ricci tensor yields to $T^{\mu\nu}$, it can be argued that in a standard theory of gravity this tensor density corresponds to $\bar{g}^{\mu\nu}$. Therefore, Eq.~\eqref{accion3dfinal} reveals a one-to-one correspondence with general relativity nonminimally coupled to the $A_\mu$ field,
+\begin{equation}
   \label{accion3dGR}
-  S[\mathfrak{g},{\Gamma},A] = \int \dn{3}{x} \bigg(
-  \sqrt{\mathfrak{g}} \Big(  A_1 {R} + A_4{\nabla}^\mu A_\mu + A_5 A_\mu A^\mu + A_6  \Big)
-  + A_2\epsilon^{\mu\nu\rho} {R}_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
-  + A_3\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho
-  + A_7\epsilon^{\mu\nu\lambda}\Big({\Gamma}^{\sigma}{}_{\mu\rho}\partial_\nu{\Gamma}^{\rho}{}_{\lambda\sigma}
-  + \frac{2}{3}{\Gamma}^{\tau}{}_{\mu\rho}{\Gamma}^{\rho}{}_{\nu\sigma}{}{\Gamma}^{\sigma}{}_{\lambda\tau}{}\Big)
-  + A_8\epsilon^{\mu\nu\rho}{\Gamma}^{\sigma}{}_{\mu\sigma}\partial_\nu{\Gamma}^{\tau}{}_{\rho\tau}
-  \bigg).
-\end{dmath}
+  \begin{split}
+    S[\mathfrak{g},{\Gamma},A] &= \int \dn{3}{x} \bigg(
+    \sqrt{\mathfrak{g}} \Big(  A_1 {R} + A_4{\nabla}^\mu A_\mu + A_5 A_\mu A^\mu + A_6  \Big)
+    + A_2\epsilon^{\mu\nu\rho} {R}_{\mu\nu}{}^{\sigma}{}_\sigma A_\rho
+    \\
+    & \qquad + A_3\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho
+    + A_7\epsilon^{\mu\nu\lambda}\Big({\Gamma}^{\sigma}{}_{\mu\rho}\partial_\nu{\Gamma}^{\rho}{}_{\lambda\sigma}
+    + \frac{2}{3}{\Gamma}^{\tau}{}_{\mu\rho}{\Gamma}^{\rho}{}_{\nu\sigma}{}{\Gamma}^{\sigma}{}_{\lambda\tau}{}\Big)   
+    \\
+    & \qquad + A_8\epsilon^{\mu\nu\rho}{\Gamma}^{\sigma}{}_{\mu\sigma}\partial_\nu{\Gamma}^{\tau}{}_{\rho\tau}
+    \bigg).
+  \end{split}
+\end{equation}
 Thus, an interesting sector of the theory corresponds to the space of non-degenerated $T^{\mu\nu}$. 
 
-For the degrees of freedom count we have used Ref.~\cite{Diaz:2014yua} where a lagrangian approach to the counting has been developed. We part from the $ N=27$ dimensional affine connection.  For the action \eqref{accion3dfinal}, we compute the equations of motion and obtain only first order equations that figure as 27 lagrangian constraints. Only 3 of these equations admit an additional time derivative without becoming of second order in time,  i.e., 
+For the counting of degrees of freedom, we have used Ref.~\refcite{Diaz:2014yua} where a lagrangian approach to the counting has been developed. We part from the twenty-seven dimensional affine connection, or $N = 27$ in the notation of~\refcite{Diaz:2014yua}.  From the equations of motion of the action~\eqref{accion3dfinal} we obtain only first order equations, that figure as twenty-seven Lagrangian constraints. Only three of these equations admit an additional time derivative without becoming of second order in time,  i.e., 
 \begin{equation*}
-  \frac{\delta S}{\delta\Gamma^i{}_{00}} \text{ and } A_4 \frac{\delta S}{\delta\Gamma^0{}_{00}} - 2 A_1 \frac{\delta S}{\delta A_{0}}.
+  \frac{\delta S}{\delta\Gamma^i{}_{00}} \quad \text{ and } \quad A_4 \frac{\delta S}{\delta\Gamma^0{}_{00}} - 2 A_1 \frac{\delta S}{\delta A_{0}}.
 \end{equation*}
 Thus, the total number of Lagrangian constraints is \mbox{$l=30$.} As for gauge transformations, we know this model to be invariant under diffeomorphisms, described through three local parameters which appear with first order time derivatives in the change of $T^{\mu\nu}$ and $ A_0$ and with second order time derivatives in the transformation rule of $\Gamma^\mu{}_{00} $, hence we have $e=9$ effective gauge parameters (because each time derivative count as independent) and $g=3$ gauge identities. Finally,  we conclude that   \mbox{$N-\frac{1}{2}(l+g+e) = 6$} is the total number of degrees of freedom in this model. 
 
